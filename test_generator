@@ -1,1 +1,23 @@
 
+import re
+import csv
+import nltk
+from nltk import word_tokenize
+
+
+with open('test_file.txt', 'w') as trainfile:		
+	for i in range(len(singular_male)):
+
+
+
+		simple_locl_ccommand_match =   # condition 1
+    simple_locl_ccommand_numbermismatch =   # condition 2
+    simple_locl_ccommand_gendermismatch =   # condition 3
+    simple_locl_ccommand_bothmismatch =   # condition 4
+		test_file.write(sentence)
+
+
+
+
+
+test_file.close()
