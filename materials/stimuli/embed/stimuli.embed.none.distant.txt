@@ -1,0 +1,10 @@
+The boy suggested that the brother disappointed himself . <eos>
+The boy said that the boy amused himself . <eos>
+The boy suggested that the boy taught himself . <eos>
+The girl said that the sister amused herself . <eos>
+The girl suggested that the sister convinced herself . <eos>
+The boy said that the grandfather convinced himself . <eos>
+The boy said that the actor confused himself . <eos>
+The boy said that the grandfather enjoyed himself . <eos>
+The boy suggested that the husband proved himself . <eos>
+The girl said that the woman enjoyed herself . <eos>

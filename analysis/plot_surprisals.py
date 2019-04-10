@@ -15,7 +15,8 @@ def plot_mean_surprisal(df, out_path, group_by):
     mismatch_order = ['none', 'gender', 'number', 'both']
     params = dict(data=df, x=group_by, y='surprisal')
     if group_by == 'mismatch':
-        sns.barplot(hue='c_command', order=mismatch_order, **params)
+        hue = 'c_command' if 'c_command' in list(df) else 'local'
+        sns.barplot(hue=hue, order=mismatch_order, **params)
     else:
         sns.barplot(hue='mismatch', hue_order=mismatch_order, **params)
     plt.title('mean GRNN surprisal')
@@ -37,12 +38,15 @@ def main(data, out_path, group_by):
     surprisal_files = listdir(data)
     dfs = []
     for s in surprisal_files:
-        _, clause_type, mismatch, c_command, _ = s.split('.')
+        _, clause_type, mismatch, relation, _ = s.split('.')
         df = pd.read_csv('%s/%s' % (data, s), delim_whitespace=True,
                          names=['token', 'surprisal'])
         df['clause_type'] = clause_type
         df['mismatch'] = mismatch
-        df['c_command'] = (c_command == 'ccommand')
+        if 'ccommand' in relation:
+            df['c_command'] = (relation == 'ccommand')
+        else:
+            df['local'] = (relation == 'local')
         df = df.loc[df.token.isin(pronouns)]
         dfs.append(df)
     df = pd.concat(dfs)
