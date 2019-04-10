@@ -71,10 +71,10 @@ class Lexicon(object):
 
         # 7. construct and return sentence based on c-command relation
         if c_command:
-            return 'The {} {} {}'.format(antecedent, verb, pn)
+            return 'The {} {} {} . <eos>'.format(antecedent, verb, pn)
         else:
             possessor = gen_nouns[number + '_poss'].sample().values[0]
-            return 'The {} {} {} {}'.format(possessor, antecedent, verb, pn)
+            return 'The {} {} {} {} . <eos>'.format(possessor, antecedent, verb, pn)
     
     def _embed_sent(self, local=True, c_command=True, mismatch='none'):
         raise NotImplementedError
