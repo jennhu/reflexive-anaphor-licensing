@@ -15,7 +15,7 @@ def main(lex_path, out_path):
     
     # dummy example -- saves 10 grammatical sentences
     L = util.Lexicon(lex_path)
-    sentences = [L.generate_sentence(clause_type='simple') for _ in range(10)]
+    sentences = [L.generate_sentence(clause_type='embed') for _ in range(10)]
     util.write_sentences(sentences, out_path)
     log.info('Wrote sentences to %s' % out_path)
 

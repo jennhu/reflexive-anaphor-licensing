@@ -18,7 +18,12 @@ def write_sentences(sentences, path):
 class Lexicon(object):
     def __init__(self, lex_path):
         self.lex_path = lex_path
-        self.verbs = read_csv(self._path('verbs.csv'))
+
+        # read and separate verbs
+        verbs = read_csv(self._path('verbs.csv'))
+        self.refl_verbs = verbs.loc[verbs.verb_type == 'refl'].verb
+        self.matrix_verbs = verbs.loc[verbs.verb_type == 'matrix'].verb
+
         self.nouns = read_csv(self._path('nouns.csv'))
         self.pronouns = read_csv(self._path('pronouns.csv'))
 
@@ -39,12 +44,24 @@ class Lexicon(object):
     def _flip_number(self, number):
         return 'singular' if number == 'plural' else 'plural'
 
-    def _simple_sent(self, local=True, c_command=True, mismatch='none'):
-        assert local, 'local must be True for simple clause'
+    def _get_pn_features(self, sentence):
+        if 'himself' in sentence:
+            return 'male', 'singular'
+        elif 'herself' in sentence:
+            return 'female', 'singular'
+        elif 'themselves' in sentence:
+            return 'none', 'plural'
+        else:
+            raise NameError('no reflexive pronoun in sentence')
 
+    def _get_nouns_by_gender(self, gender):
+        return self.nouns.loc[self.nouns.gender == gender]
+
+    def _simple_sent(self, local=True, c_command=True, mismatch='none'):
+        assert local, 'local=True for simple clause'
+        
         # 1. randomly choose reflexive verb
-        refl_verbs = self.verbs.loc[self.verbs.verb_type == 'refl'].verb
-        verb = refl_verbs.sample().values[0]
+        verb = self.refl_verbs.sample().values[0]
 
         # 2. randomly choose features of reflexive pronoun
         pn_gender = random.choice(['male', 'female'])
@@ -59,8 +76,8 @@ class Lexicon(object):
             pn = 'themselves'
 
         # 4. get rows corresponding to matching and mismatching gender
-        gen_nouns = self.nouns.loc[self.nouns.gender == pn_gender]
-        opp_gen_nouns = self.nouns.loc[self.nouns.gender == opp_gender]
+        gen_nouns = self._get_nouns_by_gender(pn_gender)
+        opp_gen_nouns = self._get_nouns_by_gender(opp_gender)
 
         # 5. set features of antecedent to match or mismatch pronoun features
         nouns = gen_nouns if mismatch in ['none', 'number'] else opp_gen_nouns
@@ -73,8 +90,27 @@ class Lexicon(object):
         if c_command:
             return 'The {} {} {} . <eos>'.format(antecedent, verb, pn)
         else:
-            possessor = gen_nouns[number + '_poss'].sample().values[0]
-            return 'The {} {} {} {} . <eos>'.format(possessor, antecedent, verb, pn)
+            poss = gen_nouns[number + '_poss'].sample().values[0]
+            return 'The {} {} {} {} . <eos>'.format(poss, antecedent, verb, pn)
     
     def _embed_sent(self, local=True, c_command=True, mismatch='none'):
-        raise NotImplementedError
+        assert c_command, 'c_command=True for embedded clause'
+
+        # 1. generate simple clause to be embedded
+        embedded = self._simple_sent(c_command=c_command,
+                                     mismatch=mismatch).lower()
+
+        # 2. get features of reflexive pronoun
+        pn_gender, pn_number = self._get_pn_features(embedded)
+
+        # 3. randomly choose matrix verb
+        matrix_verb = self.matrix_verbs.sample().values[0]
+
+        # 4. construct and return sentence based on locality condition
+        # choose inanimate noun for matrix subject if locality is satisfied
+        matrix_subj_gender = 'none' if local else pn_gender
+        # get nouns that match gender of matrix subject
+        matrix_nouns = self._get_nouns_by_gender(matrix_subj_gender)
+        matrix_subj = matrix_nouns[pn_number].sample().values[0]
+        return 'The {} {} that {}'.format(matrix_subj, matrix_verb, embedded)
+
