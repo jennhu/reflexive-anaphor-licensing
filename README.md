@@ -19,6 +19,7 @@ if `<CLAUSE_TYPE>` is `embed`.
 
 ## TODO
 
+- [ ] pilot before meeting Roger
 - [ ] generate stimuli
 - [ ] create Singularity image with dependencies
 - [ ] get GRNN surprisals
