@@ -8,6 +8,7 @@ See these [prerequisites](https://github.com/clab/rnng#prerequisites) for RNNG d
 
 ## TODO
 
+- [ ] pilot before meeting Roger
 - [ ] generate stimuli
 - [ ] create Singularity image with dependencies
 - [ ] get GRNN surprisals
