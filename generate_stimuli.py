@@ -7,7 +7,7 @@ import argparse
 import util
 import logging
 
-def main(lex_path, out_path):
+def main(lex_path, out_path, n):
     # set up logger
     logging.basicConfig(level=logging.INFO)
     log = logging.getLogger(__name__)
@@ -15,7 +15,7 @@ def main(lex_path, out_path):
     
     # dummy example -- saves 10 grammatical sentences
     L = util.Lexicon(lex_path)
-    sentences = [L.generate_sentence(clause_type='embed') for _ in range(10)]
+    sentences = [L.generate_sentence(clause_type='simple') for _ in range(n)]
     util.write_sentences(sentences, out_path)
     log.info('Wrote sentences to %s' % out_path)
 
@@ -26,5 +26,7 @@ if __name__ == '__main__':
                         help='path to files containing lexical items')
     parser.add_argument('--out_path', '-out_path', '--O', '-O',
                         help='path to save final stimuli file')
+    parser.add_argument('--n', '-n', type=int, default=10,
+                        help='number of sentences to generate')
     args = parser.parse_args()
     main(**vars(args))

@@ -1,0 +1,9 @@
+The girl 's aunt hurt herself . <eos>
+The girl 's wife convinced herself . <eos>
+The boy 's father amused himself . <eos>
+The girl 's woman taught herself . <eos>
+The boy 's brother proved himself . <eos>
+The girl 's girl helped herself . <eos>
+The boy 's man pleased himself . <eos>
+The boy 's boy enjoyed himself . <eos>
+The girl 's mother repeated herself . <eos>
