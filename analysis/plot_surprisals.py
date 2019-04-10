@@ -32,7 +32,7 @@ def prob_ratio(df1, df2):
     return mean(prob_ratios)
 
 
-def main(data, out_path):
+def main(data, out_path, group_by):
     pronouns = ['himself', 'herself', 'themselves']
     surprisal_files = listdir(data)
     dfs = []
@@ -46,7 +46,7 @@ def main(data, out_path):
         df = df.loc[df.token.isin(pronouns)]
         dfs.append(df)
     df = pd.concat(dfs)
-    plot_mean_surprisal(df, out_path)
+    plot_mean_surprisal(df, out_path, group_by)
     
 
 if __name__ == '__main__':
