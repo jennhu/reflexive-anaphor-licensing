@@ -10,16 +10,16 @@ import matplotlib.pyplot as plt
 from os import listdir
 from numpy import mean
 
-def plot_mean_surprisal(df, out_path, group_by):
+def plot_mean_surprisal(df, out_path, clause_type, group_by):
     plt.style.use('ggplot')
     mismatch_order = ['none', 'gender', 'number', 'both']
     params = dict(data=df, x=group_by, y='surprisal')
     if group_by == 'mismatch':
-        hue = 'c_command' if 'c_command' in list(df) else 'local'
+        hue = 'c_command' if clause_type == 'simple' else 'local'
         sns.barplot(hue=hue, order=mismatch_order, **params)
     else:
         sns.barplot(hue='mismatch', hue_order=mismatch_order, **params)
-    plt.title('mean GRNN surprisal')
+    plt.title('mean GRNN surprisal (%s)' % clause_type)
     plt.savefig(out_path, dpi=300, bbox_inches='tight')
 
 
@@ -38,19 +38,20 @@ def main(data, out_path, group_by):
     surprisal_files = listdir(data)
     dfs = []
     for s in surprisal_files:
+        # get parameters from file name -- see README for acceptable file names
         _, clause_type, mismatch, relation, _ = s.split('.')
         df = pd.read_csv('%s/%s' % (data, s), delim_whitespace=True,
                          names=['token', 'surprisal'])
         df['clause_type'] = clause_type
         df['mismatch'] = mismatch
-        if 'ccommand' in relation:
+        if clause_type == 'simple':
             df['c_command'] = (relation == 'ccommand')
         else:
             df['local'] = (relation == 'local')
         df = df.loc[df.token.isin(pronouns)]
         dfs.append(df)
     df = pd.concat(dfs)
-    plot_mean_surprisal(df, out_path, group_by)
+    plot_mean_surprisal(df, out_path, clause_type, group_by)
     
 
 if __name__ == '__main__':

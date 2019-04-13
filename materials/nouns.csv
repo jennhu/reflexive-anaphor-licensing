@@ -25,3 +25,7 @@ script,scripts,script's,scripts',none
 song,songs,song's,songs',none
 document,documents,document's,documents',none
 movie,movies,movie's,movies',none
+groom,groom's,grooms,grooms',male
+bride,bride's,brides,brides',female
+king,king's,kings,kings',male
+queen,queen's,queens,queens',female
