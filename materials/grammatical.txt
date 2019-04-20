@@ -1,0 +1,28 @@
+The father enjoyed himself . <eos>
+The brother confused himself . <eos>
+The brother helped himself . <eos>
+The king disappointed himself . <eos>
+The actor killed himself . <eos>
+The brother disappointed himself . <eos>
+The son behaved himself . <eos>
+The father taught himself . <eos>
+The son helped himself . <eos>
+The father behaved himself . <eos>
+The father killed himself . <eos>
+The grandfather enjoyed himself . <eos>
+The brother saved himself . <eos>
+The king proved himself . <eos>
+The father talked to himself . <eos>
+The father proved himself . <eos>
+The uncle cleaned himself . <eos>
+The grandfather talked to himself . <eos>
+The father confused himself . <eos>
+The boy behaved himself . <eos>
+The grandfather saved himself . <eos>
+The grandfather disappointed himself . <eos>
+The son repeated himself . <eos>
+The king behaved himself . <eos>
+The boy convinced himself . <eos>
+The prince talked to himself . <eos>
+The uncle behaved himself . <eos>
+The husband confused himself . <eos>

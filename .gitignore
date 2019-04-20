@@ -1,5 +1,10 @@
-# Large data files
+# Large data files, SLURM scripts, etc.
 data/
+slurm/
+surprisal_data/rnng/old/
+surprisal_data/grnn/old/
+materials/old/
+analysis/plots/old/
 
 # Temporary files
 ._*

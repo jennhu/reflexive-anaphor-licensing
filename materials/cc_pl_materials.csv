@@ -1,0 +1,211 @@
+item,clause_type,locality,c-command,grammatical,head_mismatch,distract_mismatch,mismatch_position,mismatch_feature,head_noun,distractor noun,verb,pronoun,sentence,sentence_no_eos
+1,simple,local,c-command,1,none,none,none,none,fathers,men,enjoyed,themselves,The fathers near the men enjoyed themselves . <eos>,The fathers near the men enjoyed themselves .
+1,simple,local,c-command,1,none,number,distractor,number,fathers,man,enjoyed,themselves,The fathers near the man enjoyed themselves . <eos>,The fathers near the man enjoyed themselves .
+1,simple,local,c-command,1,none,gender,distractor,gender,fathers,women,enjoyed,themselves,The fathers near the women enjoyed themselves . <eos>,The fathers near the women enjoyed themselves .
+1,simple,local,c-command,1,none,both,distractor,both,fathers,woman,enjoyed,themselves,The fathers near the woman enjoyed themselves . <eos>,The fathers near the woman enjoyed themselves .
+1,simple,local,no-c-command,0,number,none,head,number,man,fathers,enjoyed,themselves,The man near the fathers enjoyed themselves . <eos>,The man near the fathers enjoyed themselves .
+1,simple,local,no-c-command,1,gender,none,head,gender,women,fathers,enjoyed,themselves,The women near the fathers enjoyed themselves . <eos>,The women near the fathers enjoyed themselves .
+1,simple,local,no-c-command,0,both,none,head,both,woman,fathers,enjoyed,themselves,The woman near the fathers enjoyed themselves . <eos>,The woman near the fathers enjoyed themselves .
+2,simple,local,c-command,1,none,none,none,none,brothers,men,confused,themselves,The brothers near the men confused themselves . <eos>,The brothers near the men confused themselves .
+2,simple,local,c-command,1,none,number,distractor,number,brothers,man,confused,themselves,The brothers near the man confused themselves . <eos>,The brothers near the man confused themselves .
+2,simple,local,c-command,1,none,gender,distractor,gender,brothers,women,confused,themselves,The brothers near the women confused themselves . <eos>,The brothers near the women confused themselves .
+2,simple,local,c-command,1,none,both,distractor,both,brothers,woman,confused,themselves,The brothers near the woman confused themselves . <eos>,The brothers near the woman confused themselves .
+2,simple,local,no-c-command,0,number,none,head,number,man,brothers,confused,themselves,The man near the brothers confused themselves . <eos>,The man near the brothers confused themselves .
+2,simple,local,no-c-command,1,gender,none,head,gender,women,brothers,confused,themselves,The women near the brothers confused themselves . <eos>,The women near the brothers confused themselves .
+2,simple,local,no-c-command,0,both,none,head,both,woman,brothers,confused,themselves,The woman near the brothers confused themselves . <eos>,The woman near the brothers confused themselves .
+3,simple,local,c-command,1,none,none,none,none,brothers,men,helped,themselves,The brothers near the men helped themselves . <eos>,The brothers near the men helped themselves .
+3,simple,local,c-command,1,none,number,distractor,number,brothers,man,helped,themselves,The brothers near the man helped themselves . <eos>,The brothers near the man helped themselves .
+3,simple,local,c-command,1,none,gender,distractor,gender,brothers,women,helped,themselves,The brothers near the women helped themselves . <eos>,The brothers near the women helped themselves .
+3,simple,local,c-command,1,none,both,distractor,both,brothers,woman,helped,themselves,The brothers near the woman helped themselves . <eos>,The brothers near the woman helped themselves .
+3,simple,local,no-c-command,0,number,none,head,number,man,brothers,helped,themselves,The man near the brothers helped themselves . <eos>,The man near the brothers helped themselves .
+3,simple,local,no-c-command,1,gender,none,head,gender,women,brothers,helped,themselves,The women near the brothers helped themselves . <eos>,The women near the brothers helped themselves .
+3,simple,local,no-c-command,0,both,none,head,both,woman,brothers,helped,themselves,The woman near the brothers helped themselves . <eos>,The woman near the brothers helped themselves .
+4,simple,local,c-command,1,none,none,none,none,kings,men,disappointed,themselves,The kings near the men disappointed themselves . <eos>,The kings near the men disappointed themselves .
+4,simple,local,c-command,1,none,number,distractor,number,kings,man,disappointed,themselves,The kings near the man disappointed themselves . <eos>,The kings near the man disappointed themselves .
+4,simple,local,c-command,1,none,gender,distractor,gender,kings,women,disappointed,themselves,The kings near the women disappointed themselves . <eos>,The kings near the women disappointed themselves .
+4,simple,local,c-command,1,none,both,distractor,both,kings,woman,disappointed,themselves,The kings near the woman disappointed themselves . <eos>,The kings near the woman disappointed themselves .
+4,simple,local,no-c-command,0,number,none,head,number,man,kings,disappointed,themselves,The man near the kings disappointed themselves . <eos>,The man near the kings disappointed themselves .
+4,simple,local,no-c-command,1,gender,none,head,gender,women,kings,disappointed,themselves,The women near the kings disappointed themselves . <eos>,The women near the kings disappointed themselves .
+4,simple,local,no-c-command,0,both,none,head,both,woman,kings,disappointed,themselves,The woman near the kings disappointed themselves . <eos>,The woman near the kings disappointed themselves .
+5,simple,local,c-command,1,none,none,none,none,actors,men,killed,themselves,The actors near the men killed themselves . <eos>,The actors near the men killed themselves .
+5,simple,local,c-command,1,none,number,distractor,number,actors,man,killed,themselves,The actors near the man killed themselves . <eos>,The actors near the man killed themselves .
+5,simple,local,c-command,1,none,gender,distractor,gender,actors,women,killed,themselves,The actors near the women killed themselves . <eos>,The actors near the women killed themselves .
+5,simple,local,c-command,1,none,both,distractor,both,actors,woman,killed,themselves,The actors near the woman killed themselves . <eos>,The actors near the woman killed themselves .
+5,simple,local,no-c-command,0,number,none,head,number,man,actors,killed,themselves,The man near the actors killed themselves . <eos>,The man near the actors killed themselves .
+5,simple,local,no-c-command,1,gender,none,head,gender,women,actors,killed,themselves,The women near the actors killed themselves . <eos>,The women near the actors killed themselves .
+5,simple,local,no-c-command,0,both,none,head,both,woman,actors,killed,themselves,The woman near the actors killed themselves . <eos>,The woman near the actors killed themselves .
+6,simple,local,c-command,1,none,none,none,none,brothers,men,disappointed,themselves,The brothers near the men disappointed themselves . <eos>,The brothers near the men disappointed themselves .
+6,simple,local,c-command,1,none,number,distractor,number,brothers,man,disappointed,themselves,The brothers near the man disappointed themselves . <eos>,The brothers near the man disappointed themselves .
+6,simple,local,c-command,1,none,gender,distractor,gender,brothers,women,disappointed,themselves,The brothers near the women disappointed themselves . <eos>,The brothers near the women disappointed themselves .
+6,simple,local,c-command,1,none,both,distractor,both,brothers,woman,disappointed,themselves,The brothers near the woman disappointed themselves . <eos>,The brothers near the woman disappointed themselves .
+6,simple,local,no-c-command,0,number,none,head,number,man,brothers,disappointed,themselves,The man near the brothers disappointed themselves . <eos>,The man near the brothers disappointed themselves .
+6,simple,local,no-c-command,1,gender,none,head,gender,women,brothers,disappointed,themselves,The women near the brothers disappointed themselves . <eos>,The women near the brothers disappointed themselves .
+6,simple,local,no-c-command,0,both,none,head,both,woman,brothers,disappointed,themselves,The woman near the brothers disappointed themselves . <eos>,The woman near the brothers disappointed themselves .
+7,simple,local,c-command,1,none,none,none,none,sons,men,behaved,themselves,The sons near the men behaved themselves . <eos>,The sons near the men behaved themselves .
+7,simple,local,c-command,1,none,number,distractor,number,sons,man,behaved,themselves,The sons near the man behaved themselves . <eos>,The sons near the man behaved themselves .
+7,simple,local,c-command,1,none,gender,distractor,gender,sons,women,behaved,themselves,The sons near the women behaved themselves . <eos>,The sons near the women behaved themselves .
+7,simple,local,c-command,1,none,both,distractor,both,sons,woman,behaved,themselves,The sons near the woman behaved themselves . <eos>,The sons near the woman behaved themselves .
+7,simple,local,no-c-command,0,number,none,head,number,man,sons,behaved,themselves,The man near the sons behaved themselves . <eos>,The man near the sons behaved themselves .
+7,simple,local,no-c-command,1,gender,none,head,gender,women,sons,behaved,themselves,The women near the sons behaved themselves . <eos>,The women near the sons behaved themselves .
+7,simple,local,no-c-command,0,both,none,head,both,woman,sons,behaved,themselves,The woman near the sons behaved themselves . <eos>,The woman near the sons behaved themselves .
+8,simple,local,c-command,1,none,none,none,none,fathers,men,taught,themselves,The fathers near the men taught themselves . <eos>,The fathers near the men taught themselves .
+8,simple,local,c-command,1,none,number,distractor,number,fathers,man,taught,themselves,The fathers near the man taught themselves . <eos>,The fathers near the man taught themselves .
+8,simple,local,c-command,1,none,gender,distractor,gender,fathers,women,taught,themselves,The fathers near the women taught themselves . <eos>,The fathers near the women taught themselves .
+8,simple,local,c-command,1,none,both,distractor,both,fathers,woman,taught,themselves,The fathers near the woman taught themselves . <eos>,The fathers near the woman taught themselves .
+8,simple,local,no-c-command,0,number,none,head,number,man,fathers,taught,themselves,The man near the fathers taught themselves . <eos>,The man near the fathers taught themselves .
+8,simple,local,no-c-command,1,gender,none,head,gender,women,fathers,taught,themselves,The women near the fathers taught themselves . <eos>,The women near the fathers taught themselves .
+8,simple,local,no-c-command,0,both,none,head,both,woman,fathers,taught,themselves,The woman near the fathers taught themselves . <eos>,The woman near the fathers taught themselves .
+9,simple,local,c-command,1,none,none,none,none,sons,men,helped,themselves,The sons near the men helped themselves . <eos>,The sons near the men helped themselves .
+9,simple,local,c-command,1,none,number,distractor,number,sons,man,helped,themselves,The sons near the man helped themselves . <eos>,The sons near the man helped themselves .
+9,simple,local,c-command,1,none,gender,distractor,gender,sons,women,helped,themselves,The sons near the women helped themselves . <eos>,The sons near the women helped themselves .
+9,simple,local,c-command,1,none,both,distractor,both,sons,woman,helped,themselves,The sons near the woman helped themselves . <eos>,The sons near the woman helped themselves .
+9,simple,local,no-c-command,0,number,none,head,number,man,sons,helped,themselves,The man near the sons helped themselves . <eos>,The man near the sons helped themselves .
+9,simple,local,no-c-command,1,gender,none,head,gender,women,sons,helped,themselves,The women near the sons helped themselves . <eos>,The women near the sons helped themselves .
+9,simple,local,no-c-command,0,both,none,head,both,woman,sons,helped,themselves,The woman near the sons helped themselves . <eos>,The woman near the sons helped themselves .
+10,simple,local,c-command,1,none,none,none,none,fathers,men,taught,themselves,The fathers near the men taught themselves . <eos>,The fathers near the men taught themselves .
+10,simple,local,c-command,1,none,number,distractor,number,fathers,man,taught,themselves,The fathers near the man taught themselves . <eos>,The fathers near the man taught themselves .
+10,simple,local,c-command,1,none,gender,distractor,gender,fathers,women,taught,themselves,The fathers near the women taught themselves . <eos>,The fathers near the women taught themselves .
+10,simple,local,c-command,1,none,both,distractor,both,fathers,woman,taught,themselves,The fathers near the woman taught themselves . <eos>,The fathers near the woman taught themselves .
+10,simple,local,no-c-command,0,number,none,head,number,man,fathers,taught,themselves,The man near the fathers taught themselves . <eos>,The man near the fathers taught themselves .
+10,simple,local,no-c-command,1,gender,none,head,gender,women,fathers,taught,themselves,The women near the fathers taught themselves . <eos>,The women near the fathers taught themselves .
+10,simple,local,no-c-command,0,both,none,head,both,woman,fathers,taught,themselves,The woman near the fathers taught themselves . <eos>,The woman near the fathers taught themselves .
+11,simple,local,c-command,1,none,none,none,none,sons,men,helped,themselves,The sons near the men helped themselves . <eos>,The sons near the men helped themselves .
+11,simple,local,c-command,1,none,number,distractor,number,sons,man,helped,themselves,The sons near the man helped themselves . <eos>,The sons near the man helped themselves .
+11,simple,local,c-command,1,none,gender,distractor,gender,sons,women,helped,themselves,The sons near the women helped themselves . <eos>,The sons near the women helped themselves .
+11,simple,local,c-command,1,none,both,distractor,both,sons,woman,helped,themselves,The sons near the woman helped themselves . <eos>,The sons near the woman helped themselves .
+11,simple,local,no-c-command,0,number,none,head,number,man,sons,helped,themselves,The man near the sons helped themselves . <eos>,The man near the sons helped themselves .
+11,simple,local,no-c-command,1,gender,none,head,gender,women,sons,helped,themselves,The women near the sons helped themselves . <eos>,The women near the sons helped themselves .
+11,simple,local,no-c-command,0,both,none,head,both,woman,sons,helped,themselves,The woman near the sons helped themselves . <eos>,The woman near the sons helped themselves .
+12,simple,local,c-command,1,none,none,none,none,fathers,men,behaved,themselves,The fathers near the men behaved themselves . <eos>,The fathers near the men behaved themselves .
+12,simple,local,c-command,1,none,number,distractor,number,fathers,man,behaved,themselves,The fathers near the man behaved themselves . <eos>,The fathers near the man behaved themselves .
+12,simple,local,c-command,1,none,gender,distractor,gender,fathers,women,behaved,themselves,The fathers near the women behaved themselves . <eos>,The fathers near the women behaved themselves .
+12,simple,local,c-command,1,none,both,distractor,both,fathers,woman,behaved,themselves,The fathers near the woman behaved themselves . <eos>,The fathers near the woman behaved themselves .
+12,simple,local,no-c-command,0,number,none,head,number,man,fathers,behaved,themselves,The man near the fathers behaved themselves . <eos>,The man near the fathers behaved themselves .
+12,simple,local,no-c-command,1,gender,none,head,gender,women,fathers,behaved,themselves,The women near the fathers behaved themselves . <eos>,The women near the fathers behaved themselves .
+12,simple,local,no-c-command,0,both,none,head,both,woman,fathers,behaved,themselves,The woman near the fathers behaved themselves . <eos>,The woman near the fathers behaved themselves .
+13,simple,local,c-command,1,none,none,none,none,fathers,men,killed,themselves,The fathers near the men killed themselves . <eos>,The fathers near the men killed themselves .
+13,simple,local,c-command,1,none,number,distractor,number,fathers,man,killed,themselves,The fathers near the man killed themselves . <eos>,The fathers near the man killed themselves .
+13,simple,local,c-command,1,none,gender,distractor,gender,fathers,women,killed,themselves,The fathers near the women killed themselves . <eos>,The fathers near the women killed themselves .
+13,simple,local,c-command,1,none,both,distractor,both,fathers,woman,killed,themselves,The fathers near the woman killed themselves . <eos>,The fathers near the woman killed themselves .
+13,simple,local,no-c-command,0,number,none,head,number,man,fathers,killed,themselves,The man near the fathers killed themselves . <eos>,The man near the fathers killed themselves .
+13,simple,local,no-c-command,1,gender,none,head,gender,women,fathers,killed,themselves,The women near the fathers killed themselves . <eos>,The women near the fathers killed themselves .
+13,simple,local,no-c-command,0,both,none,head,both,woman,fathers,killed,themselves,The woman near the fathers killed themselves . <eos>,The woman near the fathers killed themselves .
+14,simple,local,c-command,1,none,none,none,none,fathers,men,enjoyed,themselves,The fathers near the men enjoyed themselves . <eos>,The fathers near the men enjoyed themselves .
+14,simple,local,c-command,1,none,number,distractor,number,fathers,man,enjoyed,themselves,The fathers near the man enjoyed themselves . <eos>,The fathers near the man enjoyed themselves .
+14,simple,local,c-command,1,none,gender,distractor,gender,fathers,women,enjoyed,themselves,The fathers near the women enjoyed themselves . <eos>,The fathers near the women enjoyed themselves .
+14,simple,local,c-command,1,none,both,distractor,both,fathers,woman,enjoyed,themselves,The fathers near the woman enjoyed themselves . <eos>,The fathers near the woman enjoyed themselves .
+14,simple,local,no-c-command,0,number,none,head,number,man,fathers,enjoyed,themselves,The man near the fathers enjoyed themselves . <eos>,The man near the fathers enjoyed themselves .
+14,simple,local,no-c-command,1,gender,none,head,gender,women,fathers,enjoyed,themselves,The women near the fathers enjoyed themselves . <eos>,The women near the fathers enjoyed themselves .
+14,simple,local,no-c-command,0,both,none,head,both,woman,fathers,enjoyed,themselves,The woman near the fathers enjoyed themselves . <eos>,The woman near the fathers enjoyed themselves .
+15,simple,local,c-command,1,none,none,none,none,brothers,men,saved,themselves,The brothers near the men saved themselves . <eos>,The brothers near the men saved themselves .
+15,simple,local,c-command,1,none,number,distractor,number,brothers,man,saved,themselves,The brothers near the man saved themselves . <eos>,The brothers near the man saved themselves .
+15,simple,local,c-command,1,none,gender,distractor,gender,brothers,women,saved,themselves,The brothers near the women saved themselves . <eos>,The brothers near the women saved themselves .
+15,simple,local,c-command,1,none,both,distractor,both,brothers,woman,saved,themselves,The brothers near the woman saved themselves . <eos>,The brothers near the woman saved themselves .
+15,simple,local,no-c-command,0,number,none,head,number,man,brothers,saved,themselves,The man near the brothers saved themselves . <eos>,The man near the brothers saved themselves .
+15,simple,local,no-c-command,1,gender,none,head,gender,women,brothers,saved,themselves,The women near the brothers saved themselves . <eos>,The women near the brothers saved themselves .
+15,simple,local,no-c-command,0,both,none,head,both,woman,brothers,saved,themselves,The woman near the brothers saved themselves . <eos>,The woman near the brothers saved themselves .
+16,simple,local,c-command,1,none,none,none,none,kings,men,proved,themselves,The kings near the men proved themselves . <eos>,The kings near the men proved themselves .
+16,simple,local,c-command,1,none,number,distractor,number,kings,man,proved,themselves,The kings near the man proved themselves . <eos>,The kings near the man proved themselves .
+16,simple,local,c-command,1,none,gender,distractor,gender,kings,women,proved,themselves,The kings near the women proved themselves . <eos>,The kings near the women proved themselves .
+16,simple,local,c-command,1,none,both,distractor,both,kings,woman,proved,themselves,The kings near the woman proved themselves . <eos>,The kings near the woman proved themselves .
+16,simple,local,no-c-command,0,number,none,head,number,man,kings,proved,themselves,The man near the kings proved themselves . <eos>,The man near the kings proved themselves .
+16,simple,local,no-c-command,1,gender,none,head,gender,women,kings,proved,themselves,The women near the kings proved themselves . <eos>,The women near the kings proved themselves .
+16,simple,local,no-c-command,0,both,none,head,both,woman,kings,proved,themselves,The woman near the kings proved themselves . <eos>,The woman near the kings proved themselves .
+17,simple,local,c-command,1,none,none,none,none,fathers,men,talked to,themselves,The fathers near the men talked to themselves . <eos>,The fathers near the men talked to themselves .
+17,simple,local,c-command,1,none,number,distractor,number,fathers,man,talked to,themselves,The fathers near the man talked to themselves . <eos>,The fathers near the man talked to themselves .
+17,simple,local,c-command,1,none,gender,distractor,gender,fathers,women,talked to,themselves,The fathers near the women talked to themselves . <eos>,The fathers near the women talked to themselves .
+17,simple,local,c-command,1,none,both,distractor,both,fathers,woman,talked to,themselves,The fathers near the woman talked to themselves . <eos>,The fathers near the woman talked to themselves .
+17,simple,local,no-c-command,0,number,none,head,number,man,fathers,talked to,themselves,The man near the fathers talked to themselves . <eos>,The man near the fathers talked to themselves .
+17,simple,local,no-c-command,1,gender,none,head,gender,women,fathers,talked to,themselves,The women near the fathers talked to themselves . <eos>,The women near the fathers talked to themselves .
+17,simple,local,no-c-command,0,both,none,head,both,woman,fathers,talked to,themselves,The woman near the fathers talked to themselves . <eos>,The woman near the fathers talked to themselves .
+18,simple,local,c-command,1,none,none,none,none,fathers,men,proved,themselves,The fathers near the men proved themselves . <eos>,The fathers near the men proved themselves .
+18,simple,local,c-command,1,none,number,distractor,number,fathers,man,proved,themselves,The fathers near the man proved themselves . <eos>,The fathers near the man proved themselves .
+18,simple,local,c-command,1,none,gender,distractor,gender,fathers,women,proved,themselves,The fathers near the women proved themselves . <eos>,The fathers near the women proved themselves .
+18,simple,local,c-command,1,none,both,distractor,both,fathers,woman,proved,themselves,The fathers near the woman proved themselves . <eos>,The fathers near the woman proved themselves .
+18,simple,local,no-c-command,0,number,none,head,number,man,fathers,proved,themselves,The man near the fathers proved themselves . <eos>,The man near the fathers proved themselves .
+18,simple,local,no-c-command,1,gender,none,head,gender,women,fathers,proved,themselves,The women near the fathers proved themselves . <eos>,The women near the fathers proved themselves .
+18,simple,local,no-c-command,0,both,none,head,both,woman,fathers,proved,themselves,The woman near the fathers proved themselves . <eos>,The woman near the fathers proved themselves .
+19,simple,local,c-command,1,none,none,none,none,sons,men,cleaned,themselves,The sons near the men cleaned themselves . <eos>,The sons near the men cleaned themselves .
+19,simple,local,c-command,1,none,number,distractor,number,sons,man,cleaned,themselves,The sons near the man cleaned themselves . <eos>,The sons near the man cleaned themselves .
+19,simple,local,c-command,1,none,gender,distractor,gender,sons,women,cleaned,themselves,The sons near the women cleaned themselves . <eos>,The sons near the women cleaned themselves .
+19,simple,local,c-command,1,none,both,distractor,both,sons,woman,cleaned,themselves,The sons near the woman cleaned themselves . <eos>,The sons near the woman cleaned themselves .
+19,simple,local,no-c-command,0,number,none,head,number,man,sons,cleaned,themselves,The man near the sons cleaned themselves . <eos>,The man near the sons cleaned themselves .
+19,simple,local,no-c-command,1,gender,none,head,gender,women,sons,cleaned,themselves,The women near the sons cleaned themselves . <eos>,The women near the sons cleaned themselves .
+19,simple,local,no-c-command,0,both,none,head,both,woman,sons,cleaned,themselves,The woman near the sons cleaned themselves . <eos>,The woman near the sons cleaned themselves .
+20,simple,local,c-command,1,none,none,none,none,fathers,men,talked to,themselves,The fathers near the men talked to themselves . <eos>,The fathers near the men talked to themselves .
+20,simple,local,c-command,1,none,number,distractor,number,fathers,man,talked to,themselves,The fathers near the man talked to themselves . <eos>,The fathers near the man talked to themselves .
+20,simple,local,c-command,1,none,gender,distractor,gender,fathers,women,talked to,themselves,The fathers near the women talked to themselves . <eos>,The fathers near the women talked to themselves .
+20,simple,local,c-command,1,none,both,distractor,both,fathers,woman,talked to,themselves,The fathers near the woman talked to themselves . <eos>,The fathers near the woman talked to themselves .
+20,simple,local,no-c-command,0,number,none,head,number,man,fathers,talked to,themselves,The man near the fathers talked to themselves . <eos>,The man near the fathers talked to themselves .
+20,simple,local,no-c-command,1,gender,none,head,gender,women,fathers,talked to,themselves,The women near the fathers talked to themselves . <eos>,The women near the fathers talked to themselves .
+20,simple,local,no-c-command,0,both,none,head,both,woman,fathers,talked to,themselves,The woman near the fathers talked to themselves . <eos>,The woman near the fathers talked to themselves .
+21,simple,local,c-command,1,none,none,none,none,fathers,men,confused,themselves,The fathers near the men confused themselves . <eos>,The fathers near the men confused themselves .
+21,simple,local,c-command,1,none,number,distractor,number,fathers,man,confused,themselves,The fathers near the man confused themselves . <eos>,The fathers near the man confused themselves .
+21,simple,local,c-command,1,none,gender,distractor,gender,fathers,women,confused,themselves,The fathers near the women confused themselves . <eos>,The fathers near the women confused themselves .
+21,simple,local,c-command,1,none,both,distractor,both,fathers,woman,confused,themselves,The fathers near the woman confused themselves . <eos>,The fathers near the woman confused themselves .
+21,simple,local,no-c-command,0,number,none,head,number,man,fathers,confused,themselves,The man near the fathers confused themselves . <eos>,The man near the fathers confused themselves .
+21,simple,local,no-c-command,1,gender,none,head,gender,women,fathers,confused,themselves,The women near the fathers confused themselves . <eos>,The women near the fathers confused themselves .
+21,simple,local,no-c-command,0,both,none,head,both,woman,fathers,confused,themselves,The woman near the fathers confused themselves . <eos>,The woman near the fathers confused themselves .
+22,simple,local,c-command,1,none,none,none,none,boys,men,behaved,themselves,The boys near the men behaved themselves . <eos>,The boys near the men behaved themselves .
+22,simple,local,c-command,1,none,number,distractor,number,boys,man,behaved,themselves,The boys near the man behaved themselves . <eos>,The boys near the man behaved themselves .
+22,simple,local,c-command,1,none,gender,distractor,gender,boys,women,behaved,themselves,The boys near the women behaved themselves . <eos>,The boys near the women behaved themselves .
+22,simple,local,c-command,1,none,both,distractor,both,boys,woman,behaved,themselves,The boys near the woman behaved themselves . <eos>,The boys near the woman behaved themselves .
+22,simple,local,no-c-command,0,number,none,head,number,man,boys,behaved,themselves,The man near the boys behaved themselves . <eos>,The man near the boys behaved themselves .
+22,simple,local,no-c-command,1,gender,none,head,gender,women,boys,behaved,themselves,The women near the boys behaved themselves . <eos>,The women near the boys behaved themselves .
+22,simple,local,no-c-command,0,both,none,head,both,woman,boys,behaved,themselves,The woman near the boys behaved themselves . <eos>,The woman near the boys behaved themselves .
+23,simple,local,c-command,1,none,none,none,none,fathers,men,saved,themselves,The fathers near the men saved themselves . <eos>,The fathers near the men saved themselves .
+23,simple,local,c-command,1,none,number,distractor,number,fathers,man,saved,themselves,The fathers near the man saved themselves . <eos>,The fathers near the man saved themselves .
+23,simple,local,c-command,1,none,gender,distractor,gender,fathers,women,saved,themselves,The fathers near the women saved themselves . <eos>,The fathers near the women saved themselves .
+23,simple,local,c-command,1,none,both,distractor,both,fathers,woman,saved,themselves,The fathers near the woman saved themselves . <eos>,The fathers near the woman saved themselves .
+23,simple,local,no-c-command,0,number,none,head,number,man,fathers,saved,themselves,The man near the fathers saved themselves . <eos>,The man near the fathers saved themselves .
+23,simple,local,no-c-command,1,gender,none,head,gender,women,fathers,saved,themselves,The women near the fathers saved themselves . <eos>,The women near the fathers saved themselves .
+23,simple,local,no-c-command,0,both,none,head,both,woman,fathers,saved,themselves,The woman near the fathers saved themselves . <eos>,The woman near the fathers saved themselves .
+24,simple,local,c-command,1,none,none,none,none,fathers,men,disappointed,themselves,The fathers near the men disappointed themselves . <eos>,The fathers near the men disappointed themselves .
+24,simple,local,c-command,1,none,number,distractor,number,fathers,man,disappointed,themselves,The fathers near the man disappointed themselves . <eos>,The fathers near the man disappointed themselves .
+24,simple,local,c-command,1,none,gender,distractor,gender,fathers,women,disappointed,themselves,The fathers near the women disappointed themselves . <eos>,The fathers near the women disappointed themselves .
+24,simple,local,c-command,1,none,both,distractor,both,fathers,woman,disappointed,themselves,The fathers near the woman disappointed themselves . <eos>,The fathers near the woman disappointed themselves .
+24,simple,local,no-c-command,0,number,none,head,number,man,fathers,disappointed,themselves,The man near the fathers disappointed themselves . <eos>,The man near the fathers disappointed themselves .
+24,simple,local,no-c-command,1,gender,none,head,gender,women,fathers,disappointed,themselves,The women near the fathers disappointed themselves . <eos>,The women near the fathers disappointed themselves .
+24,simple,local,no-c-command,0,both,none,head,both,woman,fathers,disappointed,themselves,The woman near the fathers disappointed themselves . <eos>,The woman near the fathers disappointed themselves .
+25,simple,local,c-command,1,none,none,none,none,sons,men,repeated,themselves,The sons near the men repeated themselves . <eos>,The sons near the men repeated themselves .
+25,simple,local,c-command,1,none,number,distractor,number,sons,man,repeated,themselves,The sons near the man repeated themselves . <eos>,The sons near the man repeated themselves .
+25,simple,local,c-command,1,none,gender,distractor,gender,sons,women,repeated,themselves,The sons near the women repeated themselves . <eos>,The sons near the women repeated themselves .
+25,simple,local,c-command,1,none,both,distractor,both,sons,woman,repeated,themselves,The sons near the woman repeated themselves . <eos>,The sons near the woman repeated themselves .
+25,simple,local,no-c-command,0,number,none,head,number,man,sons,repeated,themselves,The man near the sons repeated themselves . <eos>,The man near the sons repeated themselves .
+25,simple,local,no-c-command,1,gender,none,head,gender,women,sons,repeated,themselves,The women near the sons repeated themselves . <eos>,The women near the sons repeated themselves .
+25,simple,local,no-c-command,0,both,none,head,both,woman,sons,repeated,themselves,The woman near the sons repeated themselves . <eos>,The woman near the sons repeated themselves .
+26,simple,local,c-command,1,none,none,none,none,kings,men,behaved,themselves,The kings near the men behaved themselves . <eos>,The kings near the men behaved themselves .
+26,simple,local,c-command,1,none,number,distractor,number,kings,man,behaved,themselves,The kings near the man behaved themselves . <eos>,The kings near the man behaved themselves .
+26,simple,local,c-command,1,none,gender,distractor,gender,kings,women,behaved,themselves,The kings near the women behaved themselves . <eos>,The kings near the women behaved themselves .
+26,simple,local,c-command,1,none,both,distractor,both,kings,woman,behaved,themselves,The kings near the woman behaved themselves . <eos>,The kings near the woman behaved themselves .
+26,simple,local,no-c-command,0,number,none,head,number,man,kings,behaved,themselves,The man near the kings behaved themselves . <eos>,The man near the kings behaved themselves .
+26,simple,local,no-c-command,1,gender,none,head,gender,women,kings,behaved,themselves,The women near the kings behaved themselves . <eos>,The women near the kings behaved themselves .
+26,simple,local,no-c-command,0,both,none,head,both,woman,kings,behaved,themselves,The woman near the kings behaved themselves . <eos>,The woman near the kings behaved themselves .
+27,simple,local,c-command,1,none,none,none,none,boys,men,convinced,themselves,The boys near the men convinced themselves . <eos>,The boys near the men convinced themselves .
+27,simple,local,c-command,1,none,number,distractor,number,boys,man,convinced,themselves,The boys near the man convinced themselves . <eos>,The boys near the man convinced themselves .
+27,simple,local,c-command,1,none,gender,distractor,gender,boys,women,convinced,themselves,The boys near the women convinced themselves . <eos>,The boys near the women convinced themselves .
+27,simple,local,c-command,1,none,both,distractor,both,boys,woman,convinced,themselves,The boys near the woman convinced themselves . <eos>,The boys near the woman convinced themselves .
+27,simple,local,no-c-command,0,number,none,head,number,man,boys,convinced,themselves,The man near the boys convinced themselves . <eos>,The man near the boys convinced themselves .
+27,simple,local,no-c-command,1,gender,none,head,gender,women,boys,convinced,themselves,The women near the boys convinced themselves . <eos>,The women near the boys convinced themselves .
+27,simple,local,no-c-command,0,both,none,head,both,woman,boys,convinced,themselves,The woman near the boys convinced themselves . <eos>,The woman near the boys convinced themselves .
+28,simple,local,c-command,1,none,none,none,none,kings,men,talked to,themselves,The kings near the men talked to themselves . <eos>,The kings near the men talked to themselves .
+28,simple,local,c-command,1,none,number,distractor,number,kings,man,talked to,themselves,The kings near the man talked to themselves . <eos>,The kings near the man talked to themselves .
+28,simple,local,c-command,1,none,gender,distractor,gender,kings,women,talked to,themselves,The kings near the women talked to themselves . <eos>,The kings near the women talked to themselves .
+28,simple,local,c-command,1,none,both,distractor,both,kings,woman,talked to,themselves,The kings near the woman talked to themselves . <eos>,The kings near the woman talked to themselves .
+28,simple,local,no-c-command,0,number,none,head,number,man,kings,talked to,themselves,The man near the kings talked to themselves . <eos>,The man near the kings talked to themselves .
+28,simple,local,no-c-command,1,gender,none,head,gender,women,kings,talked to,themselves,The women near the kings talked to themselves . <eos>,The women near the kings talked to themselves .
+28,simple,local,no-c-command,0,both,none,head,both,woman,kings,talked to,themselves,The woman near the kings talked to themselves . <eos>,The woman near the kings talked to themselves .
+29,simple,local,c-command,1,none,none,none,none,sons,men,behaved,themselves,The sons near the men behaved themselves . <eos>,The sons near the men behaved themselves .
+29,simple,local,c-command,1,none,number,distractor,number,sons,man,behaved,themselves,The sons near the man behaved themselves . <eos>,The sons near the man behaved themselves .
+29,simple,local,c-command,1,none,gender,distractor,gender,sons,women,behaved,themselves,The sons near the women behaved themselves . <eos>,The sons near the women behaved themselves .
+29,simple,local,c-command,1,none,both,distractor,both,sons,woman,behaved,themselves,The sons near the woman behaved themselves . <eos>,The sons near the woman behaved themselves .
+29,simple,local,no-c-command,0,number,none,head,number,man,sons,behaved,themselves,The man near the sons behaved themselves . <eos>,The man near the sons behaved themselves .
+29,simple,local,no-c-command,1,gender,none,head,gender,women,sons,behaved,themselves,The women near the sons behaved themselves . <eos>,The women near the sons behaved themselves .
+29,simple,local,no-c-command,0,both,none,head,both,woman,sons,behaved,themselves,The woman near the sons behaved themselves . <eos>,The woman near the sons behaved themselves .
+30,simple,local,c-command,1,none,none,none,none,husbands,men,confused,themselves,The husbands near the men confused themselves . <eos>,The husbands near the men confused themselves .
+30,simple,local,c-command,1,none,number,distractor,number,husbands,man,confused,themselves,The husbands near the man confused themselves . <eos>,The husbands near the man confused themselves .
+30,simple,local,c-command,1,none,gender,distractor,gender,husbands,women,confused,themselves,The husbands near the women confused themselves . <eos>,The husbands near the women confused themselves .
+30,simple,local,c-command,1,none,both,distractor,both,husbands,woman,confused,themselves,The husbands near the woman confused themselves . <eos>,The husbands near the woman confused themselves .
+30,simple,local,no-c-command,0,number,none,head,number,man,husbands,confused,themselves,The man near the husbands confused themselves . <eos>,The man near the husbands confused themselves .
+30,simple,local,no-c-command,1,gender,none,head,gender,women,husbands,confused,themselves,The women near the husbands confused themselves . <eos>,The women near the husbands confused themselves .
+30,simple,local,no-c-command,0,both,none,head,both,woman,husbands,confused,themselves,The woman near the husbands confused themselves . <eos>,The woman near the husbands confused themselves .

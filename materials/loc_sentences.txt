@@ -1,0 +1,210 @@
+The father said that the man enjoyed himself . <eos>
+The father said that the men enjoyed himself . <eos>
+The father said that the woman enjoyed himself . <eos>
+The father said that the women enjoyed himself . <eos>
+The men said that the father enjoyed himself . <eos>
+The woman said that the father enjoyed himself . <eos>
+The women said that the father enjoyed himself . <eos>
+The brother said that the man confused himself . <eos>
+The brother said that the men confused himself . <eos>
+The brother said that the woman confused himself . <eos>
+The brother said that the women confused himself . <eos>
+The men said that the brother confused himself . <eos>
+The woman said that the brother confused himself . <eos>
+The women said that the brother confused himself . <eos>
+The brother said that the man helped himself . <eos>
+The brother said that the men helped himself . <eos>
+The brother said that the woman helped himself . <eos>
+The brother said that the women helped himself . <eos>
+The men said that the brother helped himself . <eos>
+The woman said that the brother helped himself . <eos>
+The women said that the brother helped himself . <eos>
+The king said that the man disappointed himself . <eos>
+The king said that the men disappointed himself . <eos>
+The king said that the woman disappointed himself . <eos>
+The king said that the women disappointed himself . <eos>
+The men said that the king disappointed himself . <eos>
+The woman said that the king disappointed himself . <eos>
+The women said that the king disappointed himself . <eos>
+The actor said that the man killed himself . <eos>
+The actor said that the men killed himself . <eos>
+The actor said that the woman killed himself . <eos>
+The actor said that the women killed himself . <eos>
+The men said that the actor killed himself . <eos>
+The woman said that the actor killed himself . <eos>
+The women said that the actor killed himself . <eos>
+The brother said that the man disappointed himself . <eos>
+The brother said that the men disappointed himself . <eos>
+The brother said that the woman disappointed himself . <eos>
+The brother said that the women disappointed himself . <eos>
+The men said that the brother disappointed himself . <eos>
+The woman said that the brother disappointed himself . <eos>
+The women said that the brother disappointed himself . <eos>
+The son said that the man behaved himself . <eos>
+The son said that the men behaved himself . <eos>
+The son said that the woman behaved himself . <eos>
+The son said that the women behaved himself . <eos>
+The men said that the son behaved himself . <eos>
+The woman said that the son behaved himself . <eos>
+The women said that the son behaved himself . <eos>
+The father said that the man taught himself . <eos>
+The father said that the men taught himself . <eos>
+The father said that the woman taught himself . <eos>
+The father said that the women taught himself . <eos>
+The men said that the father taught himself . <eos>
+The woman said that the father taught himself . <eos>
+The women said that the father taught himself . <eos>
+The son said that the man helped himself . <eos>
+The son said that the men helped himself . <eos>
+The son said that the woman helped himself . <eos>
+The son said that the women helped himself . <eos>
+The men said that the son helped himself . <eos>
+The woman said that the son helped himself . <eos>
+The women said that the son helped himself . <eos>
+The father said that the man taught himself . <eos>
+The father said that the men taught himself . <eos>
+The father said that the woman taught himself . <eos>
+The father said that the women taught himself . <eos>
+The men said that the father taught himself . <eos>
+The woman said that the father taught himself . <eos>
+The women said that the father taught himself . <eos>
+The son said that the man helped himself . <eos>
+The son said that the men helped himself . <eos>
+The son said that the woman helped himself . <eos>
+The son said that the women helped himself . <eos>
+The men said that the son helped himself . <eos>
+The woman said that the son helped himself . <eos>
+The women said that the son helped himself . <eos>
+The father said that the man behaved himself . <eos>
+The father said that the men behaved himself . <eos>
+The father said that the woman behaved himself . <eos>
+The father said that the women behaved himself . <eos>
+The men said that the father behaved himself . <eos>
+The woman said that the father behaved himself . <eos>
+The women said that the father behaved himself . <eos>
+The father said that the man killed himself . <eos>
+The father said that the men killed himself . <eos>
+The father said that the woman killed himself . <eos>
+The father said that the women killed himself . <eos>
+The men said that the father killed himself . <eos>
+The woman said that the father killed himself . <eos>
+The women said that the father killed himself . <eos>
+The grandfather said that the man enjoyed himself . <eos>
+The grandfather said that the men enjoyed himself . <eos>
+The grandfather said that the woman enjoyed himself . <eos>
+The grandfather said that the women enjoyed himself . <eos>
+The men said that the grandfather enjoyed himself . <eos>
+The woman said that the grandfather enjoyed himself . <eos>
+The women said that the grandfather enjoyed himself . <eos>
+The brother said that the man saved himself . <eos>
+The brother said that the men saved himself . <eos>
+The brother said that the woman saved himself . <eos>
+The brother said that the women saved himself . <eos>
+The men said that the brother saved himself . <eos>
+The woman said that the brother saved himself . <eos>
+The women said that the brother saved himself . <eos>
+The king said that the man proved himself . <eos>
+The king said that the men proved himself . <eos>
+The king said that the woman proved himself . <eos>
+The king said that the women proved himself . <eos>
+The men said that the king proved himself . <eos>
+The woman said that the king proved himself . <eos>
+The women said that the king proved himself . <eos>
+The father said that the man talked to himself . <eos>
+The father said that the men talked to himself . <eos>
+The father said that the woman talked to himself . <eos>
+The father said that the women talked to himself . <eos>
+The men said that the father talked to himself . <eos>
+The woman said that the father talked to himself . <eos>
+The women said that the father talked to himself . <eos>
+The father said that the man proved himself . <eos>
+The father said that the men proved himself . <eos>
+The father said that the woman proved himself . <eos>
+The father said that the women proved himself . <eos>
+The men said that the father proved himself . <eos>
+The woman said that the father proved himself . <eos>
+The women said that the father proved himself . <eos>
+The uncle said that the man cleaned himself . <eos>
+The uncle said that the men cleaned himself . <eos>
+The uncle said that the woman cleaned himself . <eos>
+The uncle said that the women cleaned himself . <eos>
+The men said that the uncle cleaned himself . <eos>
+The woman said that the uncle cleaned himself . <eos>
+The women said that the uncle cleaned himself . <eos>
+The grandfather said that the man talked to himself . <eos>
+The grandfather said that the men talked to himself . <eos>
+The grandfather said that the woman talked to himself . <eos>
+The grandfather said that the women talked to himself . <eos>
+The men said that the grandfather talked to himself . <eos>
+The woman said that the grandfather talked to himself . <eos>
+The women said that the grandfather talked to himself . <eos>
+The father said that the man confused himself . <eos>
+The father said that the men confused himself . <eos>
+The father said that the woman confused himself . <eos>
+The father said that the women confused himself . <eos>
+The men said that the father confused himself . <eos>
+The woman said that the father confused himself . <eos>
+The women said that the father confused himself . <eos>
+The boy said that the man behaved himself . <eos>
+The boy said that the men behaved himself . <eos>
+The boy said that the woman behaved himself . <eos>
+The boy said that the women behaved himself . <eos>
+The men said that the boy behaved himself . <eos>
+The woman said that the boy behaved himself . <eos>
+The women said that the boy behaved himself . <eos>
+The grandfather said that the man saved himself . <eos>
+The grandfather said that the men saved himself . <eos>
+The grandfather said that the woman saved himself . <eos>
+The grandfather said that the women saved himself . <eos>
+The men said that the grandfather saved himself . <eos>
+The woman said that the grandfather saved himself . <eos>
+The women said that the grandfather saved himself . <eos>
+The grandfather said that the man disappointed himself . <eos>
+The grandfather said that the men disappointed himself . <eos>
+The grandfather said that the woman disappointed himself . <eos>
+The grandfather said that the women disappointed himself . <eos>
+The men said that the grandfather disappointed himself . <eos>
+The woman said that the grandfather disappointed himself . <eos>
+The women said that the grandfather disappointed himself . <eos>
+The son said that the man repeated himself . <eos>
+The son said that the men repeated himself . <eos>
+The son said that the woman repeated himself . <eos>
+The son said that the women repeated himself . <eos>
+The men said that the son repeated himself . <eos>
+The woman said that the son repeated himself . <eos>
+The women said that the son repeated himself . <eos>
+The king said that the man behaved himself . <eos>
+The king said that the men behaved himself . <eos>
+The king said that the woman behaved himself . <eos>
+The king said that the women behaved himself . <eos>
+The men said that the king behaved himself . <eos>
+The woman said that the king behaved himself . <eos>
+The women said that the king behaved himself . <eos>
+The boy said that the man convinced himself . <eos>
+The boy said that the men convinced himself . <eos>
+The boy said that the woman convinced himself . <eos>
+The boy said that the women convinced himself . <eos>
+The men said that the boy convinced himself . <eos>
+The woman said that the boy convinced himself . <eos>
+The women said that the boy convinced himself . <eos>
+The prince said that the man talked to himself . <eos>
+The prince said that the men talked to himself . <eos>
+The prince said that the woman talked to himself . <eos>
+The prince said that the women talked to himself . <eos>
+The men said that the prince talked to himself . <eos>
+The woman said that the prince talked to himself . <eos>
+The women said that the prince talked to himself . <eos>
+The uncle said that the man behaved himself . <eos>
+The uncle said that the men behaved himself . <eos>
+The uncle said that the woman behaved himself . <eos>
+The uncle said that the women behaved himself . <eos>
+The men said that the uncle behaved himself . <eos>
+The woman said that the uncle behaved himself . <eos>
+The women said that the uncle behaved himself . <eos>
+The husband said that the man confused himself . <eos>
+The husband said that the men confused himself . <eos>
+The husband said that the woman confused himself . <eos>
+The husband said that the women confused himself . <eos>
+The men said that the husband confused himself . <eos>
+The woman said that the husband confused himself . <eos>
+The women said that the husband confused himself . <eos>

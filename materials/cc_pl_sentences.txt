@@ -1,0 +1,210 @@
+The fathers near the men enjoyed themselves . <eos>
+The fathers near the man enjoyed themselves . <eos>
+The fathers near the women enjoyed themselves . <eos>
+The fathers near the woman enjoyed themselves . <eos>
+The man near the fathers enjoyed themselves . <eos>
+The women near the fathers enjoyed themselves . <eos>
+The woman near the fathers enjoyed themselves . <eos>
+The brothers near the men confused themselves . <eos>
+The brothers near the man confused themselves . <eos>
+The brothers near the women confused themselves . <eos>
+The brothers near the woman confused themselves . <eos>
+The man near the brothers confused themselves . <eos>
+The women near the brothers confused themselves . <eos>
+The woman near the brothers confused themselves . <eos>
+The brothers near the men helped themselves . <eos>
+The brothers near the man helped themselves . <eos>
+The brothers near the women helped themselves . <eos>
+The brothers near the woman helped themselves . <eos>
+The man near the brothers helped themselves . <eos>
+The women near the brothers helped themselves . <eos>
+The woman near the brothers helped themselves . <eos>
+The kings near the men disappointed themselves . <eos>
+The kings near the man disappointed themselves . <eos>
+The kings near the women disappointed themselves . <eos>
+The kings near the woman disappointed themselves . <eos>
+The man near the kings disappointed themselves . <eos>
+The women near the kings disappointed themselves . <eos>
+The woman near the kings disappointed themselves . <eos>
+The actors near the men killed themselves . <eos>
+The actors near the man killed themselves . <eos>
+The actors near the women killed themselves . <eos>
+The actors near the woman killed themselves . <eos>
+The man near the actors killed themselves . <eos>
+The women near the actors killed themselves . <eos>
+The woman near the actors killed themselves . <eos>
+The brothers near the men disappointed themselves . <eos>
+The brothers near the man disappointed themselves . <eos>
+The brothers near the women disappointed themselves . <eos>
+The brothers near the woman disappointed themselves . <eos>
+The man near the brothers disappointed themselves . <eos>
+The women near the brothers disappointed themselves . <eos>
+The woman near the brothers disappointed themselves . <eos>
+The sons near the men behaved themselves . <eos>
+The sons near the man behaved themselves . <eos>
+The sons near the women behaved themselves . <eos>
+The sons near the woman behaved themselves . <eos>
+The man near the sons behaved themselves . <eos>
+The women near the sons behaved themselves . <eos>
+The woman near the sons behaved themselves . <eos>
+The fathers near the men taught themselves . <eos>
+The fathers near the man taught themselves . <eos>
+The fathers near the women taught themselves . <eos>
+The fathers near the woman taught themselves . <eos>
+The man near the fathers taught themselves . <eos>
+The women near the fathers taught themselves . <eos>
+The woman near the fathers taught themselves . <eos>
+The sons near the men helped themselves . <eos>
+The sons near the man helped themselves . <eos>
+The sons near the women helped themselves . <eos>
+The sons near the woman helped themselves . <eos>
+The man near the sons helped themselves . <eos>
+The women near the sons helped themselves . <eos>
+The woman near the sons helped themselves . <eos>
+The fathers near the men taught themselves . <eos>
+The fathers near the man taught themselves . <eos>
+The fathers near the women taught themselves . <eos>
+The fathers near the woman taught themselves . <eos>
+The man near the fathers taught themselves . <eos>
+The women near the fathers taught themselves . <eos>
+The woman near the fathers taught themselves . <eos>
+The sons near the men helped themselves . <eos>
+The sons near the man helped themselves . <eos>
+The sons near the women helped themselves . <eos>
+The sons near the woman helped themselves . <eos>
+The man near the sons helped themselves . <eos>
+The women near the sons helped themselves . <eos>
+The woman near the sons helped themselves . <eos>
+The fathers near the men behaved themselves . <eos>
+The fathers near the man behaved themselves . <eos>
+The fathers near the women behaved themselves . <eos>
+The fathers near the woman behaved themselves . <eos>
+The man near the fathers behaved themselves . <eos>
+The women near the fathers behaved themselves . <eos>
+The woman near the fathers behaved themselves . <eos>
+The fathers near the men killed themselves . <eos>
+The fathers near the man killed themselves . <eos>
+The fathers near the women killed themselves . <eos>
+The fathers near the woman killed themselves . <eos>
+The man near the fathers killed themselves . <eos>
+The women near the fathers killed themselves . <eos>
+The woman near the fathers killed themselves . <eos>
+The fathers near the men enjoyed themselves . <eos>
+The fathers near the man enjoyed themselves . <eos>
+The fathers near the women enjoyed themselves . <eos>
+The fathers near the woman enjoyed themselves . <eos>
+The man near the fathers enjoyed themselves . <eos>
+The women near the fathers enjoyed themselves . <eos>
+The woman near the fathers enjoyed themselves . <eos>
+The brothers near the men saved themselves . <eos>
+The brothers near the man saved themselves . <eos>
+The brothers near the women saved themselves . <eos>
+The brothers near the woman saved themselves . <eos>
+The man near the brothers saved themselves . <eos>
+The women near the brothers saved themselves . <eos>
+The woman near the brothers saved themselves . <eos>
+The kings near the men proved themselves . <eos>
+The kings near the man proved themselves . <eos>
+The kings near the women proved themselves . <eos>
+The kings near the woman proved themselves . <eos>
+The man near the kings proved themselves . <eos>
+The women near the kings proved themselves . <eos>
+The woman near the kings proved themselves . <eos>
+The fathers near the men talked to themselves . <eos>
+The fathers near the man talked to themselves . <eos>
+The fathers near the women talked to themselves . <eos>
+The fathers near the woman talked to themselves . <eos>
+The man near the fathers talked to themselves . <eos>
+The women near the fathers talked to themselves . <eos>
+The woman near the fathers talked to themselves . <eos>
+The fathers near the men proved themselves . <eos>
+The fathers near the man proved themselves . <eos>
+The fathers near the women proved themselves . <eos>
+The fathers near the woman proved themselves . <eos>
+The man near the fathers proved themselves . <eos>
+The women near the fathers proved themselves . <eos>
+The woman near the fathers proved themselves . <eos>
+The sons near the men cleaned themselves . <eos>
+The sons near the man cleaned themselves . <eos>
+The sons near the women cleaned themselves . <eos>
+The sons near the woman cleaned themselves . <eos>
+The man near the sons cleaned themselves . <eos>
+The women near the sons cleaned themselves . <eos>
+The woman near the sons cleaned themselves . <eos>
+The fathers near the men talked to themselves . <eos>
+The fathers near the man talked to themselves . <eos>
+The fathers near the women talked to themselves . <eos>
+The fathers near the woman talked to themselves . <eos>
+The man near the fathers talked to themselves . <eos>
+The women near the fathers talked to themselves . <eos>
+The woman near the fathers talked to themselves . <eos>
+The fathers near the men confused themselves . <eos>
+The fathers near the man confused themselves . <eos>
+The fathers near the women confused themselves . <eos>
+The fathers near the woman confused themselves . <eos>
+The man near the fathers confused themselves . <eos>
+The women near the fathers confused themselves . <eos>
+The woman near the fathers confused themselves . <eos>
+The boys near the men behaved themselves . <eos>
+The boys near the man behaved themselves . <eos>
+The boys near the women behaved themselves . <eos>
+The boys near the woman behaved themselves . <eos>
+The man near the boys behaved themselves . <eos>
+The women near the boys behaved themselves . <eos>
+The woman near the boys behaved themselves . <eos>
+The fathers near the men saved themselves . <eos>
+The fathers near the man saved themselves . <eos>
+The fathers near the women saved themselves . <eos>
+The fathers near the woman saved themselves . <eos>
+The man near the fathers saved themselves . <eos>
+The women near the fathers saved themselves . <eos>
+The woman near the fathers saved themselves . <eos>
+The fathers near the men disappointed themselves . <eos>
+The fathers near the man disappointed themselves . <eos>
+The fathers near the women disappointed themselves . <eos>
+The fathers near the woman disappointed themselves . <eos>
+The man near the fathers disappointed themselves . <eos>
+The women near the fathers disappointed themselves . <eos>
+The woman near the fathers disappointed themselves . <eos>
+The sons near the men repeated themselves . <eos>
+The sons near the man repeated themselves . <eos>
+The sons near the women repeated themselves . <eos>
+The sons near the woman repeated themselves . <eos>
+The man near the sons repeated themselves . <eos>
+The women near the sons repeated themselves . <eos>
+The woman near the sons repeated themselves . <eos>
+The kings near the men behaved themselves . <eos>
+The kings near the man behaved themselves . <eos>
+The kings near the women behaved themselves . <eos>
+The kings near the woman behaved themselves . <eos>
+The man near the kings behaved themselves . <eos>
+The women near the kings behaved themselves . <eos>
+The woman near the kings behaved themselves . <eos>
+The boys near the men convinced themselves . <eos>
+The boys near the man convinced themselves . <eos>
+The boys near the women convinced themselves . <eos>
+The boys near the woman convinced themselves . <eos>
+The man near the boys convinced themselves . <eos>
+The women near the boys convinced themselves . <eos>
+The woman near the boys convinced themselves . <eos>
+The kings near the men talked to themselves . <eos>
+The kings near the man talked to themselves . <eos>
+The kings near the women talked to themselves . <eos>
+The kings near the woman talked to themselves . <eos>
+The man near the kings talked to themselves . <eos>
+The women near the kings talked to themselves . <eos>
+The woman near the kings talked to themselves . <eos>
+The sons near the men behaved themselves . <eos>
+The sons near the man behaved themselves . <eos>
+The sons near the women behaved themselves . <eos>
+The sons near the woman behaved themselves . <eos>
+The man near the sons behaved themselves . <eos>
+The women near the sons behaved themselves . <eos>
+The woman near the sons behaved themselves . <eos>
+The husbands near the men confused themselves . <eos>
+The husbands near the man confused themselves . <eos>
+The husbands near the women confused themselves . <eos>
+The husbands near the woman confused themselves . <eos>
+The man near the husbands confused themselves . <eos>
+The women near the husbands confused themselves . <eos>
+The woman near the husbands confused themselves . <eos>
