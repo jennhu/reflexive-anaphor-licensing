@@ -21,7 +21,7 @@ cd /om/user/jennhu/colorlessgreenRNNs/src/language_models
 python evaluate_target_word_test.py \
     --data ../../data/wiki \
     --checkpoint ../../hidden650_batch128_dropout0.2_lr20.0.pt \
-    --prefixfile "${MATERIALS}/${EXP}_sentences.txt" \
-    --outf "${DATA}/${EXP}_surprisal_grnn.txt" \
+    --prefixfile ${MATERIALS}/${EXP}_sentences.txt \
+    --outf ${DATA}/${EXP}_surprisal_grnn.txt \
     --surprisalmode True
 source deactivate

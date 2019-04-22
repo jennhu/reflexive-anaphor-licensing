@@ -1,6 +1,6 @@
 '''
     generate_stimuli.py
-    Generates materials to be used in RNNG experiment.
+    Generates materials to be used in experiment.
 '''
 
 import argparse
@@ -13,24 +13,19 @@ def main(lex_path, out_path, n):
     log = logging.getLogger(__name__)
     log.info('Reading lexical items from %s' % lex_path)
     
-    # first generate grammatical sentences
+    # generate grammatical sentences and remove duplicates
     L = util.Lexicon(lex_path)
-    grammatical_sentences = {
-        'simple': list(set([L.generate_sentence(clause_type='simple') for _ in range(n)])),
-        # 'embed': [L.generate_sentence(clause_type='embed') for _ in range(n)]
-    }
-
-    # generate sentences for all conditions based on grammatical sentences
-    # all_sentences = util.generate_stimuli(grammatical_sentences)
-
+    sentences = list(set([L.generate_sentence(clause_type='simple') 
+                          for _ in range(n)]))
+    
     # save data to file
-    util.write_sentences(grammatical_sentences['simple'], out_path)
+    util.write_sentences(sentences, out_path)
     log.info('Wrote sentences to %s' % out_path)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Generate stimuli.')
     parser.add_argument('--lex_path', '-lex_path', '--L', '-L', 
-                        default='materials',
+                        default='materials/lexicon',
                         help='path to files containing lexical items')
     parser.add_argument('--out_path', '-out_path', '--O', '-O',
                         help='path to save final stimuli file')

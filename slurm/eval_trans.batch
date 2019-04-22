@@ -20,7 +20,7 @@ EXP=$1
 source activate transXL
 python ${TRANS_PATH}/eval_transfo.py \
     -model ${TRANS_PATH}/model \
-    -inputf "${MATERIALS}/${EXP}_sentences.txt" \
-    -outputf "${DATA}/${EXP}_surprisal_trans.txt" \
+    -inputf ${MATERIALS}/${EXP}_sentences.txt \
+    -outputf ${DATA}/${EXP}_surprisal_trans.txt \
     --cuda
 source deactivate

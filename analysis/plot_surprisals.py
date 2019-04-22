@@ -22,11 +22,19 @@ def _orders(exp):
 
 
 def plot_mean_surprisal(df, out_path, model, exp):
-    plt.style.use('ggplot')
+    sns.set_style('whitegrid')
     position_order, feature_order = _orders(exp)
+    # ungrammatical --> red, grammatical --> blue
+    palette = {
+        'local_subj' : 'indianred',
+        'head' : 'indianred',
+        'nonlocal_subj' : 'skyblue',
+        'distractor' : 'skyblue',
+        'none' : 'darkseagreen'
+    }
     params = dict(data=df, x='mismatch_feature', y='surprisal', 
                   hue='mismatch_position', hue_order=position_order, 
-                  order=feature_order)
+                  order=feature_order, palette=palette)
     sns.barplot(**params)
     plt.title('%s mean surprisal (%s)' % (model, exp))
     plt.savefig(out_path, dpi=300, bbox_inches='tight')
@@ -42,7 +50,7 @@ def prob_ratio(df1, df2):
     return mean(prob_ratios)
 
 
-def _get_data_df(data, surp, pronoun, agree, pl):
+def _get_data_df(data, surp, pronoun, exp):
     # read surprisals and data
     surp_df = pd.read_csv(surp, delim_whitespace=True,
                           names=['token', 'surprisal'])

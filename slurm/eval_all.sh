@@ -1,6 +1,9 @@
 #!/bin/sh
-$EXP=$1
-sbatch eval_grnn.batch $EXP
-sbatch eval_jrnn.batch $EXP
-sbatch eval_rnng.batch $EXP
-sbatch eval_trans.batch $EXP
+
+# expected usage: ./eval_all.sh <experiment name>
+MODELS=("grnn" "jrnn" "rnng" "tiny" "trans")
+for model in ${MODELS[@]}
+do
+    echo "Model = $model"
+    sbatch eval_$model.batch $1
+done

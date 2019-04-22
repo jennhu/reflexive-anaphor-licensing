@@ -21,7 +21,8 @@ EXP=$1
 
 cd /om/user/jennhu/rnng-incremental/
 build/nt-parser/nt-parser-gen --dynet-mem 2000  -x -T train_gen.oracle \
-    -v ${MATERIALS}/${EXP}_sentences_no_eos.txt -f ${DATA}/${EXP}_surprisal_rnng.txt \
+    -v ${MATERIALS}/${EXP}_sentences_no_eos.txt \
+    -f ${DATA}/${EXP}_surprisal_rnng.txt \
     --clusters clusters-train-berk.txt \
     --input_dim 256 --lstm_input_dim 256 --hidden_dim 256 \
     -m ntparse_gen_D0.3_2_256_256_16_256-pid20681.params

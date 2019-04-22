@@ -3,16 +3,17 @@
 This repository contains the code for testing grammaticality judgments of 
 English syntactic phenomena in five different language models:
 
-1. Recurrent neural network trained on Wikipedia ([GRNN](https://github.com/facebookresearch/colorlessgreenRNNs))
-2. Recurrent neural network trained on [One Billion Word Benchmark](http://arxiv.org/abs/1312.3005) ([JRNN](https://github.com/tensorflow/models/tree/master/research/lm_1b))
-3. Recurrent neural network grammar ([RNNG](https://github.com/clab/rnng))
+1. [GRNN](https://github.com/facebookresearch/colorlessgreenRNNs) (recurrent neural network trained on Wikipedia)
+2. [JRNN](https://github.com/tensorflow/models/tree/master/research/lm_1b) (recurrent neural network trained on [One Billion Word Benchmark](http://arxiv.org/abs/1312.3005))
+3. [RNNG](https://github.com/clab/rnng) (recurrent neural network grammar)
 4. [Transformer-XL](https://github.com/kimiyoung/transformer-xl)
-5. TinyLSTM
+5. [Tiny LSTM](https://github.com/pytorch/examples/tree/master/word_language_model)
 
 ## Dependencies
 
 See the parent repositories linked above for model-specific dependencies.
-Our analysis code simply requires a basic scientific installation of Python.
+Our analysis code simply requires a basic scientific installation of Python
+(`numpy`, `pandas`, `matplotlib`, etc.)
 
 ### Transformer-XL
 Note that we use the [pytorch-pretrained-BERT](https://github.com/huggingface/pytorch-pretrained-BERT) implementation of Transformer-XL. To download the 
@@ -45,3 +46,18 @@ Then, the per-token surprisal values for a given model are saved to
 
 The plots are analogously saved to
 `analysis/plots/<EXPERIMENT>_<MODEL>.png`.
+
+## Running experiments
+
+Given a full set of materials, run the script `./run_experiment.sh <EXPERIMENT>`
+to generate the sentence files and obtain surprisals from all five models.
+
+To generate the plots for a given experiment and model, run the following:
+```bash
+cd analysis
+python plot_surprisals.py -exp <EXPERIMENT> -model <MODEL>
+```
+This will save a plot to `analysis/plots/<EXPERIMENT>_<MODEL>.png` showing
+the mean surprisal at the target word across each condition.
+The relevant target word (e.g. *himself*, *themselves*, *was*) will be
+inferred from the name of the experiment.
