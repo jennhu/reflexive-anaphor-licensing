@@ -1,0 +1,26 @@
+#!/bin/sh
+#SBATCH --job-name=eval_trans
+#SBATCH --qos=cpl
+#SBATCH --time=0-6    # -- first number is days requested, second number is hours
+#SBATCH -o logs/eval_transfo_%j.out
+#SBATCH -e logs/eval_transfo_%j.err
+#SBATCH --gres=gpu:titan-x:1  #  -- request the number of gpus.
+#SBATCH -c 1                  #  -- request number of cores
+#SBATCH --mem=5G              #  -- request memory
+#SBATCH --mail-user=jennhu@mit.edu # -- use this to send an automated email when:
+#SBATCH --mail-type=end            # -- your job completes successfully
+#SBATCH --mail-type=fail           # -- or if your job fails
+
+MATERIALS="/om/user/jennhu/rnng-refl/materials"
+DATA="/om/user/jennhu/rnng-refl/surprisal_data/trans"
+TRANS_PATH="/om/user/jennhu/causality"
+EXP=$1
+#"cc_pl"
+
+source activate transXL
+python ${TRANS_PATH}/eval_transfo.py \
+    -model ${TRANS_PATH}/model \
+    -inputf "${MATERIALS}/${EXP}_sentences.txt" \
+    -outputf "${DATA}/${EXP}_surprisal_trans.txt" \
+    --cuda
+source deactivate

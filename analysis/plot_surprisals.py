@@ -10,13 +10,13 @@ import matplotlib.pyplot as plt
 from os import listdir
 from numpy import mean
 
-def plot_mean_surprisal(df, out_path, model, agree, loc):
+def plot_mean_surprisal(df, out_path, model, agree, loc, pl):
     plt.style.use('ggplot')
     if loc:
         position_order = ['none', 'local_subj', 'nonlocal_subj']
     else:
         position_order = ['none', 'head', 'distractor']
-    if agree:
+    if agree or pl:
         feature_order = ['none', 'number', 'both']
     else:
         feature_order = ['none', 'gender', 'number', 'both']
@@ -38,18 +38,19 @@ def prob_ratio(df1, df2):
     return mean(prob_ratios)
 
 
-def get_data_df(data, surp, pronoun, agree):
+def get_data_df(data, surp, pronoun, agree, pl):
     # read surprisals and data
     surp_df = pd.read_csv(surp, delim_whitespace=True,
                           names=['token', 'surprisal'])
     data_df = pd.read_csv(data)
 
     if agree:
-        surp_df = surp_df.loc[surp_df.token == 'was']
+        verb = 'were' if pl else 'was'
+        surp_df = surp_df.loc[surp_df.token == verb]
     else:
         # only keep surprisal at specified pronoun
-        if pronoun == 'all':
-            surp_df = surp_df.loc[surp_df.token.isin(['himself'])]
+        if pl:
+            surp_df = surp_df.loc[surp_df.token == 'themselves']
         else:
             surp_df = surp_df.loc[surp_df.token == pronoun]
             data_df = data_df.loc[data_df.pronoun == pronoun]
@@ -64,16 +65,14 @@ def main(data, surp, out_path, model, pronoun, exp):
     if exp:
         data = '../materials/%s_materials.csv' % exp
         surp = '../surprisal_data/%s/%s_surprisal_%s.txt' % (model, exp, model.upper())
-        if pronoun == 'all':
-            out_path = 'plots/%s_%s.png' % (exp, model)
-        else:
-            out_path = 'plots/%s_%s_%s.png' % (exp, model, pronoun)
+        out_path = 'plots/%s_%s.png' % (exp, model)
     else:
         assert all(arg is not None for arg in [data, surp, out_path])
     agree = 'agree' in exp
     loc = 'loc' in exp
-    df = get_data_df(data, surp, pronoun, agree)
-    plot_mean_surprisal(df, out_path, model, agree, loc)
+    pl = 'pl' in exp
+    df = get_data_df(data, surp, pronoun, agree, pl)
+    plot_mean_surprisal(df, out_path, model, agree, loc, pl)
     
 
 if __name__ == '__main__':
@@ -86,8 +85,7 @@ if __name__ == '__main__':
                         help='path to save final plots')
     parser.add_argument('--model', '-model', '--M', '-M', required=True,
                         help='name of model')
-    parser.add_argument('--pronoun', '-pronoun', default='all',
-                        choices=['all', 'he', 'she', 'He', 'She'],
+    parser.add_argument('--pronoun', '-pronoun', default='himself',
                         help='pronouns to include in analysis')
     parser.add_argument('--exp', '-exp',
                         help='name of experiment (overrides all other args)')

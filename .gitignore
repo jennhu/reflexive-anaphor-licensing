@@ -1,6 +1,7 @@
 # Large data files, SLURM scripts, etc.
 data/
-slurm/
+slurm/logs
+slurm/old
 surprisal_data/rnng/old/
 surprisal_data/grnn/old/
 materials/old/
