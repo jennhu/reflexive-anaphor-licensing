@@ -73,12 +73,4 @@ inferred from the name of the experiment.
 - [ ] Unigram/Bigram probability of Refl/Copula in a corpus?
 
 
-## TODO
-
-- [ ] pilot before meeting Roger
-- [ ] generate stimuli
-- [ ] create Singularity image with dependencies
-- [ ] get GRNN surprisals
-- [ ] get RNNG surprisals
-
 
