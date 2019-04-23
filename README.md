@@ -61,3 +61,24 @@ This will save a plot to `analysis/plots/<EXPERIMENT>_<MODEL>.png` showing
 the mean surprisal at the target word across each condition.
 The relevant target word (e.g. *himself*, *themselves*, *was*) will be
 inferred from the name of the experiment.
+
+
+## TODO
+
+- [ ] Verbs: count in the corpus (Wiki?)
+- [ ] Nouns: check frequency
+- [ ] "Baseline baseline": no distracting NPs
+- [ ] Counter-balancing of all N occurrences: double-check
+- [ ] Accuracy vs. Surprisals?
+- [ ] Unigram/Bigram probability of Refl/Copula in a corpus?
+
+
+## TODO
+
+- [ ] pilot before meeting Roger
+- [ ] generate stimuli
+- [ ] create Singularity image with dependencies
+- [ ] get GRNN surprisals
+- [ ] get RNNG surprisals
+
+
