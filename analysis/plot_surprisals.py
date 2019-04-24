@@ -11,19 +11,20 @@ from numpy import mean
 def _orders(exp):
     agree, loc, pl = 'agree' in exp, 'loc' in exp, 'pl' in exp
     if loc:
-        position_order = ['none', 'local_subj', 'nonlocal_subj']
+        position_order = ['none', 'nonlocal_subj', 'local_subj', ]
     else:
-        position_order = ['none', 'head', 'distractor']
-    if agree or pl:
-        feature_order = ['none', 'number', 'both']
-    else:
-        feature_order = ['none', 'gender', 'number', 'both']
+        position_order = ['none', 'distractor', 'head']
+    feature_order = ['none', 'number']
+    # if agree or pl:
+    #     feature_order = ['none', 'number', 'both']
+    # else:
+    #     feature_order = ['none', 'gender', 'number', 'both']
     return position_order, feature_order
 
 
 def plot_mean_surprisal(df, out_path, model, exp):
     sns.set_style('whitegrid')
-    position_order, feature_order = _orders(exp)
+    position_order, _ = _orders(exp)
     # ungrammatical --> red, grammatical --> blue
     palette = {
         'local_subj' : 'indianred',
@@ -32,9 +33,12 @@ def plot_mean_surprisal(df, out_path, model, exp):
         'distractor' : 'skyblue',
         'none' : 'darkseagreen'
     }
-    params = dict(data=df, x='mismatch_feature', y='surprisal', 
-                  hue='mismatch_position', hue_order=position_order, 
-                  order=feature_order, palette=palette)
+    # params = dict(data=df, x='mismatch_feature', y='surprisal', 
+    #               hue='mismatch_position', hue_order=position_order, 
+    #               order=feature_order, palette=palette)
+    params = dict(data=df, x='mismatch_position', y='surprisal',
+                #   hue='mismatch_position', hue_order=position_order,
+                  order=position_order, palette=palette)
     sns.barplot(**params)
     plt.title('%s mean surprisal (%s)' % (model, exp))
     plt.savefig(out_path, dpi=300, bbox_inches='tight')
@@ -73,7 +77,7 @@ def _get_data_df(data, surp, pronoun, exp):
 
 
 def main(out_prefix, model, exp, pronoun):
-    data = '../materials/%s_materials.csv' % exp
+    data = '../materials/%s.csv' % exp
     surp = '../surprisal_data/%s/%s_surprisal_%s.txt' % (model, exp, model)
     out_path = '%s/%s_%s.png' % (out_prefix, exp, model)
     
@@ -90,7 +94,7 @@ if __name__ == '__main__':
     parser.add_argument('--model', '-model', '--M', '-M', required=True,
                         help='name of model')
     parser.add_argument('--exp', '-exp', required=True,
-                        help='name of experiment (overrides all other args)')
+                        help='name of experiment')
     parser.add_argument('--pronoun', '-pronoun', default='himself',
                         help='pronouns to include in analysis')
     args = parser.parse_args()

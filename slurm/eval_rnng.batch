@@ -3,7 +3,7 @@
 #SBATCH -J eval_rnng # A single job name for the array
 #SBATCH -n 1 # one core
 #SBATCH -N 1 # on one node
-#SBATCH --time=0-12:00
+#SBATCH --time=1-0    # -- first number is days requested, second number is hours
 #SBATCH --mem=10G
 #SBATCH -o logs/eval_rnng_%j.out # Standard output
 #SBATCH -e logs/eval_rnng_%j.err # Standard error
@@ -17,7 +17,6 @@ export LD_LIBRARY_PATH="${DEPENDENCIES}/boost_1_68_0/lib"
 MATERIALS="/om/user/jennhu/rnng-refl/materials"
 DATA="/om/user/jennhu/rnng-refl/surprisal_data/rnng"
 EXP=$1
-#"loc"
 
 cd /om/user/jennhu/rnng-incremental/
 build/nt-parser/nt-parser-gen --dynet-mem 2000  -x -T train_gen.oracle \

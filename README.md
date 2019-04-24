@@ -34,7 +34,7 @@ for more detailed setup instructions.
 
 Everything is organized by experiment name. An experiment is expected to have
 three components:
-1. `materials/<EXPERIMENT>_materials.csv` 
+1. `materials/<EXPERIMENT>.csv` 
     (list of conditions and stimuli)
 2. `materials/<EXPERIMENT>_sentences.txt` 
     (list of sentences for most models)
@@ -65,12 +65,12 @@ inferred from the name of the experiment.
 
 ## TODO
 
-- [ ] Verbs: count in the corpus (Wiki?)
-- [ ] Nouns: check frequency
+- [x] Verbs: count in the corpus (Wiki?)
+- [x] Nouns: check frequency
 - [ ] "Baseline baseline": no distracting NPs
 - [ ] Counter-balancing of all N occurrences: double-check
-- [ ] Accuracy vs. Surprisals?
-- [ ] Unigram/Bigram probability of Refl/Copula in a corpus?
+- [ ] Accuracy vs. Surprisal
+- [ ] Unigram/Bigram probability of Refl/Copula in a corpus
 
 
 
