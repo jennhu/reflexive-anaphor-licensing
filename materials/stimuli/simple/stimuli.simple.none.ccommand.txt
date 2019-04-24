@@ -1,9 +1,0 @@
-The aunt hurt herself . <eos>
-The wife convinced herself . <eos>
-The father amused himself . <eos>
-The woman taught herself . <eos>
-The brother proved himself . <eos>
-The girl helped herself . <eos>
-The man pleased himself . <eos>
-The boy enjoyed himself . <eos>
-The mother repeated herself . <eos>

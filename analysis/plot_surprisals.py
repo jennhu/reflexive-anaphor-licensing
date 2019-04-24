@@ -2,24 +2,45 @@
     plot_surprisals.py
     Plots mean surprisals across conditions using model surprisal data.
 '''
-
 import argparse
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-from os import listdir
 from numpy import mean
 
-def plot_mean_surprisal(df, out_path, clause_type, group_by):
-    plt.style.use('ggplot')
-    mismatch_order = ['none', 'gender', 'number', 'both']
-    params = dict(data=df, x=group_by, y='surprisal')
-    if group_by == 'mismatch':
-        hue = 'c_command' if clause_type == 'simple' else 'local'
-        sns.barplot(hue=hue, order=mismatch_order, **params)
+def _orders(exp):
+    agree, loc, pl = 'agree' in exp, 'loc' in exp, 'pl' in exp
+    if loc:
+        position_order = ['none', 'nonlocal_subj', 'local_subj', ]
     else:
-        sns.barplot(hue='mismatch', hue_order=mismatch_order, **params)
-    plt.title('mean GRNN surprisal (%s)' % clause_type)
+        position_order = ['none', 'distractor', 'head']
+    feature_order = ['none', 'number']
+    # if agree or pl:
+    #     feature_order = ['none', 'number', 'both']
+    # else:
+    #     feature_order = ['none', 'gender', 'number', 'both']
+    return position_order, feature_order
+
+
+def plot_mean_surprisal(df, out_path, model, exp):
+    sns.set_style('whitegrid')
+    position_order, _ = _orders(exp)
+    # ungrammatical --> red, grammatical --> blue
+    palette = {
+        'local_subj' : 'indianred',
+        'head' : 'indianred',
+        'nonlocal_subj' : 'skyblue',
+        'distractor' : 'skyblue',
+        'none' : 'darkseagreen'
+    }
+    # params = dict(data=df, x='mismatch_feature', y='surprisal', 
+    #               hue='mismatch_position', hue_order=position_order, 
+    #               order=feature_order, palette=palette)
+    params = dict(data=df, x='mismatch_position', y='surprisal',
+                #   hue='mismatch_position', hue_order=position_order,
+                  order=position_order, palette=palette)
+    sns.barplot(**params)
+    plt.title('%s mean surprisal (%s)' % (model, exp))
     plt.savefig(out_path, dpi=300, bbox_inches='tight')
 
 
@@ -33,34 +54,48 @@ def prob_ratio(df1, df2):
     return mean(prob_ratios)
 
 
-def main(data, out_path, group_by):
-    pronouns = ['himself', 'herself', 'themselves']
-    surprisal_files = listdir(data)
-    dfs = []
-    for s in surprisal_files:
-        # get parameters from file name -- see README for acceptable file names
-        _, clause_type, mismatch, relation, _ = s.split('.')
-        df = pd.read_csv('%s/%s' % (data, s), delim_whitespace=True,
-                         names=['token', 'surprisal'])
-        df['clause_type'] = clause_type
-        df['mismatch'] = mismatch
-        if clause_type == 'simple':
-            df['c_command'] = (relation == 'ccommand')
-        else:
-            df['local'] = (relation == 'local')
-        df = df.loc[df.token.isin(pronouns)]
-        dfs.append(df)
-    df = pd.concat(dfs)
-    plot_mean_surprisal(df, out_path, clause_type, group_by)
+def _get_data_df(data, surp, pronoun, exp):
+    # read surprisals and data
+    surp_df = pd.read_csv(surp, delim_whitespace=True,
+                          names=['token', 'surprisal'])
+    data_df = pd.read_csv(data)
+
+    agree, pl = 'agree' in exp, 'pl' in exp
+    # only keep surprisal at specified pronoun or verb
+    if agree:
+        verb = 'were' if pl else 'was'
+        surp_df = surp_df.loc[surp_df.token == verb]
+    else:
+        pn = 'themselves' if pl else pronoun
+        surp_df = surp_df.loc[surp_df.token == pn]
+        data_df = data_df.loc[data_df.pronoun == pn]
+
+    # insert surprisal into data_df
+    data_df['surprisal'] = surp_df.surprisal.values
+    
+    return data_df
+
+
+def main(out_prefix, model, exp, pronoun):
+    data = '../materials/%s.csv' % exp
+    surp = '../surprisal_data/%s/%s_surprisal_%s.txt' % (model, exp, model)
+    out_path = '%s/%s_%s.png' % (out_prefix, exp, model)
+    
+    df = _get_data_df(data, surp, pronoun, exp)
+    plot_mean_surprisal(df, out_path, model, exp)
     
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Generate stimuli.')
-    parser.add_argument('--data', '-data', required=True,
-                        help='path to files containing surprisal data')
-    parser.add_argument('--out_path', '-out_path', '--O', '-O', required=True,
-                        help='path to save final plots')
-    parser.add_argument('--group_by', '-group_by', default='mismatch',
-                        help='variable to group columns by in plot')
+    parser = argparse.ArgumentParser(description='Plot mean surprisals.')
+    parser.add_argument('--out_prefix', '-out_prefix', '--O', '-O',
+                        default='plots',
+                        help='prefix to path to save final plots (file will '
+                             'be named according to experiment name)')
+    parser.add_argument('--model', '-model', '--M', '-M', required=True,
+                        help='name of model')
+    parser.add_argument('--exp', '-exp', required=True,
+                        help='name of experiment')
+    parser.add_argument('--pronoun', '-pronoun', default='himself',
+                        help='pronouns to include in analysis')
     args = parser.parse_args()
     main(**vars(args))

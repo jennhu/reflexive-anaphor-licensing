@@ -1,0 +1,26 @@
+#!/bin/sh
+#SBATCH --job-name=eval_grnn
+#SBATCH --qos=cpl
+#SBATCH --time=1-0    # -- first number is days requested, second number is hours
+#SBATCH -o logs/eval_grnn_%j.out
+#SBATCH -e logs/eval_grnn_%j.err
+#SBATCH --gres=gpu:titan-x:1  #  -- request the number of gpus.
+#SBATCH -c 1                  #  -- request number of cores
+#SBATCH --mem=5G              #  -- request memory
+#SBATCH --mail-user=jennhu@mit.edu # -- use this to send an automated email when:
+#SBATCH --mail-type=end            # -- your job completes successfully
+#SBATCH --mail-type=fail           # -- or if your job fails
+
+MATERIALS="/om/user/jennhu/rnng-refl/materials"
+DATA="/om/user/jennhu/rnng-refl/surprisal_data/grnn"
+EXP=$1
+
+source activate neural-nlp
+cd /om/user/jennhu/colorlessgreenRNNs/src/language_models
+python evaluate_target_word_test.py \
+    --data ../../data/wiki \
+    --checkpoint ../../hidden650_batch128_dropout0.2_lr20.0.pt \
+    --prefixfile ${MATERIALS}/${EXP}_sentences.txt \
+    --outf ${DATA}/${EXP}_surprisal_grnn.txt \
+    --surprisalmode True
+source deactivate

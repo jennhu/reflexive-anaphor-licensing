@@ -1,0 +1,211 @@
+itme,clause_type,locality,grammatical,head_mismatch,distract_mismatch,mismatch_position,mismatch_feature,head_noun,distractor noun,verb,pronoun,sentence,sentence_no_eos
+1,embed,local,1,none,none,none,none,father,man,enjoyed,himself,The father said that the man enjoyed himself . <eos>,The father said that the man enjoyed himself .
+1,embed,nonlocal,0,number,none,local_subj,number,father,men,enjoyed,himself,The father said that the men enjoyed himself . <eos>,The father said that the men enjoyed himself .
+1,embed,nonlocal,0,gender,none,local_subj,gender,father,woman,enjoyed,himself,The father said that the woman enjoyed himself . <eos>,The father said that the woman enjoyed himself .
+1,embed,nonlocal,0,both,none,local_subj,both,father,women,enjoyed,himself,The father said that the women enjoyed himself . <eos>,The father said that the women enjoyed himself .
+1,embed,local,1,none,none,nonlocal_subj,number,men,father,enjoyed,himself,The men said that the father enjoyed himself . <eos>,The men said that the father enjoyed himself .
+1,embed,local,1,none,number,nonlocal_subj,gender,woman,father,enjoyed,himself,The woman said that the father enjoyed himself . <eos>,The woman said that the father enjoyed himself .
+1,embed,local,1,none,gender,nonlocal_subj,both,women,father,enjoyed,himself,The women said that the father enjoyed himself . <eos>,The women said that the father enjoyed himself .
+2,embed,local,1,none,none,none,none,brother,man,confused,himself,The brother said that the man confused himself . <eos>,The brother said that the man confused himself .
+2,embed,nonlocal,0,number,none,local_subj,number,brother,men,confused,himself,The brother said that the men confused himself . <eos>,The brother said that the men confused himself .
+2,embed,nonlocal,0,gender,none,local_subj,gender,brother,woman,confused,himself,The brother said that the woman confused himself . <eos>,The brother said that the woman confused himself .
+2,embed,nonlocal,0,both,none,local_subj,both,brother,women,confused,himself,The brother said that the women confused himself . <eos>,The brother said that the women confused himself .
+2,embed,local,1,none,none,nonlocal_subj,number,men,brother,confused,himself,The men said that the brother confused himself . <eos>,The men said that the brother confused himself .
+2,embed,local,1,none,number,nonlocal_subj,gender,woman,brother,confused,himself,The woman said that the brother confused himself . <eos>,The woman said that the brother confused himself .
+2,embed,local,1,none,gender,nonlocal_subj,both,women,brother,confused,himself,The women said that the brother confused himself . <eos>,The women said that the brother confused himself .
+3,embed,local,1,none,none,none,none,brother,man,helped,himself,The brother said that the man helped himself . <eos>,The brother said that the man helped himself .
+3,embed,nonlocal,0,number,none,local_subj,number,brother,men,helped,himself,The brother said that the men helped himself . <eos>,The brother said that the men helped himself .
+3,embed,nonlocal,0,gender,none,local_subj,gender,brother,woman,helped,himself,The brother said that the woman helped himself . <eos>,The brother said that the woman helped himself .
+3,embed,nonlocal,0,both,none,local_subj,both,brother,women,helped,himself,The brother said that the women helped himself . <eos>,The brother said that the women helped himself .
+3,embed,local,1,none,none,nonlocal_subj,number,men,brother,helped,himself,The men said that the brother helped himself . <eos>,The men said that the brother helped himself .
+3,embed,local,1,none,number,nonlocal_subj,gender,woman,brother,helped,himself,The woman said that the brother helped himself . <eos>,The woman said that the brother helped himself .
+3,embed,local,1,none,gender,nonlocal_subj,both,women,brother,helped,himself,The women said that the brother helped himself . <eos>,The women said that the brother helped himself .
+4,embed,local,1,none,none,none,none,king,man,disappointed,himself,The king said that the man disappointed himself . <eos>,The king said that the man disappointed himself .
+4,embed,nonlocal,0,number,none,local_subj,number,king,men,disappointed,himself,The king said that the men disappointed himself . <eos>,The king said that the men disappointed himself .
+4,embed,nonlocal,0,gender,none,local_subj,gender,king,woman,disappointed,himself,The king said that the woman disappointed himself . <eos>,The king said that the woman disappointed himself .
+4,embed,nonlocal,0,both,none,local_subj,both,king,women,disappointed,himself,The king said that the women disappointed himself . <eos>,The king said that the women disappointed himself .
+4,embed,local,1,none,none,nonlocal_subj,number,men,king,disappointed,himself,The men said that the king disappointed himself . <eos>,The men said that the king disappointed himself .
+4,embed,local,1,none,number,nonlocal_subj,gender,woman,king,disappointed,himself,The woman said that the king disappointed himself . <eos>,The woman said that the king disappointed himself .
+4,embed,local,1,none,gender,nonlocal_subj,both,women,king,disappointed,himself,The women said that the king disappointed himself . <eos>,The women said that the king disappointed himself .
+5,embed,local,1,none,none,none,none,actor,man,killed,himself,The actor said that the man killed himself . <eos>,The actor said that the man killed himself .
+5,embed,nonlocal,0,number,none,local_subj,number,actor,men,killed,himself,The actor said that the men killed himself . <eos>,The actor said that the men killed himself .
+5,embed,nonlocal,0,gender,none,local_subj,gender,actor,woman,killed,himself,The actor said that the woman killed himself . <eos>,The actor said that the woman killed himself .
+5,embed,nonlocal,0,both,none,local_subj,both,actor,women,killed,himself,The actor said that the women killed himself . <eos>,The actor said that the women killed himself .
+5,embed,local,1,none,none,nonlocal_subj,number,men,actor,killed,himself,The men said that the actor killed himself . <eos>,The men said that the actor killed himself .
+5,embed,local,1,none,number,nonlocal_subj,gender,woman,actor,killed,himself,The woman said that the actor killed himself . <eos>,The woman said that the actor killed himself .
+5,embed,local,1,none,gender,nonlocal_subj,both,women,actor,killed,himself,The women said that the actor killed himself . <eos>,The women said that the actor killed himself .
+6,embed,local,1,none,none,none,none,brother,man,disappointed,himself,The brother said that the man disappointed himself . <eos>,The brother said that the man disappointed himself .
+6,embed,nonlocal,0,number,none,local_subj,number,brother,men,disappointed,himself,The brother said that the men disappointed himself . <eos>,The brother said that the men disappointed himself .
+6,embed,nonlocal,0,gender,none,local_subj,gender,brother,woman,disappointed,himself,The brother said that the woman disappointed himself . <eos>,The brother said that the woman disappointed himself .
+6,embed,nonlocal,0,both,none,local_subj,both,brother,women,disappointed,himself,The brother said that the women disappointed himself . <eos>,The brother said that the women disappointed himself .
+6,embed,local,1,none,none,nonlocal_subj,number,men,brother,disappointed,himself,The men said that the brother disappointed himself . <eos>,The men said that the brother disappointed himself .
+6,embed,local,1,none,number,nonlocal_subj,gender,woman,brother,disappointed,himself,The woman said that the brother disappointed himself . <eos>,The woman said that the brother disappointed himself .
+6,embed,local,1,none,gender,nonlocal_subj,both,women,brother,disappointed,himself,The women said that the brother disappointed himself . <eos>,The women said that the brother disappointed himself .
+7,embed,local,1,none,none,none,none,son,man,behaved,himself,The son said that the man behaved himself . <eos>,The son said that the man behaved himself .
+7,embed,nonlocal,0,number,none,local_subj,number,son,men,behaved,himself,The son said that the men behaved himself . <eos>,The son said that the men behaved himself .
+7,embed,nonlocal,0,gender,none,local_subj,gender,son,woman,behaved,himself,The son said that the woman behaved himself . <eos>,The son said that the woman behaved himself .
+7,embed,nonlocal,0,both,none,local_subj,both,son,women,behaved,himself,The son said that the women behaved himself . <eos>,The son said that the women behaved himself .
+7,embed,local,1,none,none,nonlocal_subj,number,men,son,behaved,himself,The men said that the son behaved himself . <eos>,The men said that the son behaved himself .
+7,embed,local,1,none,number,nonlocal_subj,gender,woman,son,behaved,himself,The woman said that the son behaved himself . <eos>,The woman said that the son behaved himself .
+7,embed,local,1,none,gender,nonlocal_subj,both,women,son,behaved,himself,The women said that the son behaved himself . <eos>,The women said that the son behaved himself .
+8,embed,local,1,none,none,none,none,father,man,taught,himself,The father said that the man taught himself . <eos>,The father said that the man taught himself .
+8,embed,nonlocal,0,number,none,local_subj,number,father,men,taught,himself,The father said that the men taught himself . <eos>,The father said that the men taught himself .
+8,embed,nonlocal,0,gender,none,local_subj,gender,father,woman,taught,himself,The father said that the woman taught himself . <eos>,The father said that the woman taught himself .
+8,embed,nonlocal,0,both,none,local_subj,both,father,women,taught,himself,The father said that the women taught himself . <eos>,The father said that the women taught himself .
+8,embed,local,1,none,none,nonlocal_subj,number,men,father,taught,himself,The men said that the father taught himself . <eos>,The men said that the father taught himself .
+8,embed,local,1,none,number,nonlocal_subj,gender,woman,father,taught,himself,The woman said that the father taught himself . <eos>,The woman said that the father taught himself .
+8,embed,local,1,none,gender,nonlocal_subj,both,women,father,taught,himself,The women said that the father taught himself . <eos>,The women said that the father taught himself .
+9,embed,local,1,none,none,none,none,son,man,helped,himself,The son said that the man helped himself . <eos>,The son said that the man helped himself .
+9,embed,nonlocal,0,number,none,local_subj,number,son,men,helped,himself,The son said that the men helped himself . <eos>,The son said that the men helped himself .
+9,embed,nonlocal,0,gender,none,local_subj,gender,son,woman,helped,himself,The son said that the woman helped himself . <eos>,The son said that the woman helped himself .
+9,embed,nonlocal,0,both,none,local_subj,both,son,women,helped,himself,The son said that the women helped himself . <eos>,The son said that the women helped himself .
+9,embed,local,1,none,none,nonlocal_subj,number,men,son,helped,himself,The men said that the son helped himself . <eos>,The men said that the son helped himself .
+9,embed,local,1,none,number,nonlocal_subj,gender,woman,son,helped,himself,The woman said that the son helped himself . <eos>,The woman said that the son helped himself .
+9,embed,local,1,none,gender,nonlocal_subj,both,women,son,helped,himself,The women said that the son helped himself . <eos>,The women said that the son helped himself .
+10,embed,local,1,none,none,none,none,father,man,taught,himself,The father said that the man taught himself . <eos>,The father said that the man taught himself .
+10,embed,nonlocal,0,number,none,local_subj,number,father,men,taught,himself,The father said that the men taught himself . <eos>,The father said that the men taught himself .
+10,embed,nonlocal,0,gender,none,local_subj,gender,father,woman,taught,himself,The father said that the woman taught himself . <eos>,The father said that the woman taught himself .
+10,embed,nonlocal,0,both,none,local_subj,both,father,women,taught,himself,The father said that the women taught himself . <eos>,The father said that the women taught himself .
+10,embed,local,1,none,none,nonlocal_subj,number,men,father,taught,himself,The men said that the father taught himself . <eos>,The men said that the father taught himself .
+10,embed,local,1,none,number,nonlocal_subj,gender,woman,father,taught,himself,The woman said that the father taught himself . <eos>,The woman said that the father taught himself .
+10,embed,local,1,none,gender,nonlocal_subj,both,women,father,taught,himself,The women said that the father taught himself . <eos>,The women said that the father taught himself .
+11,embed,local,1,none,none,none,none,son,man,helped,himself,The son said that the man helped himself . <eos>,The son said that the man helped himself .
+11,embed,nonlocal,0,number,none,local_subj,number,son,men,helped,himself,The son said that the men helped himself . <eos>,The son said that the men helped himself .
+11,embed,nonlocal,0,gender,none,local_subj,gender,son,woman,helped,himself,The son said that the woman helped himself . <eos>,The son said that the woman helped himself .
+11,embed,nonlocal,0,both,none,local_subj,both,son,women,helped,himself,The son said that the women helped himself . <eos>,The son said that the women helped himself .
+11,embed,local,1,none,none,nonlocal_subj,number,men,son,helped,himself,The men said that the son helped himself . <eos>,The men said that the son helped himself .
+11,embed,local,1,none,number,nonlocal_subj,gender,woman,son,helped,himself,The woman said that the son helped himself . <eos>,The woman said that the son helped himself .
+11,embed,local,1,none,gender,nonlocal_subj,both,women,son,helped,himself,The women said that the son helped himself . <eos>,The women said that the son helped himself .
+12,embed,local,1,none,none,none,none,father,man,behaved,himself,The father said that the man behaved himself . <eos>,The father said that the man behaved himself .
+12,embed,nonlocal,0,number,none,local_subj,number,father,men,behaved,himself,The father said that the men behaved himself . <eos>,The father said that the men behaved himself .
+12,embed,nonlocal,0,gender,none,local_subj,gender,father,woman,behaved,himself,The father said that the woman behaved himself . <eos>,The father said that the woman behaved himself .
+12,embed,nonlocal,0,both,none,local_subj,both,father,women,behaved,himself,The father said that the women behaved himself . <eos>,The father said that the women behaved himself .
+12,embed,local,1,none,none,nonlocal_subj,number,men,father,behaved,himself,The men said that the father behaved himself . <eos>,The men said that the father behaved himself .
+12,embed,local,1,none,number,nonlocal_subj,gender,woman,father,behaved,himself,The woman said that the father behaved himself . <eos>,The woman said that the father behaved himself .
+12,embed,local,1,none,gender,nonlocal_subj,both,women,father,behaved,himself,The women said that the father behaved himself . <eos>,The women said that the father behaved himself .
+13,embed,local,1,none,none,none,none,father,man,killed,himself,The father said that the man killed himself . <eos>,The father said that the man killed himself .
+13,embed,nonlocal,0,number,none,local_subj,number,father,men,killed,himself,The father said that the men killed himself . <eos>,The father said that the men killed himself .
+13,embed,nonlocal,0,gender,none,local_subj,gender,father,woman,killed,himself,The father said that the woman killed himself . <eos>,The father said that the woman killed himself .
+13,embed,nonlocal,0,both,none,local_subj,both,father,women,killed,himself,The father said that the women killed himself . <eos>,The father said that the women killed himself .
+13,embed,local,1,none,none,nonlocal_subj,number,men,father,killed,himself,The men said that the father killed himself . <eos>,The men said that the father killed himself .
+13,embed,local,1,none,number,nonlocal_subj,gender,woman,father,killed,himself,The woman said that the father killed himself . <eos>,The woman said that the father killed himself .
+13,embed,local,1,none,gender,nonlocal_subj,both,women,father,killed,himself,The women said that the father killed himself . <eos>,The women said that the father killed himself .
+14,embed,local,1,none,none,none,none,grandfather,man,enjoyed,himself,The grandfather said that the man enjoyed himself . <eos>,The grandfather said that the man enjoyed himself .
+14,embed,nonlocal,0,number,none,local_subj,number,grandfather,men,enjoyed,himself,The grandfather said that the men enjoyed himself . <eos>,The grandfather said that the men enjoyed himself .
+14,embed,nonlocal,0,gender,none,local_subj,gender,grandfather,woman,enjoyed,himself,The grandfather said that the woman enjoyed himself . <eos>,The grandfather said that the woman enjoyed himself .
+14,embed,nonlocal,0,both,none,local_subj,both,grandfather,women,enjoyed,himself,The grandfather said that the women enjoyed himself . <eos>,The grandfather said that the women enjoyed himself .
+14,embed,local,1,none,none,nonlocal_subj,number,men,grandfather,enjoyed,himself,The men said that the grandfather enjoyed himself . <eos>,The men said that the grandfather enjoyed himself .
+14,embed,local,1,none,number,nonlocal_subj,gender,woman,grandfather,enjoyed,himself,The woman said that the grandfather enjoyed himself . <eos>,The woman said that the grandfather enjoyed himself .
+14,embed,local,1,none,gender,nonlocal_subj,both,women,grandfather,enjoyed,himself,The women said that the grandfather enjoyed himself . <eos>,The women said that the grandfather enjoyed himself .
+15,embed,local,1,none,none,none,none,brother,man,saved,himself,The brother said that the man saved himself . <eos>,The brother said that the man saved himself .
+15,embed,nonlocal,0,number,none,local_subj,number,brother,men,saved,himself,The brother said that the men saved himself . <eos>,The brother said that the men saved himself .
+15,embed,nonlocal,0,gender,none,local_subj,gender,brother,woman,saved,himself,The brother said that the woman saved himself . <eos>,The brother said that the woman saved himself .
+15,embed,nonlocal,0,both,none,local_subj,both,brother,women,saved,himself,The brother said that the women saved himself . <eos>,The brother said that the women saved himself .
+15,embed,local,1,none,none,nonlocal_subj,number,men,brother,saved,himself,The men said that the brother saved himself . <eos>,The men said that the brother saved himself .
+15,embed,local,1,none,number,nonlocal_subj,gender,woman,brother,saved,himself,The woman said that the brother saved himself . <eos>,The woman said that the brother saved himself .
+15,embed,local,1,none,gender,nonlocal_subj,both,women,brother,saved,himself,The women said that the brother saved himself . <eos>,The women said that the brother saved himself .
+16,embed,local,1,none,none,none,none,king,man,proved,himself,The king said that the man proved himself . <eos>,The king said that the man proved himself .
+16,embed,nonlocal,0,number,none,local_subj,number,king,men,proved,himself,The king said that the men proved himself . <eos>,The king said that the men proved himself .
+16,embed,nonlocal,0,gender,none,local_subj,gender,king,woman,proved,himself,The king said that the woman proved himself . <eos>,The king said that the woman proved himself .
+16,embed,nonlocal,0,both,none,local_subj,both,king,women,proved,himself,The king said that the women proved himself . <eos>,The king said that the women proved himself .
+16,embed,local,1,none,none,nonlocal_subj,number,men,king,proved,himself,The men said that the king proved himself . <eos>,The men said that the king proved himself .
+16,embed,local,1,none,number,nonlocal_subj,gender,woman,king,proved,himself,The woman said that the king proved himself . <eos>,The woman said that the king proved himself .
+16,embed,local,1,none,gender,nonlocal_subj,both,women,king,proved,himself,The women said that the king proved himself . <eos>,The women said that the king proved himself .
+17,embed,local,1,none,none,none,none,father,man,talked to,himself,The father said that the man talked to himself . <eos>,The father said that the man talked to himself .
+17,embed,nonlocal,0,number,none,local_subj,number,father,men,talked to,himself,The father said that the men talked to himself . <eos>,The father said that the men talked to himself .
+17,embed,nonlocal,0,gender,none,local_subj,gender,father,woman,talked to,himself,The father said that the woman talked to himself . <eos>,The father said that the woman talked to himself .
+17,embed,nonlocal,0,both,none,local_subj,both,father,women,talked to,himself,The father said that the women talked to himself . <eos>,The father said that the women talked to himself .
+17,embed,local,1,none,none,nonlocal_subj,number,men,father,talked to,himself,The men said that the father talked to himself . <eos>,The men said that the father talked to himself .
+17,embed,local,1,none,number,nonlocal_subj,gender,woman,father,talked to,himself,The woman said that the father talked to himself . <eos>,The woman said that the father talked to himself .
+17,embed,local,1,none,gender,nonlocal_subj,both,women,father,talked to,himself,The women said that the father talked to himself . <eos>,The women said that the father talked to himself .
+18,embed,local,1,none,none,none,none,father,man,proved,himself,The father said that the man proved himself . <eos>,The father said that the man proved himself .
+18,embed,nonlocal,0,number,none,local_subj,number,father,men,proved,himself,The father said that the men proved himself . <eos>,The father said that the men proved himself .
+18,embed,nonlocal,0,gender,none,local_subj,gender,father,woman,proved,himself,The father said that the woman proved himself . <eos>,The father said that the woman proved himself .
+18,embed,nonlocal,0,both,none,local_subj,both,father,women,proved,himself,The father said that the women proved himself . <eos>,The father said that the women proved himself .
+18,embed,local,1,none,none,nonlocal_subj,number,men,father,proved,himself,The men said that the father proved himself . <eos>,The men said that the father proved himself .
+18,embed,local,1,none,number,nonlocal_subj,gender,woman,father,proved,himself,The woman said that the father proved himself . <eos>,The woman said that the father proved himself .
+18,embed,local,1,none,gender,nonlocal_subj,both,women,father,proved,himself,The women said that the father proved himself . <eos>,The women said that the father proved himself .
+19,embed,local,1,none,none,none,none,uncle,man,cleaned,himself,The uncle said that the man cleaned himself . <eos>,The uncle said that the man cleaned himself .
+19,embed,nonlocal,0,number,none,local_subj,number,uncle,men,cleaned,himself,The uncle said that the men cleaned himself . <eos>,The uncle said that the men cleaned himself .
+19,embed,nonlocal,0,gender,none,local_subj,gender,uncle,woman,cleaned,himself,The uncle said that the woman cleaned himself . <eos>,The uncle said that the woman cleaned himself .
+19,embed,nonlocal,0,both,none,local_subj,both,uncle,women,cleaned,himself,The uncle said that the women cleaned himself . <eos>,The uncle said that the women cleaned himself .
+19,embed,local,1,none,none,nonlocal_subj,number,men,uncle,cleaned,himself,The men said that the uncle cleaned himself . <eos>,The men said that the uncle cleaned himself .
+19,embed,local,1,none,number,nonlocal_subj,gender,woman,uncle,cleaned,himself,The woman said that the uncle cleaned himself . <eos>,The woman said that the uncle cleaned himself .
+19,embed,local,1,none,gender,nonlocal_subj,both,women,uncle,cleaned,himself,The women said that the uncle cleaned himself . <eos>,The women said that the uncle cleaned himself .
+20,embed,local,1,none,none,none,none,grandfather,man,talked to,himself,The grandfather said that the man talked to himself . <eos>,The grandfather said that the man talked to himself .
+20,embed,nonlocal,0,number,none,local_subj,number,grandfather,men,talked to,himself,The grandfather said that the men talked to himself . <eos>,The grandfather said that the men talked to himself .
+20,embed,nonlocal,0,gender,none,local_subj,gender,grandfather,woman,talked to,himself,The grandfather said that the woman talked to himself . <eos>,The grandfather said that the woman talked to himself .
+20,embed,nonlocal,0,both,none,local_subj,both,grandfather,women,talked to,himself,The grandfather said that the women talked to himself . <eos>,The grandfather said that the women talked to himself .
+20,embed,local,1,none,none,nonlocal_subj,number,men,grandfather,talked to,himself,The men said that the grandfather talked to himself . <eos>,The men said that the grandfather talked to himself .
+20,embed,local,1,none,number,nonlocal_subj,gender,woman,grandfather,talked to,himself,The woman said that the grandfather talked to himself . <eos>,The woman said that the grandfather talked to himself .
+20,embed,local,1,none,gender,nonlocal_subj,both,women,grandfather,talked to,himself,The women said that the grandfather talked to himself . <eos>,The women said that the grandfather talked to himself .
+21,embed,local,1,none,none,none,none,father,man,confused,himself,The father said that the man confused himself . <eos>,The father said that the man confused himself .
+21,embed,nonlocal,0,number,none,local_subj,number,father,men,confused,himself,The father said that the men confused himself . <eos>,The father said that the men confused himself .
+21,embed,nonlocal,0,gender,none,local_subj,gender,father,woman,confused,himself,The father said that the woman confused himself . <eos>,The father said that the woman confused himself .
+21,embed,nonlocal,0,both,none,local_subj,both,father,women,confused,himself,The father said that the women confused himself . <eos>,The father said that the women confused himself .
+21,embed,local,1,none,none,nonlocal_subj,number,men,father,confused,himself,The men said that the father confused himself . <eos>,The men said that the father confused himself .
+21,embed,local,1,none,number,nonlocal_subj,gender,woman,father,confused,himself,The woman said that the father confused himself . <eos>,The woman said that the father confused himself .
+21,embed,local,1,none,gender,nonlocal_subj,both,women,father,confused,himself,The women said that the father confused himself . <eos>,The women said that the father confused himself .
+22,embed,local,1,none,none,none,none,boy,man,behaved,himself,The boy said that the man behaved himself . <eos>,The boy said that the man behaved himself .
+22,embed,nonlocal,0,number,none,local_subj,number,boy,men,behaved,himself,The boy said that the men behaved himself . <eos>,The boy said that the men behaved himself .
+22,embed,nonlocal,0,gender,none,local_subj,gender,boy,woman,behaved,himself,The boy said that the woman behaved himself . <eos>,The boy said that the woman behaved himself .
+22,embed,nonlocal,0,both,none,local_subj,both,boy,women,behaved,himself,The boy said that the women behaved himself . <eos>,The boy said that the women behaved himself .
+22,embed,local,1,none,none,nonlocal_subj,number,men,boy,behaved,himself,The men said that the boy behaved himself . <eos>,The men said that the boy behaved himself .
+22,embed,local,1,none,number,nonlocal_subj,gender,woman,boy,behaved,himself,The woman said that the boy behaved himself . <eos>,The woman said that the boy behaved himself .
+22,embed,local,1,none,gender,nonlocal_subj,both,women,boy,behaved,himself,The women said that the boy behaved himself . <eos>,The women said that the boy behaved himself .
+23,embed,local,1,none,none,none,none,grandfather,man,saved,himself,The grandfather said that the man saved himself . <eos>,The grandfather said that the man saved himself .
+23,embed,nonlocal,0,number,none,local_subj,number,grandfather,men,saved,himself,The grandfather said that the men saved himself . <eos>,The grandfather said that the men saved himself .
+23,embed,nonlocal,0,gender,none,local_subj,gender,grandfather,woman,saved,himself,The grandfather said that the woman saved himself . <eos>,The grandfather said that the woman saved himself .
+23,embed,nonlocal,0,both,none,local_subj,both,grandfather,women,saved,himself,The grandfather said that the women saved himself . <eos>,The grandfather said that the women saved himself .
+23,embed,local,1,none,none,nonlocal_subj,number,men,grandfather,saved,himself,The men said that the grandfather saved himself . <eos>,The men said that the grandfather saved himself .
+23,embed,local,1,none,number,nonlocal_subj,gender,woman,grandfather,saved,himself,The woman said that the grandfather saved himself . <eos>,The woman said that the grandfather saved himself .
+23,embed,local,1,none,gender,nonlocal_subj,both,women,grandfather,saved,himself,The women said that the grandfather saved himself . <eos>,The women said that the grandfather saved himself .
+24,embed,local,1,none,none,none,none,grandfather,man,disappointed,himself,The grandfather said that the man disappointed himself . <eos>,The grandfather said that the man disappointed himself .
+24,embed,nonlocal,0,number,none,local_subj,number,grandfather,men,disappointed,himself,The grandfather said that the men disappointed himself . <eos>,The grandfather said that the men disappointed himself .
+24,embed,nonlocal,0,gender,none,local_subj,gender,grandfather,woman,disappointed,himself,The grandfather said that the woman disappointed himself . <eos>,The grandfather said that the woman disappointed himself .
+24,embed,nonlocal,0,both,none,local_subj,both,grandfather,women,disappointed,himself,The grandfather said that the women disappointed himself . <eos>,The grandfather said that the women disappointed himself .
+24,embed,local,1,none,none,nonlocal_subj,number,men,grandfather,disappointed,himself,The men said that the grandfather disappointed himself . <eos>,The men said that the grandfather disappointed himself .
+24,embed,local,1,none,number,nonlocal_subj,gender,woman,grandfather,disappointed,himself,The woman said that the grandfather disappointed himself . <eos>,The woman said that the grandfather disappointed himself .
+24,embed,local,1,none,gender,nonlocal_subj,both,women,grandfather,disappointed,himself,The women said that the grandfather disappointed himself . <eos>,The women said that the grandfather disappointed himself .
+25,embed,local,1,none,none,none,none,son,man,repeated,himself,The son said that the man repeated himself . <eos>,The son said that the man repeated himself .
+25,embed,nonlocal,0,number,none,local_subj,number,son,men,repeated,himself,The son said that the men repeated himself . <eos>,The son said that the men repeated himself .
+25,embed,nonlocal,0,gender,none,local_subj,gender,son,woman,repeated,himself,The son said that the woman repeated himself . <eos>,The son said that the woman repeated himself .
+25,embed,nonlocal,0,both,none,local_subj,both,son,women,repeated,himself,The son said that the women repeated himself . <eos>,The son said that the women repeated himself .
+25,embed,local,1,none,none,nonlocal_subj,number,men,son,repeated,himself,The men said that the son repeated himself . <eos>,The men said that the son repeated himself .
+25,embed,local,1,none,number,nonlocal_subj,gender,woman,son,repeated,himself,The woman said that the son repeated himself . <eos>,The woman said that the son repeated himself .
+25,embed,local,1,none,gender,nonlocal_subj,both,women,son,repeated,himself,The women said that the son repeated himself . <eos>,The women said that the son repeated himself .
+26,embed,local,1,none,none,none,none,king,man,behaved,himself,The king said that the man behaved himself . <eos>,The king said that the man behaved himself .
+26,embed,nonlocal,0,number,none,local_subj,number,king,men,behaved,himself,The king said that the men behaved himself . <eos>,The king said that the men behaved himself .
+26,embed,nonlocal,0,gender,none,local_subj,gender,king,woman,behaved,himself,The king said that the woman behaved himself . <eos>,The king said that the woman behaved himself .
+26,embed,nonlocal,0,both,none,local_subj,both,king,women,behaved,himself,The king said that the women behaved himself . <eos>,The king said that the women behaved himself .
+26,embed,local,1,none,none,nonlocal_subj,number,men,king,behaved,himself,The men said that the king behaved himself . <eos>,The men said that the king behaved himself .
+26,embed,local,1,none,number,nonlocal_subj,gender,woman,king,behaved,himself,The woman said that the king behaved himself . <eos>,The woman said that the king behaved himself .
+26,embed,local,1,none,gender,nonlocal_subj,both,women,king,behaved,himself,The women said that the king behaved himself . <eos>,The women said that the king behaved himself .
+27,embed,local,1,none,none,none,none,boy,man,convinced,himself,The boy said that the man convinced himself . <eos>,The boy said that the man convinced himself .
+27,embed,nonlocal,0,number,none,local_subj,number,boy,men,convinced,himself,The boy said that the men convinced himself . <eos>,The boy said that the men convinced himself .
+27,embed,nonlocal,0,gender,none,local_subj,gender,boy,woman,convinced,himself,The boy said that the woman convinced himself . <eos>,The boy said that the woman convinced himself .
+27,embed,nonlocal,0,both,none,local_subj,both,boy,women,convinced,himself,The boy said that the women convinced himself . <eos>,The boy said that the women convinced himself .
+27,embed,local,1,none,none,nonlocal_subj,number,men,boy,convinced,himself,The men said that the boy convinced himself . <eos>,The men said that the boy convinced himself .
+27,embed,local,1,none,number,nonlocal_subj,gender,woman,boy,convinced,himself,The woman said that the boy convinced himself . <eos>,The woman said that the boy convinced himself .
+27,embed,local,1,none,gender,nonlocal_subj,both,women,boy,convinced,himself,The women said that the boy convinced himself . <eos>,The women said that the boy convinced himself .
+28,embed,local,1,none,none,none,none,prince,man,talked to,himself,The prince said that the man talked to himself . <eos>,The prince said that the man talked to himself .
+28,embed,nonlocal,0,number,none,local_subj,number,prince,men,talked to,himself,The prince said that the men talked to himself . <eos>,The prince said that the men talked to himself .
+28,embed,nonlocal,0,gender,none,local_subj,gender,prince,woman,talked to,himself,The prince said that the woman talked to himself . <eos>,The prince said that the woman talked to himself .
+28,embed,nonlocal,0,both,none,local_subj,both,prince,women,talked to,himself,The prince said that the women talked to himself . <eos>,The prince said that the women talked to himself .
+28,embed,local,1,none,none,nonlocal_subj,number,men,prince,talked to,himself,The men said that the prince talked to himself . <eos>,The men said that the prince talked to himself .
+28,embed,local,1,none,number,nonlocal_subj,gender,woman,prince,talked to,himself,The woman said that the prince talked to himself . <eos>,The woman said that the prince talked to himself .
+28,embed,local,1,none,gender,nonlocal_subj,both,women,prince,talked to,himself,The women said that the prince talked to himself . <eos>,The women said that the prince talked to himself .
+29,embed,local,1,none,none,none,none,uncle,man,behaved,himself,The uncle said that the man behaved himself . <eos>,The uncle said that the man behaved himself .
+29,embed,nonlocal,0,number,none,local_subj,number,uncle,men,behaved,himself,The uncle said that the men behaved himself . <eos>,The uncle said that the men behaved himself .
+29,embed,nonlocal,0,gender,none,local_subj,gender,uncle,woman,behaved,himself,The uncle said that the woman behaved himself . <eos>,The uncle said that the woman behaved himself .
+29,embed,nonlocal,0,both,none,local_subj,both,uncle,women,behaved,himself,The uncle said that the women behaved himself . <eos>,The uncle said that the women behaved himself .
+29,embed,local,1,none,none,nonlocal_subj,number,men,uncle,behaved,himself,The men said that the uncle behaved himself . <eos>,The men said that the uncle behaved himself .
+29,embed,local,1,none,number,nonlocal_subj,gender,woman,uncle,behaved,himself,The woman said that the uncle behaved himself . <eos>,The woman said that the uncle behaved himself .
+29,embed,local,1,none,gender,nonlocal_subj,both,women,uncle,behaved,himself,The women said that the uncle behaved himself . <eos>,The women said that the uncle behaved himself .
+30,embed,local,1,none,none,none,none,husband,man,confused,himself,The husband said that the man confused himself . <eos>,The husband said that the man confused himself .
+30,embed,nonlocal,0,number,none,local_subj,number,husband,men,confused,himself,The husband said that the men confused himself . <eos>,The husband said that the men confused himself .
+30,embed,nonlocal,0,gender,none,local_subj,gender,husband,woman,confused,himself,The husband said that the woman confused himself . <eos>,The husband said that the woman confused himself .
+30,embed,nonlocal,0,both,none,local_subj,both,husband,women,confused,himself,The husband said that the women confused himself . <eos>,The husband said that the women confused himself .
+30,embed,local,1,none,none,nonlocal_subj,number,men,husband,confused,himself,The men said that the husband confused himself . <eos>,The men said that the husband confused himself .
+30,embed,local,1,none,number,nonlocal_subj,gender,woman,husband,confused,himself,The woman said that the husband confused himself . <eos>,The woman said that the husband confused himself .
+30,embed,local,1,none,gender,nonlocal_subj,both,women,husband,confused,himself,The women said that the husband confused himself . <eos>,The women said that the husband confused himself .

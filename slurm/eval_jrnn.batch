@@ -1,0 +1,26 @@
+#!/bin/bash
+#SBATCH --qos=cpl
+#SBATCH -J eval_jrnn # A single job name for the array
+#SBATCH -n 1 # one core
+#SBATCH -N 1 # on one node
+#SBATCH --time=1-0    # -- first number is days requested, second number is hours
+#SBATCH --mem=20G
+#SBATCH -o logs/eval_jrnn_%j.out # Standard output
+#SBATCH -e logs/eval_jrnn_%j.err # Standard error
+#SBATCH --mail-user=jennhu@mit.edu # -- use this to send an automated email when:
+#SBATCH --mail-type=end            # -- your job completes successfully
+#SBATCH --mail-type=fail           # -- or if your job fails
+
+MATERIALS="/om/user/jennhu/rnng-refl/materials"
+DATA="/om/user/jennhu/rnng-refl/surprisal_data/jrnn"
+JRNN_PATH="/om/user/jennhu/jrnn"
+EXP=$1
+
+source activate neural-nlp
+python ${JRNN_PATH}/lm_1b/eval_test_google.py \
+    --pbtxt ${JRNN_PATH}/data/graph-2016-09-10.pbtxt \
+    --ckpt '/om/user/jennhu/jrnn/data/ckpt-*' \
+    --vocab_file ${JRNN_PATH}/data/vocab-2016-09-10.txt \
+    --input_file ${MATERIALS}/${EXP}_sentences.txt
+    --output_file ${DATA}/${EXP}_surprisal_jrnn.txt
+source deactivate

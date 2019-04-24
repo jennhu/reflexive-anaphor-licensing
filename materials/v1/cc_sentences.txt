@@ -1,0 +1,210 @@
+The father near the man enjoyed himself . <eos>
+The father near the men enjoyed himself . <eos>
+The father near the woman enjoyed himself . <eos>
+The father near the women enjoyed himself . <eos>
+The men near the father enjoyed himself . <eos>
+The woman near the father enjoyed himself . <eos>
+The women near the father enjoyed himself . <eos>
+The brother near the man confused himself . <eos>
+The brother near the men confused himself . <eos>
+The brother near the woman confused himself . <eos>
+The brother near the women confused himself . <eos>
+The men near the brother confused himself . <eos>
+The woman near the brother confused himself . <eos>
+The women near the brother confused himself . <eos>
+The brother near the man helped himself . <eos>
+The brother near the men helped himself . <eos>
+The brother near the woman helped himself . <eos>
+The brother near the women helped himself . <eos>
+The men near the brother helped himself . <eos>
+The woman near the brother helped himself . <eos>
+The women near the brother helped himself . <eos>
+The king near the man disappointed himself . <eos>
+The king near the men disappointed himself . <eos>
+The king near the woman disappointed himself . <eos>
+The king near the women disappointed himself . <eos>
+The men near the king disappointed himself . <eos>
+The woman near the king disappointed himself . <eos>
+The women near the king disappointed himself . <eos>
+The actor near the man killed himself . <eos>
+The actor near the men killed himself . <eos>
+The actor near the woman killed himself . <eos>
+The actor near the women killed himself . <eos>
+The men near the actor killed himself . <eos>
+The woman near the actor killed himself . <eos>
+The women near the actor killed himself . <eos>
+The brother near the man disappointed himself . <eos>
+The brother near the men disappointed himself . <eos>
+The brother near the woman disappointed himself . <eos>
+The brother near the women disappointed himself . <eos>
+The men near the brother disappointed himself . <eos>
+The woman near the brother disappointed himself . <eos>
+The women near the brother disappointed himself . <eos>
+The son near the man behaved himself . <eos>
+The son near the men behaved himself . <eos>
+The son near the woman behaved himself . <eos>
+The son near the women behaved himself . <eos>
+The men near the son behaved himself . <eos>
+The woman near the son behaved himself . <eos>
+The women near the son behaved himself . <eos>
+The father near the man taught himself . <eos>
+The father near the men taught himself . <eos>
+The father near the woman taught himself . <eos>
+The father near the women taught himself . <eos>
+The men near the father taught himself . <eos>
+The woman near the father taught himself . <eos>
+The women near the father taught himself . <eos>
+The son near the man helped himself . <eos>
+The son near the men helped himself . <eos>
+The son near the woman helped himself . <eos>
+The son near the women helped himself . <eos>
+The men near the son helped himself . <eos>
+The woman near the son helped himself . <eos>
+The women near the son helped himself . <eos>
+The father near the man taught himself . <eos>
+The father near the men taught himself . <eos>
+The father near the woman taught himself . <eos>
+The father near the women taught himself . <eos>
+The men near the father taught himself . <eos>
+The woman near the father taught himself . <eos>
+The women near the father taught himself . <eos>
+The son near the man helped himself . <eos>
+The son near the men helped himself . <eos>
+The son near the woman helped himself . <eos>
+The son near the women helped himself . <eos>
+The men near the son helped himself . <eos>
+The woman near the son helped himself . <eos>
+The women near the son helped himself . <eos>
+The father near the man behaved himself . <eos>
+The father near the men behaved himself . <eos>
+The father near the woman behaved himself . <eos>
+The father near the women behaved himself . <eos>
+The men near the father behaved himself . <eos>
+The woman near the father behaved himself . <eos>
+The women near the father behaved himself . <eos>
+The father near the man killed himself . <eos>
+The father near the men killed himself . <eos>
+The father near the woman killed himself . <eos>
+The father near the women killed himself . <eos>
+The men near the father killed himself . <eos>
+The woman near the father killed himself . <eos>
+The women near the father killed himself . <eos>
+The grandfather near the man enjoyed himself . <eos>
+The grandfather near the men enjoyed himself . <eos>
+The grandfather near the woman enjoyed himself . <eos>
+The grandfather near the women enjoyed himself . <eos>
+The men near the grandfather enjoyed himself . <eos>
+The woman near the grandfather enjoyed himself . <eos>
+The women near the grandfather enjoyed himself . <eos>
+The brother near the man saved himself . <eos>
+The brother near the men saved himself . <eos>
+The brother near the woman saved himself . <eos>
+The brother near the women saved himself . <eos>
+The men near the brother saved himself . <eos>
+The woman near the brother saved himself . <eos>
+The women near the brother saved himself . <eos>
+The king near the man proved himself . <eos>
+The king near the men proved himself . <eos>
+The king near the woman proved himself . <eos>
+The king near the women proved himself . <eos>
+The men near the king proved himself . <eos>
+The woman near the king proved himself . <eos>
+The women near the king proved himself . <eos>
+The father near the man talked to himself . <eos>
+The father near the men talked to himself . <eos>
+The father near the woman talked to himself . <eos>
+The father near the women talked to himself . <eos>
+The men near the father talked to himself . <eos>
+The woman near the father talked to himself . <eos>
+The women near the father talked to himself . <eos>
+The father near the man proved himself . <eos>
+The father near the men proved himself . <eos>
+The father near the woman proved himself . <eos>
+The father near the women proved himself . <eos>
+The men near the father proved himself . <eos>
+The woman near the father proved himself . <eos>
+The women near the father proved himself . <eos>
+The uncle near the man cleaned himself . <eos>
+The uncle near the men cleaned himself . <eos>
+The uncle near the woman cleaned himself . <eos>
+The uncle near the women cleaned himself . <eos>
+The men near the uncle cleaned himself . <eos>
+The woman near the uncle cleaned himself . <eos>
+The women near the uncle cleaned himself . <eos>
+The grandfather near the man talked to himself . <eos>
+The grandfather near the men talked to himself . <eos>
+The grandfather near the woman talked to himself . <eos>
+The grandfather near the women talked to himself . <eos>
+The men near the grandfather talked to himself . <eos>
+The woman near the grandfather talked to himself . <eos>
+The women near the grandfather talked to himself . <eos>
+The father near the man confused himself . <eos>
+The father near the men confused himself . <eos>
+The father near the woman confused himself . <eos>
+The father near the women confused himself . <eos>
+The men near the father confused himself . <eos>
+The woman near the father confused himself . <eos>
+The women near the father confused himself . <eos>
+The boy near the man behaved himself . <eos>
+The boy near the men behaved himself . <eos>
+The boy near the woman behaved himself . <eos>
+The boy near the women behaved himself . <eos>
+The men near the boy behaved himself . <eos>
+The woman near the boy behaved himself . <eos>
+The women near the boy behaved himself . <eos>
+The grandfather near the man saved himself . <eos>
+The grandfather near the men saved himself . <eos>
+The grandfather near the woman saved himself . <eos>
+The grandfather near the women saved himself . <eos>
+The men near the grandfather saved himself . <eos>
+The woman near the grandfather saved himself . <eos>
+The women near the grandfather saved himself . <eos>
+The grandfather near the man disappointed himself . <eos>
+The grandfather near the men disappointed himself . <eos>
+The grandfather near the woman disappointed himself . <eos>
+The grandfather near the women disappointed himself . <eos>
+The men near the grandfather disappointed himself . <eos>
+The woman near the grandfather disappointed himself . <eos>
+The women near the grandfather disappointed himself . <eos>
+The son near the man repeated himself . <eos>
+The son near the men repeated himself . <eos>
+The son near the woman repeated himself . <eos>
+The son near the women repeated himself . <eos>
+The men near the son repeated himself . <eos>
+The woman near the son repeated himself . <eos>
+The women near the son repeated himself . <eos>
+The king near the man behaved himself . <eos>
+The king near the men behaved himself . <eos>
+The king near the woman behaved himself . <eos>
+The king near the women behaved himself . <eos>
+The men near the king behaved himself . <eos>
+The woman near the king behaved himself . <eos>
+The women near the king behaved himself . <eos>
+The boy near the man convinced himself . <eos>
+The boy near the men convinced himself . <eos>
+The boy near the woman convinced himself . <eos>
+The boy near the women convinced himself . <eos>
+The men near the boy convinced himself . <eos>
+The woman near the boy convinced himself . <eos>
+The women near the boy convinced himself . <eos>
+The prince near the man talked to himself . <eos>
+The prince near the men talked to himself . <eos>
+The prince near the woman talked to himself . <eos>
+The prince near the women talked to himself . <eos>
+The men near the prince talked to himself . <eos>
+The woman near the prince talked to himself . <eos>
+The women near the prince talked to himself . <eos>
+The uncle near the man behaved himself . <eos>
+The uncle near the men behaved himself . <eos>
+The uncle near the woman behaved himself . <eos>
+The uncle near the women behaved himself . <eos>
+The men near the uncle behaved himself . <eos>
+The woman near the uncle behaved himself . <eos>
+The women near the uncle behaved himself . <eos>
+The husband near the man confused himself . <eos>
+The husband near the men confused himself . <eos>
+The husband near the woman confused himself . <eos>
+The husband near the women confused himself . <eos>
+The men near the husband confused himself . <eos>
+The woman near the husband confused himself . <eos>
+The women near the husband confused himself . <eos>

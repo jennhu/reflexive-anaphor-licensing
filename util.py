@@ -15,6 +15,9 @@ def write_sentences(sentences, path):
         for s in sentences:
             f.write('%s\n' % s)
 
+def generate_stimuli(grammatical_sentences):
+    pass
+
 class Lexicon(object):
     def __init__(self, lex_path):
         self.lex_path = lex_path
@@ -25,6 +28,7 @@ class Lexicon(object):
         self.matrix_verbs = verbs.loc[verbs.verb_type == 'matrix'].verb
 
         self.nouns = read_csv(self._path('nouns.csv'))
+        self.nouns = self.nouns.loc[~self.nouns.singular.isin(['man','woman','groom'])]
         self.pronouns = read_csv(self._path('pronouns.csv'))
 
     def _path(self, suffix):
@@ -64,8 +68,8 @@ class Lexicon(object):
         verb = self.refl_verbs.sample().values[0]
 
         # 2. randomly choose features of reflexive pronoun
-        pn_gender = random.choice(['male', 'female'])
-        pn_number = random.choice(['singular', 'plural'])
+        pn_gender = 'male' # random.choice(['male', 'female'])
+        pn_number = 'singular' # random.choice(['singular', 'plural'])
         opp_gender = self._flip_gender(pn_gender)
         opp_number = self._flip_number(pn_number)
 
