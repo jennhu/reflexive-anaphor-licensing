@@ -81,7 +81,7 @@ def _get_data_df(data, surp, pronoun, exp):
 
 
 def plot_all_models(dfs, out_path, exp):
-    sns.set_style('white')
+    sns.set_style('ticks')
     position_order, _ = _orders(exp)
     # ungrammatical --> red, grammatical --> blue
     palette = {
@@ -97,19 +97,19 @@ def plot_all_models(dfs, out_path, exp):
         model = MODELS[i]
         params = dict(data=dfs[model], x='mismatch_position', y='surprisal',
                       order=position_order, palette=palette)
-        sns.barplot(ax=ax, **params)
+        sns.barplot(ax=ax, edgecolor=None, **params)
         if i != 0:
             ax.yaxis.set_visible(False)
         else:
             ax.set_ylabel('mean surprisal', fontsize=14)
         for tick in ax.yaxis.get_major_ticks():
-            tick.label.set_fontsize(12)
-        ax.set_xlabel('mismatch', fontsize=14)
+            tick.label.set_fontsize(10)
+        ax.set_xlabel('mismatch', fontsize=12)
         ax.set_xticklabels(['none', 'nonlocal', 'local'])
         for tick in ax.xaxis.get_major_ticks():
-            tick.label.set_fontsize(12)
-            tick.label.set_rotation(45)
-        ax.set_title(_get_title(model), fontsize=16)
+            tick.label.set_fontsize(10)
+            tick.label.set_rotation(30)
+        ax.set_title(_get_title(model), fontsize=14)
     plt.savefig(out_path, dpi=300, bbox_inches='tight')
 
 
