@@ -8,18 +8,26 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from numpy import mean
 
+MODELS = ['grnn', 'jrnn', 'rnng', 'tiny', 'trans']
+TITLES = {
+    'grnn' : 'GRNN',
+    'jrnn' : 'JRNN',
+    'rnng' : 'RNNG',
+    'tiny' : 'TinyLSTM',
+    'trans' : 'TransXL'
+}
+
 def _orders(exp):
-    agree, loc, pl = 'agree' in exp, 'loc' in exp, 'pl' in exp
-    if loc:
+    if 'loc' in exp:
         position_order = ['none', 'nonlocal_subj', 'local_subj', ]
     else:
         position_order = ['none', 'distractor', 'head']
     feature_order = ['none', 'number']
-    # if agree or pl:
-    #     feature_order = ['none', 'number', 'both']
-    # else:
-    #     feature_order = ['none', 'gender', 'number', 'both']
     return position_order, feature_order
+
+
+def _get_title(model):
+    return TITLES[model]
 
 
 def plot_mean_surprisal(df, out_path, model, exp):
@@ -33,11 +41,7 @@ def plot_mean_surprisal(df, out_path, model, exp):
         'distractor' : 'skyblue',
         'none' : 'darkseagreen'
     }
-    # params = dict(data=df, x='mismatch_feature', y='surprisal', 
-    #               hue='mismatch_position', hue_order=position_order, 
-    #               order=feature_order, palette=palette)
     params = dict(data=df, x='mismatch_position', y='surprisal',
-                #   hue='mismatch_position', hue_order=position_order,
                   order=position_order, palette=palette)
     sns.barplot(**params)
     plt.title('%s mean surprisal (%s)' % (model, exp))
@@ -76,13 +80,53 @@ def _get_data_df(data, surp, pronoun, exp):
     return data_df
 
 
+def plot_all_models(dfs, out_path, exp):
+    sns.set_style('white')
+    position_order, _ = _orders(exp)
+    # ungrammatical --> red, grammatical --> blue
+    palette = {
+        'local_subj' : 'indianred',
+        'head' : 'indianred',
+        'nonlocal_subj' : 'skyblue',
+        'distractor' : 'skyblue',
+        'none' : 'darkseagreen'
+    }
+    _, axarr = plt.subplots(nrows=1, ncols=len(MODELS), 
+                            sharey=True, figsize=(10,2))
+    for i, ax in enumerate(axarr):
+        model = MODELS[i]
+        params = dict(data=dfs[model], x='mismatch_position', y='surprisal',
+                      order=position_order, palette=palette)
+        sns.barplot(ax=ax, **params)
+        if i != 0:
+            ax.yaxis.set_visible(False)
+        else:
+            ax.set_ylabel('mean surprisal', fontsize=14)
+        for tick in ax.yaxis.get_major_ticks():
+            tick.label.set_fontsize(12)
+        ax.set_xlabel('mismatch', fontsize=14)
+        ax.set_xticklabels(['none', 'nonlocal', 'local'])
+        for tick in ax.xaxis.get_major_ticks():
+            tick.label.set_fontsize(12)
+            tick.label.set_rotation(45)
+        ax.set_title(_get_title(model), fontsize=16)
+    plt.savefig(out_path, dpi=300, bbox_inches='tight')
+
+
 def main(out_prefix, model, exp, pronoun):
     data = '../materials/%s.csv' % exp
-    surp = '../surprisal_data/%s/%s_surprisal_%s.txt' % (model, exp, model)
     out_path = '%s/%s_%s.png' % (out_prefix, exp, model)
-    
-    df = _get_data_df(data, surp, pronoun, exp)
-    plot_mean_surprisal(df, out_path, model, exp)
+    if model == 'all':
+        dfs = {}
+        for m in MODELS:
+            surp = '../surprisal_data/%s/%s_surprisal_%s.txt' % (m, exp, m)
+            df = _get_data_df(data, surp, pronoun, exp)
+            dfs[m] = df
+        plot_all_models(dfs, out_path, exp)
+    else:
+        surp = '../surprisal_data/%s/%s_surprisal_%s.txt' % (model, exp, model)
+        df = _get_data_df(data, surp, pronoun, exp)
+        plot_mean_surprisal(df, out_path, model, exp)
     
 
 if __name__ == '__main__':
@@ -92,7 +136,7 @@ if __name__ == '__main__':
                         help='prefix to path to save final plots (file will '
                              'be named according to experiment name)')
     parser.add_argument('--model', '-model', '--M', '-M', required=True,
-                        help='name of model')
+                        help='name of model, or all to plot all at once')
     parser.add_argument('--exp', '-exp', required=True,
                         help='name of experiment')
     parser.add_argument('--pronoun', '-pronoun', default='himself',
