@@ -83,6 +83,7 @@ def _get_data_df(data, surp, pronoun, exp):
 def plot_all_models(dfs, out_path, exp):
     sns.set_style('ticks')
     position_order, _ = _orders(exp)
+    cc = 'cc' in exp
     # ungrammatical --> red, grammatical --> blue
     palette = {
         'local_subj' : 'indianred',
@@ -91,24 +92,34 @@ def plot_all_models(dfs, out_path, exp):
         'distractor' : 'skyblue',
         'none' : 'darkseagreen'
     }
+    fcolor = '#f4f4f7'
     _, axarr = plt.subplots(nrows=1, ncols=len(MODELS), 
                             sharey=True, figsize=(10,2))
     for i, ax in enumerate(axarr):
         model = MODELS[i]
         params = dict(data=dfs[model], x='mismatch_position', y='surprisal',
-                      order=position_order, palette=palette)
-        sns.barplot(ax=ax, edgecolor=None, **params)
-        if i != 0:
-            ax.yaxis.set_visible(False)
-        else:
+                      order=position_order, palette=palette, errwidth=1,
+                      ax=ax, edgecolor=fcolor)
+        sns.barplot(**params)
+        if i == 0:
             ax.set_ylabel('mean surprisal', fontsize=14)
+            ax.set_xlabel('')
+        else:
+            ax.yaxis.set_visible(False)
+            if i == 2:
+                ax.set_xlabel('position of feature mismatch', fontsize=12)
+            else:
+                ax.set_xlabel('')
         for tick in ax.yaxis.get_major_ticks():
             tick.label.set_fontsize(10)
-        ax.set_xlabel('mismatch', fontsize=12)
-        ax.set_xticklabels(['none', 'nonlocal', 'local'])
+        if cc:
+            ax.set_xticklabels(['none', 'distractor', 'head'])
+        else:
+            ax.set_xticklabels(['none', 'nonlocal', 'local'])
+        ax.set_facecolor(fcolor)
         for tick in ax.xaxis.get_major_ticks():
             tick.label.set_fontsize(10)
-            tick.label.set_rotation(30)
+            tick.label.set_rotation(20)
         ax.set_title(_get_title(model), fontsize=14)
     plt.savefig(out_path, dpi=300, bbox_inches='tight')
 
