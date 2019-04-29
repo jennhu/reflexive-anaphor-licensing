@@ -36,7 +36,7 @@ FCOLOR = '#f4f4f7'
 #################################################################################
 
 def _orders(exp):
-    if 'loc' in exp:
+    if 'loc' in exp or 'ml' in exp:
         position_order = ['none', 'nonlocal_subj', 'local_subj', ]
     else:
         position_order = ['none', 'distractor', 'head']
