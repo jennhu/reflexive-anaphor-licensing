@@ -3,141 +3,102 @@
     Plots mean surprisals across conditions using model surprisal data.
 '''
 import argparse
-import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-from numpy import mean
 
-MODELS = ['grnn', 'jrnn', 'rnng', 'tiny', 'trans']
-TITLES = {
-    'grnn' : 'GRNN',
-    'jrnn' : 'JRNN',
-    'rnng' : 'RNNG',
-    'tiny' : 'TinyLSTM',
-    'trans' : 'TransXL'
-}
+import plot_util
 
-def _orders(exp):
-    if 'loc' in exp:
-        position_order = ['none', 'nonlocal_subj', 'local_subj', ]
-    else:
-        position_order = ['none', 'distractor', 'head']
-    feature_order = ['none', 'number']
-    return position_order, feature_order
+#################################################################################
+# Plot surprisal vs. baseline
+#################################################################################
 
+def plot_surprisal_vs_baseline(dfs, out_path, exp):
+    for m, df in dfs.items():
+        dfs[m] = plot_util._subtract_baseline(df, exp)
+    plot_all_models(dfs, out_path, exp, ylabel='surprisal - baseline')
 
-def _get_title(model):
-    return TITLES[model]
+#################################################################################
+# Plot absolute surprisal values
+#################################################################################
 
-
-def plot_mean_surprisal(df, out_path, model, exp):
+def plot_single_model(df, out_path, model, exp):
     sns.set_style('whitegrid')
-    position_order, _ = _orders(exp)
-    # ungrammatical --> red, grammatical --> blue
-    palette = {
-        'local_subj' : 'indianred',
-        'head' : 'indianred',
-        'nonlocal_subj' : 'skyblue',
-        'distractor' : 'skyblue',
-        'none' : 'darkseagreen'
-    }
+    position_order, _ = plot_util._orders(exp)
     params = dict(data=df, x='mismatch_position', y='surprisal',
-                  order=position_order, palette=palette)
+                  order=position_order, palette=plot_util.PALETTE)
     sns.barplot(**params)
     plt.title('%s mean surprisal (%s)' % (model, exp))
     plt.savefig(out_path, dpi=300, bbox_inches='tight')
 
 
-def prob_ratio(df1, df2):
-    prob_ratios = []
-    for row in df1.itertuples():
-        surprisal1 = row.surprisal
-        surprisal2 = df2.loc[row.Index].surprisal
-        prob_ratio = 2**(surprisal2 - surprisal1)
-        prob_ratios.append(prob_ratio)
-    return mean(prob_ratios)
-
-
-def _get_data_df(data, surp, pronoun, exp):
-    # read surprisals and data
-    surp_df = pd.read_csv(surp, delim_whitespace=True,
-                          names=['token', 'surprisal'])
-    data_df = pd.read_csv(data)
-
-    agree, pl = 'agree' in exp, 'pl' in exp
-    # only keep surprisal at specified pronoun or verb
-    if agree:
-        verb = 'were' if pl else 'was'
-        surp_df = surp_df.loc[surp_df.token == verb]
-    else:
-        pn = 'themselves' if pl else pronoun
-        surp_df = surp_df.loc[surp_df.token == pn]
-        data_df = data_df.loc[data_df.pronoun == pn]
-
-    # insert surprisal into data_df
-    data_df['surprisal'] = surp_df.surprisal.values
-    
-    return data_df
-
-
-def plot_all_models(dfs, out_path, exp):
+def plot_all_models(dfs, out_path, exp, ylabel='mean surprisal'):
+    # set style and parameters
     sns.set_style('ticks')
-    position_order, _ = _orders(exp)
-    cc = 'cc' in exp
-    # ungrammatical --> red, grammatical --> blue
-    palette = {
-        'local_subj' : 'indianred',
-        'head' : 'indianred',
-        'nonlocal_subj' : 'skyblue',
-        'distractor' : 'skyblue',
-        'none' : 'darkseagreen'
-    }
-    fcolor = '#f4f4f7'
-    _, axarr = plt.subplots(nrows=1, ncols=len(MODELS), 
-                            sharey=True, figsize=(10,2))
+    position_order, _ = plot_util._orders(exp)
+    params = dict(x='mismatch_position', y='surprisal', errwidth=1,
+                  order=position_order, palette=plot_util.PALETTE,
+                  edgecolor=plot_util.FCOLOR)
+    xticklabels = ['none', 'distractor', 'head'] if 'cc' in exp else \
+                  ['none', 'nonlocal', 'local']
+    label_size = 10
+    ticklabel_size = 8
+
+    # initialize figure and subplots
+    _, axarr = plt.subplots(nrows=1, ncols=len(plot_util.MODELS),
+                            sharey=True, figsize=(10, 1.5))
+
     for i, ax in enumerate(axarr):
-        model = MODELS[i]
-        params = dict(data=dfs[model], x='mismatch_position', y='surprisal',
-                      order=position_order, palette=palette, errwidth=1,
-                      ax=ax, edgecolor=fcolor)
-        sns.barplot(**params)
+        # plot data
+        model = plot_util.MODELS[i]
+        sns.barplot(data=dfs[model], ax=ax, **params)
+        ax.set_facecolor(plot_util.FCOLOR)
+
+        # only keep y-axis label at leftmost subplot
         if i == 0:
-            ax.set_ylabel('mean surprisal', fontsize=14)
-            ax.set_xlabel('')
+            ax.set_ylabel(ylabel, fontsize=label_size)
         else:
             ax.yaxis.set_visible(False)
-            if i == 2:
-                ax.set_xlabel('position of feature mismatch', fontsize=12)
-            else:
-                ax.set_xlabel('')
-        for tick in ax.yaxis.get_major_ticks():
-            tick.label.set_fontsize(10)
-        if cc:
-            ax.set_xticklabels(['none', 'distractor', 'head'])
+        
+        # only keep x-axis label at center subplot
+        if i == len(plot_util.MODELS) / 2:
+            ax.set_xlabel('position of feature mismatch', fontsize=label_size)
         else:
-            ax.set_xticklabels(['none', 'nonlocal', 'local'])
-        ax.set_facecolor(fcolor)
+            ax.set_xlabel('')
+
+        # set tick labels and titles
+        for tick in ax.yaxis.get_major_ticks():
+            tick.label.set_fontsize(ticklabel_size)
         for tick in ax.xaxis.get_major_ticks():
-            tick.label.set_fontsize(10)
-            tick.label.set_rotation(20)
-        ax.set_title(_get_title(model), fontsize=14)
+            tick.label.set_fontsize(ticklabel_size)
+            # tick.label.set_rotation(20)
+        ax.set_xticklabels(xticklabels)
+        ax.set_title(plot_util._get_title(model), fontsize=label_size)
+
+    # save final figure
     plt.savefig(out_path, dpi=300, bbox_inches='tight')
 
 
-def main(out_prefix, model, exp, pronoun):
+#################################################################################
+# Main function
+#################################################################################
+
+def main(out_prefix, model, exp, vs_baseline):
     data = '../materials/%s.csv' % exp
     out_path = '%s/%s_%s.png' % (out_prefix, exp, model)
     if model == 'all':
         dfs = {}
-        for m in MODELS:
+        for m in plot_util.MODELS:
             surp = '../surprisal_data/%s/%s_surprisal_%s.txt' % (m, exp, m)
-            df = _get_data_df(data, surp, pronoun, exp)
+            df = plot_util._get_data_df(data, surp, exp)
             dfs[m] = df
-        plot_all_models(dfs, out_path, exp)
+        if vs_baseline:
+            plot_surprisal_vs_baseline(dfs, out_path, exp)
+        else:
+            plot_all_models(dfs, out_path, exp)
     else:
         surp = '../surprisal_data/%s/%s_surprisal_%s.txt' % (model, exp, model)
-        df = _get_data_df(data, surp, pronoun, exp)
-        plot_mean_surprisal(df, out_path, model, exp)
+        df = plot_util._get_data_df(data, surp, exp)
+        plot_single_model(df, out_path, model, exp)
     
 
 if __name__ == '__main__':
@@ -150,7 +111,9 @@ if __name__ == '__main__':
                         help='name of model, or all to plot all at once')
     parser.add_argument('--exp', '-exp', required=True,
                         help='name of experiment')
-    parser.add_argument('--pronoun', '-pronoun', default='himself',
-                        help='pronouns to include in analysis')
+    parser.add_argument('--vs_baseline', '-vs_baseline', '--vs', '-vs',
+                        default=False, action='store_true',
+                        help='toggle plotting raw surprisal or surprisal '
+                             'difference vs. baseline')
     args = parser.parse_args()
     main(**vars(args))
