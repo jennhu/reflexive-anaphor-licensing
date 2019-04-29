@@ -11,6 +11,8 @@ import pandas as pd
 
 MODELS = ['grnn', 'jrnn', 'trans', 'rnng', 'tiny']
 
+PRONOUN_ORDER = ['themselves', 'himself', 'herself']
+
 TITLES = {
     'grnn': 'GRNN',
     'jrnn': 'JRNN',
@@ -72,7 +74,7 @@ def _get_data_df(data, surp, exp):
     else:
         pn = 'themselves' if pl else exp.split('_')[1]
         surp_df = surp_df.loc[surp_df.token == pn]
-        data_df = data_df.loc[data_df.pronoun == pn]
+        # data_df = data_df.loc[data_df.pronoun == pn]
 
     # insert surprisal into data_df
     data_df['surprisal'] = surp_df.surprisal.values
