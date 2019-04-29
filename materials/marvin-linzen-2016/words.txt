@@ -1,0 +1,5 @@
+Reflexive sentential complement
+['manager', 'author', 'consultant', 'said', 'congratulated', 'farmer', 'knew', 'herself', 'himself', 'teacher', 'the', 'surgeon', 'doubted', 'customer', 'hurt', 'injured', 'thought', 'senator', 'hated', 'mechanic', 'banker', 'pilot', 'officer', 'disguised', 'embarrassed']
+
+Simple
+['injured', 'hated', 'farmer', 'pilot', 'consultant', 'himself', 'herself', 'teacher', 'senator', 'doubted', 'author', 'embarrassed', 'disguised', 'surgeon', 'congratulated', 'manager', 'officer', 'the', 'hurt', 'customer']

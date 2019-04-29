@@ -71,6 +71,7 @@ inferred from the name of the experiment.
 - [ ] Counter-balancing of all N occurrences: double-check
 - [ ] Accuracy vs. Surprisal
 - [ ] Unigram/Bigram probability of Refl/Copula in a corpus
+- [ ] "Close" replication of Futrell et al.
 
 
 

@@ -9,7 +9,7 @@ import pandas as pd
 # Global variables
 #################################################################################
 
-MODELS = ['grnn', 'jrnn', 'rnng', 'tiny', 'trans']
+MODELS = ['grnn', 'jrnn', 'trans', 'rnng', 'tiny']
 
 TITLES = {
     'grnn': 'GRNN',
