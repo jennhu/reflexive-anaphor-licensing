@@ -11,15 +11,6 @@ from matplotlib.patches import Patch
 import plot_util
 
 #################################################################################
-# Plot surprisal vs. baseline
-#################################################################################
-
-def plot_surprisal_vs_baseline(dfs, out_path, exp, model_list):
-    for m, df in dfs.items():
-        dfs[m] = plot_util._subtract_baseline(df, exp)
-    plot_multiple_models(dfs, out_path, exp, model_list, ylabel='surprisal - baseline')
-
-#################################################################################
 # Plot absolute surprisal values
 #################################################################################
 
@@ -33,15 +24,29 @@ def plot_single_model(df, out_path, model, exp):
     plt.savefig(out_path, dpi=300, bbox_inches='tight')
 
 
-def plot_multiple_models(dfs, out_path, exp, model_list, ylabel='surprisal'):
+def plot_mult_models(dfs, out_path, exp, model_list, baseline):
+    if baseline:
+        for m, df in dfs.items():
+            dfs[m] = plot_util._subtract_baseline(df, exp)
     # set style and parameters
     sns.set_style('ticks')
-    position_order, _ = plot_util._orders(exp)
-    params = dict(x='pronoun', y='surprisal', errwidth=1,
-                  order=plot_util.PRONOUN_ORDER, palette=plot_util.PALETTE,
-                  edgecolor=plot_util.FCOLOR, hue='mismatch_position',
-                  hue_order=position_order[1:])
-    xticklabels = plot_util.PRONOUN_ORDER
+    position_order, target_order = plot_util._orders(exp, baseline=baseline)
+    target = 'verb' if 'agree' in exp else 'pronoun'
+    params = dict(x=target, y='surprisal', order=target_order, errwidth=1,
+                  palette=plot_util.PALETTE, edgecolor=plot_util.FCOLOR, 
+                  hue='mismatch_position', hue_order=position_order)
+    
+    # legend labels and handles
+    if 'cc' in exp:
+        labels = ['distractor mismatch', 'head mismatch']
+    else:
+        labels = ['nonlocal mismatch', 'local mismatch']
+    handles = [Patch(facecolor=plot_util.PALETTE[p]) for p in position_order]
+
+    # tick and axis labels
+    xlabel = 'target %s' % target
+    ylabel = 'surprisal - baseline' if baseline else 'surprisal'
+    xticklabels = target_order
     label_size = 10
     ticklabel_size = 8
 
@@ -61,25 +66,18 @@ def plot_multiple_models(dfs, out_path, exp, model_list, ylabel='surprisal'):
         else:
             ax.yaxis.set_visible(False)
         
-        # only keep x-axis label at center subplot
+        # only keep x-axis label and legend at center subplot
         if i == len(model_list) / 2:
-            ax.set_xlabel('target pronoun', fontsize=label_size)
-        else:
-            ax.set_xlabel('')
-
-        # only keep legend at rightmost subplot
-        handles = [Patch(facecolor=plot_util.PALETTE['nonlocal_subj']),
-                   Patch(facecolor=plot_util.PALETTE['local_subj'])]
-        if i == len(model_list) / 2:
-            lg = ax.legend(labels=['nonlocal mismatch', 'local mismatch'],
+            ax.set_xlabel(xlabel, fontsize=label_size)
+            lg = ax.legend(labels=labels, handles=handles, fancybox=False, 
                            loc='upper center', bbox_to_anchor=(0.5, -0.45), 
-                           fancybox=False, fontsize=ticklabel_size, ncol=2,
-                           handles=handles)
+                           fontsize=ticklabel_size, ncol=2)
             title = lg.get_title()
             title.set_fontsize(ticklabel_size)
             lg.get_frame().set_edgecolor('k')
             lg.get_frame().set_linewidth(0.9)
         else:
+            ax.set_xlabel('')
             ax.get_legend().remove()
 
         # set tick labels and titles
@@ -87,7 +85,8 @@ def plot_multiple_models(dfs, out_path, exp, model_list, ylabel='surprisal'):
             tick.label.set_fontsize(ticklabel_size)
         for tick in ax.xaxis.get_major_ticks():
             tick.label.set_fontsize(ticklabel_size)
-            tick.label.set_rotation(20)
+            if 'agree' not in exp:
+                tick.label.set_rotation(20)
         ax.set_xticklabels(xticklabels)
         ax.set_title(plot_util._get_title(model), fontsize=label_size)
 
@@ -101,33 +100,21 @@ def plot_multiple_models(dfs, out_path, exp, model_list, ylabel='surprisal'):
 
 def main(out_prefix, model, exp, vs_baseline):
     out_path = '%s/%s_%s.png' % (out_prefix, exp, '_'.join(model))
-    
+    suffixes = ['', '_pl'] if 'agree' in exp else \
+               ['_himself', '_herself', '_pl']
     model_list = plot_util.MODELS if model == ['all'] else model
-    dfs = {}
+    df_dict = {}
     for m in model_list:
-        print(m)
-
-        exp1 = exp + '_himself'
-        data_path = '../materials/%s.csv' % exp1
-        surp1 = '../surprisal_data/%s/%s_surprisal_%s.txt' % (m, exp1, m)
-        df1 = plot_util._get_data_df(data_path, surp1, exp1)
-
-        exp2 = exp + '_herself'
-        data_path = '../materials/%s.csv' % exp2
-        surp2 = '../surprisal_data/%s/%s_surprisal_%s.txt' % (m, exp2, m)
-        df2 = plot_util._get_data_df(data_path, surp2, exp2)
-
-        exp3 = exp + '_pl'
-        data_path = '../materials/%s.csv' % exp3
-        surp3 = '../surprisal_data/%s/%s_surprisal_%s.txt' % (m, exp3, m)
-        df3 = plot_util._get_data_df(data_path, surp3, exp3)
-
-        full_df = pd.concat([df1, df2, df3])
-        dfs[m] = full_df
-    if vs_baseline:
-        plot_surprisal_vs_baseline(dfs, out_path, exp, model_list)
-    else:
-        plot_multiple_models(dfs, out_path, exp, model_list)
+        dfs = []
+        for s in suffixes:
+            full_exp = exp + s
+            data_path = '../materials/%s.csv' % full_exp
+            surp = '../surprisal_data/%s/%s_surprisal_%s.txt' % (m, full_exp, m)
+            df = plot_util._get_data_df(data_path, surp, full_exp)
+            dfs.append(df)
+        full_df = pd.concat(dfs)
+        df_dict[m] = full_df
+    plot_mult_models(df_dict, out_path, exp, model_list, baseline=vs_baseline)
     
 
 if __name__ == '__main__':

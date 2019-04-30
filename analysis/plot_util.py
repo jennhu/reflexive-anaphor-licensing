@@ -37,13 +37,18 @@ FCOLOR = '#f4f4f7'
 # Helper functions
 #################################################################################
 
-def _orders(exp):
+def _orders(exp, baseline=True):
     if 'loc' in exp or 'ml' in exp:
-        position_order = ['none', 'nonlocal_subj', 'local_subj', ]
+        position_order = ['nonlocal_subj', 'local_subj']
     else:
-        position_order = ['none', 'distractor', 'head']
-    feature_order = ['none', 'number']
-    return position_order, feature_order
+        position_order = ['distractor', 'head']
+    if 'agree' in exp:
+        target_order = ['was', 'were']
+    else:
+        target_order = ['themselves', 'himself', 'herself']
+    if not baseline:
+        position_order.insert(0, 'none')
+    return position_order, target_order
 
 
 def _get_title(model):
