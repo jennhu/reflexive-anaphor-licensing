@@ -38,14 +38,14 @@ FCOLOR = '#f4f4f7'
 #################################################################################
 
 def _orders(exp, baseline=True):
-    if 'loc' in exp or 'ml' in exp:
+    if any(x in exp for x in ['loc', 'ml', 'futrell']):
         position_order = ['nonlocal_subj', 'local_subj']
     else:
         position_order = ['distractor', 'head']
     if 'agree' in exp:
         target_order = ['was', 'were']
     else:
-        target_order = ['themselves', 'himself', 'herself']
+        target_order = ['himself', 'herself']# ['themselves', 'himself', 'herself']
     if not baseline:
         position_order.insert(0, 'none')
     return position_order, target_order

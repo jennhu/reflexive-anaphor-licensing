@@ -7,6 +7,7 @@ surprisal_data/grnn/old/
 materials/old/
 analysis/plots/old/
 get_data_df.py
+template/
 
 # Temporary files
 ._*

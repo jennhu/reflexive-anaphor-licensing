@@ -85,7 +85,7 @@ def plot_mult_models(dfs, out_path, exp, model_list, baseline):
             tick.label.set_fontsize(ticklabel_size)
         for tick in ax.xaxis.get_major_ticks():
             tick.label.set_fontsize(ticklabel_size)
-            if 'agree' not in exp:
+            if 'agree' not in exp and 'futrell' not in exp:
                 tick.label.set_rotation(20)
         ax.set_xticklabels(xticklabels)
         ax.set_title(plot_util._get_title(model), fontsize=label_size)
@@ -101,7 +101,7 @@ def plot_mult_models(dfs, out_path, exp, model_list, baseline):
 def main(out_prefix, model, exp, vs_baseline):
     out_path = '%s/%s_%s.png' % (out_prefix, exp, '_'.join(model))
     suffixes = ['', '_pl'] if 'agree' in exp else \
-               ['_himself', '_herself', '_pl']
+               ['_himself', '_herself'] #, '_pl']
     model_list = plot_util.MODELS if model == ['all'] else model
     df_dict = {}
     for m in model_list:

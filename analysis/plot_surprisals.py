@@ -21,9 +21,9 @@ def plot_surprisal_vs_baseline(dfs, out_path, exp, model_list):
 # Plot absolute surprisal values
 #################################################################################
 
-def plot_single_model(df, out_path, model, exp):
+def plot_single_model(df, out_path, model, exp, vs_baseline):
     sns.set_style('whitegrid')
-    position_order, _ = plot_util._orders(exp)
+    position_order, _ = plot_util._orders(exp, vs_baseline)
     params = dict(data=df, x='mismatch_position', y='surprisal',
                   order=position_order, palette=plot_util.PALETTE)
     sns.barplot(**params)
@@ -86,9 +86,10 @@ def main(out_prefix, model, exp, vs_baseline):
     out_path = '%s/%s_%s.png' % (out_prefix, exp, '_'.join(model))
 
     if len(model) == 1 and model != ['all']:
+        model = model[0]
         surp = '../surprisal_data/%s/%s_surprisal_%s.txt' % (model, exp, model)
         df = plot_util._get_data_df(data_path, surp, exp)
-        plot_single_model(df, out_path, model, exp)
+        plot_single_model(df, out_path, model, exp, vs_baseline)
 
     else:
         model_list = plot_util.MODELS if model == ['all'] else model
