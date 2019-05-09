@@ -24,8 +24,10 @@ TITLES = {
 PALETTE = {
     # ungrammatical --> red
     # grammatical --> green/blue
+    'matrix_subj': 'indianred',
     'local_subj': 'indianred',
     'head': 'indianred',
+    'rc_subj': 'skyblue',
     'nonlocal_subj': 'skyblue',
     'distractor': 'skyblue',
     'none': 'darkseagreen'
@@ -37,17 +39,25 @@ FCOLOR = '#f4f4f7'
 # Helper functions
 #################################################################################
 
-def _orders(exp, baseline=True):
-    if any(x in exp for x in ['loc', 'ml', 'futrell']):
-        position_order = ['nonlocal_subj', 'local_subj']
-    else:
+def _orders(exp, baseline=True):    
+    if 'cc' in exp:
         position_order = ['distractor', 'head']
+    elif 'rc' in exp:
+        position_order = ['rc_subj', 'matrix_subj']
+    else:
+        position_order = ['nonlocal_subj', 'local_subj']
+    
     if 'agree' in exp:
         target_order = ['was', 'were']
     else:
-        target_order = ['himself', 'herself']# ['themselves', 'himself', 'herself']
+        if 'futrell' in exp:
+            target_order = ['himself', 'herself']
+        else:
+            target_order = ['themselves', 'himself', 'herself']
+
     if not baseline:
         position_order.insert(0, 'none')
+
     return position_order, target_order
 
 
@@ -77,7 +87,7 @@ def _get_data_df(data, surp, exp):
         verb = 'were' if pl else 'was'
         surp_df = surp_df.loc[surp_df.token == verb]
     else:
-        pn = 'themselves' if pl else exp.split('_')[1]
+        pn = 'themselves' if pl else exp.split('_')[-1]
         surp_df = surp_df.loc[surp_df.token == pn]
         # data_df = data_df.loc[data_df.pronoun == pn]
 

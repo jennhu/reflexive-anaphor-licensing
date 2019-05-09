@@ -39,6 +39,8 @@ def plot_mult_models(dfs, out_path, exp, model_list, baseline):
     # legend labels and handles
     if 'cc' in exp:
         labels = ['distractor mismatch', 'head mismatch']
+    elif 'rc' in exp:
+        labels = ['rc subj mismatch', 'matrix subj mismatch']
     else:
         labels = ['nonlocal mismatch', 'local mismatch']
     handles = [Patch(facecolor=plot_util.PALETTE[p]) for p in position_order]
@@ -67,7 +69,7 @@ def plot_mult_models(dfs, out_path, exp, model_list, baseline):
             ax.yaxis.set_visible(False)
         
         # only keep x-axis label and legend at center subplot
-        if i == len(model_list) / 2:
+        if i == int(len(model_list) / 2):
             ax.set_xlabel(xlabel, fontsize=label_size)
             lg = ax.legend(labels=labels, handles=handles, fancybox=False, 
                            loc='upper center', bbox_to_anchor=(0.5, -0.45), 
@@ -101,7 +103,7 @@ def plot_mult_models(dfs, out_path, exp, model_list, baseline):
 def main(out_prefix, model, exp, vs_baseline):
     out_path = '%s/%s_%s.png' % (out_prefix, exp, '_'.join(model))
     suffixes = ['', '_pl'] if 'agree' in exp else \
-               ['_himself', '_herself'] #, '_pl']
+               ['_himself', '_herself', '_pl']
     model_list = plot_util.MODELS if model == ['all'] else model
     df_dict = {}
     for m in model_list:

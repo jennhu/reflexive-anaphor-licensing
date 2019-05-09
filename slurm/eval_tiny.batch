@@ -19,5 +19,5 @@ cd /om/user/jennhu/lm-tinylstm
 source activate neural-nlp
 python eval.py \
     --checkpoint model_small.pt \
-    --eval_data ${MATERIALS}/${EXP}_sentences.txt \
+    --eval_data ${MATERIALS}/${EXP}_sentences_no_eos.txt \
     --fpath ${DATA}/${EXP}_surprisal_tiny.txt
