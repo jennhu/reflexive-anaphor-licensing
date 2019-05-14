@@ -9,7 +9,7 @@ import pandas as pd
 # Global variables
 #################################################################################
 
-MODELS = ['grnn', 'jrnn', 'trans', 'rnng', 'tiny']
+MODELS = ['grnn', 'jrnn', 'trans', 'rnng', 'tiny', '5gram_kn']
 
 PRONOUN_ORDER = ['themselves', 'himself', 'herself']
 
@@ -18,7 +18,8 @@ TITLES = {
     'jrnn': 'JRNN',
     'rnng': 'RNNG',
     'tiny': 'TinyLSTM',
-    'trans': 'TransXL'
+    'trans': 'TransXL',
+    '5gram_kn': '5gram'
 }
 
 PALETTE = {

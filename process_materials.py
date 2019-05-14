@@ -11,6 +11,8 @@ def main(exp, out_prefix):
                               (out_prefix, exp), index=False)
     materials.sentence_no_eos.to_csv('%s/%s_sentences_no_eos.txt' % \
                                      (out_prefix, exp), index=False)
+    materials.sentence.str.lower().to_csv('%s/%s_sentences_uncased.txt' % \
+                              (out_prefix, exp), index=False)
 
 
 if __name__ == '__main__':
