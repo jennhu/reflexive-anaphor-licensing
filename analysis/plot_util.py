@@ -9,9 +9,10 @@ import pandas as pd
 # Global variables
 #################################################################################
 
-MODELS = ['grnn', 'jrnn', 'trans', 'rnng', 'tiny', '5gram_kn']
+MODELS = ['grnn', 'jrnn', 'trans', 'rnng', 'tiny', '5gram']
 
 PRONOUN_ORDER = ['themselves', 'himself', 'herself']
+# PRONOUN_ORDER = ['them', 'him', 'her']
 
 TITLES = {
     'grnn': 'GRNN',
@@ -19,17 +20,17 @@ TITLES = {
     'rnng': 'RNNG',
     'tiny': 'TinyLSTM',
     'trans': 'TransXL',
-    '5gram_kn': '5gram'
+    '5gram': '5-gram'
 }
 
 PALETTE = {
     # ungrammatical --> red
     # grammatical --> green/blue
     'matrix_subj': 'indianred',
-    'local_subj': 'indianred',
+    'local_subj': 'indianred', # 'skyblue', 
     'head': 'indianred',
     'rc_subj': 'skyblue',
-    'nonlocal_subj': 'skyblue',
+    'nonlocal_subj': 'skyblue', # 'indianred',
     'distractor': 'skyblue',
     'none': 'darkseagreen'
 }
@@ -45,16 +46,18 @@ def _orders(exp, baseline=True):
         position_order = ['distractor', 'head']
     elif 'rc' in exp:
         position_order = ['rc_subj', 'matrix_subj']
+    elif 'nonrefl' in exp:
+        position_order = ['local_subj', 'nonlocal_subj']
     else:
         position_order = ['nonlocal_subj', 'local_subj']
-    
+
     if 'agree' in exp:
         target_order = ['was', 'were']
     else:
         if 'futrell' in exp:
             target_order = ['himself', 'herself']
         else:
-            target_order = ['themselves', 'himself', 'herself']
+            target_order = PRONOUN_ORDER #['themselves', 'himself', 'herself']
 
     if not baseline:
         position_order.insert(0, 'none')
@@ -76,7 +79,7 @@ def _prob_ratio(df1, df2):
     return mean(prob_ratios)
 
 
-def _get_data_df(data, surp, exp):
+def _get_data_df(data, surp, exp, nonrefl):
     # read surprisals and data
     surp_df = pd.read_csv(surp, delim_whitespace=True,
                           names=['token', 'surprisal'])
@@ -88,8 +91,17 @@ def _get_data_df(data, surp, exp):
         verb = 'were' if pl else 'was'
         surp_df = surp_df.loc[surp_df.token == verb]
     else:
-        pn = 'themselves' if pl else exp.split('_')[-1]
+        if nonrefl:
+            pn = 'them' if pl else exp.split('_')[-1][:3]
+        else:
+            pn = 'themselves' if pl else exp.split('_')[-1]
+        
+        print(pn)
         surp_df = surp_df.loc[surp_df.token == pn]
+
+        print(surp_df.head())
+        print(data_df.head())
+        print()
         # data_df = data_df.loc[data_df.pronoun == pn]
 
     # insert surprisal into data_df

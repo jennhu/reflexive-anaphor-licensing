@@ -1,0 +1,901 @@
+The girl said that the mother saw her . <eos>
+The mother said that the girl saw her . <eos>
+The girls said that the mother saw her . <eos>
+The mothers said that the girl saw her . <eos>
+The girl said that the mothers saw her . <eos>
+The mother said that the girls saw her . <eos>
+The girl said that the mother established her . <eos>
+The mother said that the girl established her . <eos>
+The girls said that the mother established her . <eos>
+The mothers said that the girl established her . <eos>
+The girl said that the mothers established her . <eos>
+The mother said that the girls established her . <eos>
+The girl said that the mother devoted her . <eos>
+The mother said that the girl devoted her . <eos>
+The girls said that the mother devoted her . <eos>
+The mothers said that the girl devoted her . <eos>
+The girl said that the mothers devoted her . <eos>
+The mother said that the girls devoted her . <eos>
+The girl said that the mother considered her . <eos>
+The mother said that the girl considered her . <eos>
+The girls said that the mother considered her . <eos>
+The mothers said that the girl considered her . <eos>
+The girl said that the mothers considered her . <eos>
+The mother said that the girls considered her . <eos>
+The girl said that the mother identified her . <eos>
+The mother said that the girl identified her . <eos>
+The girls said that the mother identified her . <eos>
+The mothers said that the girl identified her . <eos>
+The girl said that the mothers identified her . <eos>
+The mother said that the girls identified her . <eos>
+The girl said that the mother made her . <eos>
+The mother said that the girl made her . <eos>
+The girls said that the mother made her . <eos>
+The mothers said that the girl made her . <eos>
+The girl said that the mothers made her . <eos>
+The mother said that the girls made her . <eos>
+The girl said that the mother found her . <eos>
+The mother said that the girl found her . <eos>
+The girls said that the mother found her . <eos>
+The mothers said that the girl found her . <eos>
+The girl said that the mothers found her . <eos>
+The mother said that the girls found her . <eos>
+The girl said that the mother distinguished her . <eos>
+The mother said that the girl distinguished her . <eos>
+The girls said that the mother distinguished her . <eos>
+The mothers said that the girl distinguished her . <eos>
+The girl said that the mothers distinguished her . <eos>
+The mother said that the girls distinguished her . <eos>
+The girl said that the mother taught her . <eos>
+The mother said that the girl taught her . <eos>
+The girls said that the mother taught her . <eos>
+The mothers said that the girl taught her . <eos>
+The girl said that the mothers taught her . <eos>
+The mother said that the girls taught her . <eos>
+The girl said that the mother killed her . <eos>
+The mother said that the girl killed her . <eos>
+The girls said that the mother killed her . <eos>
+The mothers said that the girl killed her . <eos>
+The girl said that the mothers killed her . <eos>
+The mother said that the girls killed her . <eos>
+The girl said that the mother called her . <eos>
+The mother said that the girl called her . <eos>
+The girls said that the mother called her . <eos>
+The mothers said that the girl called her . <eos>
+The girl said that the mothers called her . <eos>
+The mother said that the girls called her . <eos>
+The girl said that the mother dedicated her . <eos>
+The mother said that the girl dedicated her . <eos>
+The girls said that the mother dedicated her . <eos>
+The mothers said that the girl dedicated her . <eos>
+The girl said that the mothers dedicated her . <eos>
+The mother said that the girls dedicated her . <eos>
+The girl said that the mother declared her . <eos>
+The mother said that the girl declared her . <eos>
+The girls said that the mother declared her . <eos>
+The mothers said that the girl declared her . <eos>
+The girl said that the mothers declared her . <eos>
+The mother said that the girls declared her . <eos>
+The girl said that the mother proved her . <eos>
+The mother said that the girl proved her . <eos>
+The girls said that the mother proved her . <eos>
+The mothers said that the girl proved her . <eos>
+The girl said that the mothers proved her . <eos>
+The mother said that the girls proved her . <eos>
+The girl said that the mother shot her . <eos>
+The mother said that the girl shot her . <eos>
+The girls said that the mother shot her . <eos>
+The mothers said that the girl shot her . <eos>
+The girl said that the mothers shot her . <eos>
+The mother said that the girls shot her . <eos>
+The girl said that the daughter saw her . <eos>
+The daughter said that the girl saw her . <eos>
+The girls said that the daughter saw her . <eos>
+The daughters said that the girl saw her . <eos>
+The girl said that the daughters saw her . <eos>
+The daughter said that the girls saw her . <eos>
+The girl said that the daughter established her . <eos>
+The daughter said that the girl established her . <eos>
+The girls said that the daughter established her . <eos>
+The daughters said that the girl established her . <eos>
+The girl said that the daughters established her . <eos>
+The daughter said that the girls established her . <eos>
+The girl said that the daughter devoted her . <eos>
+The daughter said that the girl devoted her . <eos>
+The girls said that the daughter devoted her . <eos>
+The daughters said that the girl devoted her . <eos>
+The girl said that the daughters devoted her . <eos>
+The daughter said that the girls devoted her . <eos>
+The girl said that the daughter considered her . <eos>
+The daughter said that the girl considered her . <eos>
+The girls said that the daughter considered her . <eos>
+The daughters said that the girl considered her . <eos>
+The girl said that the daughters considered her . <eos>
+The daughter said that the girls considered her . <eos>
+The girl said that the daughter identified her . <eos>
+The daughter said that the girl identified her . <eos>
+The girls said that the daughter identified her . <eos>
+The daughters said that the girl identified her . <eos>
+The girl said that the daughters identified her . <eos>
+The daughter said that the girls identified her . <eos>
+The girl said that the daughter made her . <eos>
+The daughter said that the girl made her . <eos>
+The girls said that the daughter made her . <eos>
+The daughters said that the girl made her . <eos>
+The girl said that the daughters made her . <eos>
+The daughter said that the girls made her . <eos>
+The girl said that the daughter found her . <eos>
+The daughter said that the girl found her . <eos>
+The girls said that the daughter found her . <eos>
+The daughters said that the girl found her . <eos>
+The girl said that the daughters found her . <eos>
+The daughter said that the girls found her . <eos>
+The girl said that the daughter distinguished her . <eos>
+The daughter said that the girl distinguished her . <eos>
+The girls said that the daughter distinguished her . <eos>
+The daughters said that the girl distinguished her . <eos>
+The girl said that the daughters distinguished her . <eos>
+The daughter said that the girls distinguished her . <eos>
+The girl said that the daughter taught her . <eos>
+The daughter said that the girl taught her . <eos>
+The girls said that the daughter taught her . <eos>
+The daughters said that the girl taught her . <eos>
+The girl said that the daughters taught her . <eos>
+The daughter said that the girls taught her . <eos>
+The girl said that the daughter killed her . <eos>
+The daughter said that the girl killed her . <eos>
+The girls said that the daughter killed her . <eos>
+The daughters said that the girl killed her . <eos>
+The girl said that the daughters killed her . <eos>
+The daughter said that the girls killed her . <eos>
+The girl said that the daughter called her . <eos>
+The daughter said that the girl called her . <eos>
+The girls said that the daughter called her . <eos>
+The daughters said that the girl called her . <eos>
+The girl said that the daughters called her . <eos>
+The daughter said that the girls called her . <eos>
+The girl said that the daughter dedicated her . <eos>
+The daughter said that the girl dedicated her . <eos>
+The girls said that the daughter dedicated her . <eos>
+The daughters said that the girl dedicated her . <eos>
+The girl said that the daughters dedicated her . <eos>
+The daughter said that the girls dedicated her . <eos>
+The girl said that the daughter declared her . <eos>
+The daughter said that the girl declared her . <eos>
+The girls said that the daughter declared her . <eos>
+The daughters said that the girl declared her . <eos>
+The girl said that the daughters declared her . <eos>
+The daughter said that the girls declared her . <eos>
+The girl said that the daughter proved her . <eos>
+The daughter said that the girl proved her . <eos>
+The girls said that the daughter proved her . <eos>
+The daughters said that the girl proved her . <eos>
+The girl said that the daughters proved her . <eos>
+The daughter said that the girls proved her . <eos>
+The girl said that the daughter shot her . <eos>
+The daughter said that the girl shot her . <eos>
+The girls said that the daughter shot her . <eos>
+The daughters said that the girl shot her . <eos>
+The girl said that the daughters shot her . <eos>
+The daughter said that the girls shot her . <eos>
+The girl said that the woman saw her . <eos>
+The woman said that the girl saw her . <eos>
+The girls said that the woman saw her . <eos>
+The women said that the girl saw her . <eos>
+The girl said that the women saw her . <eos>
+The woman said that the girls saw her . <eos>
+The girl said that the woman established her . <eos>
+The woman said that the girl established her . <eos>
+The girls said that the woman established her . <eos>
+The women said that the girl established her . <eos>
+The girl said that the women established her . <eos>
+The woman said that the girls established her . <eos>
+The girl said that the woman devoted her . <eos>
+The woman said that the girl devoted her . <eos>
+The girls said that the woman devoted her . <eos>
+The women said that the girl devoted her . <eos>
+The girl said that the women devoted her . <eos>
+The woman said that the girls devoted her . <eos>
+The girl said that the woman considered her . <eos>
+The woman said that the girl considered her . <eos>
+The girls said that the woman considered her . <eos>
+The women said that the girl considered her . <eos>
+The girl said that the women considered her . <eos>
+The woman said that the girls considered her . <eos>
+The girl said that the woman identified her . <eos>
+The woman said that the girl identified her . <eos>
+The girls said that the woman identified her . <eos>
+The women said that the girl identified her . <eos>
+The girl said that the women identified her . <eos>
+The woman said that the girls identified her . <eos>
+The girl said that the woman made her . <eos>
+The woman said that the girl made her . <eos>
+The girls said that the woman made her . <eos>
+The women said that the girl made her . <eos>
+The girl said that the women made her . <eos>
+The woman said that the girls made her . <eos>
+The girl said that the woman found her . <eos>
+The woman said that the girl found her . <eos>
+The girls said that the woman found her . <eos>
+The women said that the girl found her . <eos>
+The girl said that the women found her . <eos>
+The woman said that the girls found her . <eos>
+The girl said that the woman distinguished her . <eos>
+The woman said that the girl distinguished her . <eos>
+The girls said that the woman distinguished her . <eos>
+The women said that the girl distinguished her . <eos>
+The girl said that the women distinguished her . <eos>
+The woman said that the girls distinguished her . <eos>
+The girl said that the woman taught her . <eos>
+The woman said that the girl taught her . <eos>
+The girls said that the woman taught her . <eos>
+The women said that the girl taught her . <eos>
+The girl said that the women taught her . <eos>
+The woman said that the girls taught her . <eos>
+The girl said that the woman killed her . <eos>
+The woman said that the girl killed her . <eos>
+The girls said that the woman killed her . <eos>
+The women said that the girl killed her . <eos>
+The girl said that the women killed her . <eos>
+The woman said that the girls killed her . <eos>
+The girl said that the woman called her . <eos>
+The woman said that the girl called her . <eos>
+The girls said that the woman called her . <eos>
+The women said that the girl called her . <eos>
+The girl said that the women called her . <eos>
+The woman said that the girls called her . <eos>
+The girl said that the woman dedicated her . <eos>
+The woman said that the girl dedicated her . <eos>
+The girls said that the woman dedicated her . <eos>
+The women said that the girl dedicated her . <eos>
+The girl said that the women dedicated her . <eos>
+The woman said that the girls dedicated her . <eos>
+The girl said that the woman declared her . <eos>
+The woman said that the girl declared her . <eos>
+The girls said that the woman declared her . <eos>
+The women said that the girl declared her . <eos>
+The girl said that the women declared her . <eos>
+The woman said that the girls declared her . <eos>
+The girl said that the woman proved her . <eos>
+The woman said that the girl proved her . <eos>
+The girls said that the woman proved her . <eos>
+The women said that the girl proved her . <eos>
+The girl said that the women proved her . <eos>
+The woman said that the girls proved her . <eos>
+The girl said that the woman shot her . <eos>
+The woman said that the girl shot her . <eos>
+The girls said that the woman shot her . <eos>
+The women said that the girl shot her . <eos>
+The girl said that the women shot her . <eos>
+The woman said that the girls shot her . <eos>
+The girl said that the wife saw her . <eos>
+The wife said that the girl saw her . <eos>
+The girls said that the wife saw her . <eos>
+The wives said that the girl saw her . <eos>
+The girl said that the wives saw her . <eos>
+The wife said that the girls saw her . <eos>
+The girl said that the wife established her . <eos>
+The wife said that the girl established her . <eos>
+The girls said that the wife established her . <eos>
+The wives said that the girl established her . <eos>
+The girl said that the wives established her . <eos>
+The wife said that the girls established her . <eos>
+The girl said that the wife devoted her . <eos>
+The wife said that the girl devoted her . <eos>
+The girls said that the wife devoted her . <eos>
+The wives said that the girl devoted her . <eos>
+The girl said that the wives devoted her . <eos>
+The wife said that the girls devoted her . <eos>
+The girl said that the wife considered her . <eos>
+The wife said that the girl considered her . <eos>
+The girls said that the wife considered her . <eos>
+The wives said that the girl considered her . <eos>
+The girl said that the wives considered her . <eos>
+The wife said that the girls considered her . <eos>
+The girl said that the wife identified her . <eos>
+The wife said that the girl identified her . <eos>
+The girls said that the wife identified her . <eos>
+The wives said that the girl identified her . <eos>
+The girl said that the wives identified her . <eos>
+The wife said that the girls identified her . <eos>
+The girl said that the wife made her . <eos>
+The wife said that the girl made her . <eos>
+The girls said that the wife made her . <eos>
+The wives said that the girl made her . <eos>
+The girl said that the wives made her . <eos>
+The wife said that the girls made her . <eos>
+The girl said that the wife found her . <eos>
+The wife said that the girl found her . <eos>
+The girls said that the wife found her . <eos>
+The wives said that the girl found her . <eos>
+The girl said that the wives found her . <eos>
+The wife said that the girls found her . <eos>
+The girl said that the wife distinguished her . <eos>
+The wife said that the girl distinguished her . <eos>
+The girls said that the wife distinguished her . <eos>
+The wives said that the girl distinguished her . <eos>
+The girl said that the wives distinguished her . <eos>
+The wife said that the girls distinguished her . <eos>
+The girl said that the wife taught her . <eos>
+The wife said that the girl taught her . <eos>
+The girls said that the wife taught her . <eos>
+The wives said that the girl taught her . <eos>
+The girl said that the wives taught her . <eos>
+The wife said that the girls taught her . <eos>
+The girl said that the wife killed her . <eos>
+The wife said that the girl killed her . <eos>
+The girls said that the wife killed her . <eos>
+The wives said that the girl killed her . <eos>
+The girl said that the wives killed her . <eos>
+The wife said that the girls killed her . <eos>
+The girl said that the wife called her . <eos>
+The wife said that the girl called her . <eos>
+The girls said that the wife called her . <eos>
+The wives said that the girl called her . <eos>
+The girl said that the wives called her . <eos>
+The wife said that the girls called her . <eos>
+The girl said that the wife dedicated her . <eos>
+The wife said that the girl dedicated her . <eos>
+The girls said that the wife dedicated her . <eos>
+The wives said that the girl dedicated her . <eos>
+The girl said that the wives dedicated her . <eos>
+The wife said that the girls dedicated her . <eos>
+The girl said that the wife declared her . <eos>
+The wife said that the girl declared her . <eos>
+The girls said that the wife declared her . <eos>
+The wives said that the girl declared her . <eos>
+The girl said that the wives declared her . <eos>
+The wife said that the girls declared her . <eos>
+The girl said that the wife proved her . <eos>
+The wife said that the girl proved her . <eos>
+The girls said that the wife proved her . <eos>
+The wives said that the girl proved her . <eos>
+The girl said that the wives proved her . <eos>
+The wife said that the girls proved her . <eos>
+The girl said that the wife shot her . <eos>
+The wife said that the girl shot her . <eos>
+The girls said that the wife shot her . <eos>
+The wives said that the girl shot her . <eos>
+The girl said that the wives shot her . <eos>
+The wife said that the girls shot her . <eos>
+The girl said that the wife saw her . <eos>
+The wife said that the girl saw her . <eos>
+The girls said that the wife saw her . <eos>
+The wives said that the girl saw her . <eos>
+The girl said that the wives saw her . <eos>
+The wife said that the girls saw her . <eos>
+The girl said that the wife established her . <eos>
+The wife said that the girl established her . <eos>
+The girls said that the wife established her . <eos>
+The wives said that the girl established her . <eos>
+The girl said that the wives established her . <eos>
+The wife said that the girls established her . <eos>
+The girl said that the wife devoted her . <eos>
+The wife said that the girl devoted her . <eos>
+The girls said that the wife devoted her . <eos>
+The wives said that the girl devoted her . <eos>
+The girl said that the wives devoted her . <eos>
+The wife said that the girls devoted her . <eos>
+The girl said that the wife considered her . <eos>
+The wife said that the girl considered her . <eos>
+The girls said that the wife considered her . <eos>
+The wives said that the girl considered her . <eos>
+The girl said that the wives considered her . <eos>
+The wife said that the girls considered her . <eos>
+The girl said that the wife identified her . <eos>
+The wife said that the girl identified her . <eos>
+The girls said that the wife identified her . <eos>
+The wives said that the girl identified her . <eos>
+The girl said that the wives identified her . <eos>
+The wife said that the girls identified her . <eos>
+The girl said that the wife made her . <eos>
+The wife said that the girl made her . <eos>
+The girls said that the wife made her . <eos>
+The wives said that the girl made her . <eos>
+The girl said that the wives made her . <eos>
+The wife said that the girls made her . <eos>
+The girl said that the wife found her . <eos>
+The wife said that the girl found her . <eos>
+The girls said that the wife found her . <eos>
+The wives said that the girl found her . <eos>
+The girl said that the wives found her . <eos>
+The wife said that the girls found her . <eos>
+The girl said that the wife distinguished her . <eos>
+The wife said that the girl distinguished her . <eos>
+The girls said that the wife distinguished her . <eos>
+The wives said that the girl distinguished her . <eos>
+The girl said that the wives distinguished her . <eos>
+The wife said that the girls distinguished her . <eos>
+The girl said that the wife taught her . <eos>
+The wife said that the girl taught her . <eos>
+The girls said that the wife taught her . <eos>
+The wives said that the girl taught her . <eos>
+The girl said that the wives taught her . <eos>
+The wife said that the girls taught her . <eos>
+The girl said that the wife killed her . <eos>
+The wife said that the girl killed her . <eos>
+The girls said that the wife killed her . <eos>
+The wives said that the girl killed her . <eos>
+The girl said that the wives killed her . <eos>
+The wife said that the girls killed her . <eos>
+The girl said that the wife called her . <eos>
+The wife said that the girl called her . <eos>
+The girls said that the wife called her . <eos>
+The wives said that the girl called her . <eos>
+The girl said that the wives called her . <eos>
+The wife said that the girls called her . <eos>
+The girl said that the wife dedicated her . <eos>
+The wife said that the girl dedicated her . <eos>
+The girls said that the wife dedicated her . <eos>
+The wives said that the girl dedicated her . <eos>
+The girl said that the wives dedicated her . <eos>
+The wife said that the girls dedicated her . <eos>
+The girl said that the wife declared her . <eos>
+The wife said that the girl declared her . <eos>
+The girls said that the wife declared her . <eos>
+The wives said that the girl declared her . <eos>
+The girl said that the wives declared her . <eos>
+The wife said that the girls declared her . <eos>
+The girl said that the wife proved her . <eos>
+The wife said that the girl proved her . <eos>
+The girls said that the wife proved her . <eos>
+The wives said that the girl proved her . <eos>
+The girl said that the wives proved her . <eos>
+The wife said that the girls proved her . <eos>
+The girl said that the wife shot her . <eos>
+The wife said that the girl shot her . <eos>
+The girls said that the wife shot her . <eos>
+The wives said that the girl shot her . <eos>
+The girl said that the wives shot her . <eos>
+The wife said that the girls shot her . <eos>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

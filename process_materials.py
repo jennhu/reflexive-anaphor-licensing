@@ -7,10 +7,10 @@ import pandas as pd
 
 def main(exp, out_prefix):
     materials = pd.read_csv('materials/%s.csv' % exp)
-    materials.sentence.to_csv('%s/%s_sentences.txt' % \
-                              (out_prefix, exp), index=False)
-    materials.sentence_no_eos.to_csv('%s/%s_sentences_no_eos.txt' % \
-                                     (out_prefix, exp), index=False)
+    #materials.sentence.to_csv('%s/%s_sentences.txt' % \
+    #                          (out_prefix, exp), index=False)
+    #materials.sentence_no_eos.to_csv('%s/%s_sentences_no_eos.txt' % \
+    #                                 (out_prefix, exp), index=False)
     materials.sentence.str.lower().to_csv('%s/%s_sentences_uncased.txt' % \
                               (out_prefix, exp), index=False)
 

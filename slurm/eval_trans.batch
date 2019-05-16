@@ -13,13 +13,11 @@
 
 MATERIALS="/om/user/jennhu/rnng-refl/materials"
 DATA="/om/user/jennhu/rnng-refl/surprisal_data/trans"
-TRANS_PATH="/om/user/jennhu/causality"
+TRANS_PATH="/om/group/cpl/language-models/scripts"
 EXP=$1
 
 source activate transXL
-python ${TRANS_PATH}/eval_transfo.py \
-    -model ${TRANS_PATH}/model \
-    -inputf ${MATERIALS}/${EXP}_sentences.txt \
-    -outputf ${DATA}/${EXP}_surprisal_trans.txt \
-    --cuda
+bash ${TRANS_PATH}/eval_trans.sh \
+    ${MATERIALS}/${EXP}_sentences.txt \
+    ${DATA}/${EXP}_surprisal_trans.txt
 source deactivate
