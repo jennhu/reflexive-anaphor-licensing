@@ -4,13 +4,14 @@
 '''
 import argparse
 from numpy import mean
+import random
 import pandas as pd
 
 #################################################################################
 # Global variables
 #################################################################################
 
-MODELS = ['grnn', 'jrnn', 'trans', 'rnng', 'tiny', '5gram', 'bert']
+MODELS = ['grnn_multi', 'grnn', 'jrnn', 'trans', 'rnng', 'tiny', '5gram', 'bert']
 
 #################################################################################
 # Helper functions
@@ -26,10 +27,16 @@ def _prob_ratio(df1, df2):
     return mean(prob_ratios)
 
 
-def _get_data_df(data, surp, exp, nonrefl):
+def _get_data_df(data, surp, exp, nonrefl, multi=False):
     # read surprisals and data
-    surp_df = pd.read_csv(surp, delim_whitespace=True,
-                          names=['token', 'surprisal'])
+    if not multi:
+        surp_df = pd.read_csv(surp, delim_whitespace=True,
+                              names=['token', 'surprisal'])
+    else:
+        surp_df = pd.read_csv(surp, sep=' ',
+                              names=['token', 'sentid', 'sentpos', 'wlen', 'surprisal', 'entropy'],
+                              skiprows=2, skipfooter=3)
+        print(surp_df.head())
     data_df = pd.read_csv(data)
 
     agree, pl = 'agree' in exp, 'pl' in exp
@@ -88,6 +95,11 @@ def _get_accuracy(df, mismatch_position):
         if vs_baseline > 0 and vs_distractor > 0:
             num_correct += 1
 
+        elif vs_baseline == 0 and vs_distractor == 0:
+            choice = random.choice(['baseline', 'distractor', 'ungrammatical'])
+            if choice == 'ungrammatical':
+                num_correct += 1
+
     vs_baseline_acc = num_correct_vs_baseline / float(n_items)
     vs_distractor_acc = num_correct_vs_distractor / float(n_items)
     total_acc = num_correct / float(n_items)
@@ -121,7 +133,8 @@ def main(out_prefix, model, exp, nonrefl, vs_baseline):
             if m == 'bert':
                 df = pd.read_csv('../surprisal_data/bert/%s_surprisal_bert.csv' % full_exp)
             else:
-                df = _get_data_df(data_path, surp, full_exp, nonrefl=nonrefl)
+                multi = m == 'grnn_multi'
+                df = _get_data_df(data_path, surp, full_exp, nonrefl=nonrefl, multi=multi)
 
             if 'rc' in exp:
                 mismatch_position = 'rc_subj'

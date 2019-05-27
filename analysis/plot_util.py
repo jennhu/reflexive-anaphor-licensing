@@ -9,12 +9,14 @@ import pandas as pd
 # Global variables
 #################################################################################
 
-MODELS = ['grnn', 'jrnn', 'trans', 'rnng', 'tiny', '5gram']
+MODELS = ['bert', 'trans', 'jrnn', 'grnn', 'tiny', 'rnng', '5gram']
+BIG_MODELS = ['bert', 'trans', 'jrnn', 'grnn', '5gram']
 
 PRONOUN_ORDER = ['themselves', 'himself', 'herself']
 # PRONOUN_ORDER = ['them', 'him', 'her']
 
 TITLES = {
+    'bert': 'BERT',
     'grnn': 'GRNN',
     'jrnn': 'JRNN',
     'rnng': 'RNNG',
@@ -57,7 +59,7 @@ def _orders(exp, baseline=True):
         if 'futrell' in exp:
             target_order = ['himself', 'herself']
         else:
-            target_order = PRONOUN_ORDER #['themselves', 'himself', 'herself']
+            target_order = PRONOUN_ORDER
 
     if not baseline:
         position_order.insert(0, 'none')
@@ -98,10 +100,6 @@ def _get_data_df(data, surp, exp, nonrefl):
         
         print(pn)
         surp_df = surp_df.loc[surp_df.token == pn]
-
-        print(surp_df.head())
-        print(data_df.head())
-        print()
         # data_df = data_df.loc[data_df.pronoun == pn]
 
     # insert surprisal into data_df
