@@ -67,11 +67,11 @@ inferred from the name of the experiment.
 
 - [x] Verbs: count in the corpus (Wiki?)
 - [x] Nouns: check frequency
-- [ ] "Baseline baseline": no distracting NPs
-- [ ] Counter-balancing of all N occurrences: double-check
-- [ ] Accuracy vs. Surprisal
-- [ ] Unigram/Bigram probability of Refl/Copula in a corpus
-- [ ] "Close" replication of Futrell et al.
+- [x] "Baseline baseline": no distracting NPs
+- [x] Counter-balancing of all N occurrences: double-check
+- [x] Accuracy vs. Surprisal
+- [x] Unigram/Bigram probability of Refl/Copula in a corpus
+- [x] "Close" replication of Futrell et al.
 
 
 
