@@ -7,6 +7,8 @@ get_data_df.py
 template/
 *.DS_Store
 run_experiment.sh
+move
+data/unused
 
 stimuli/unused
 stimuli/old/

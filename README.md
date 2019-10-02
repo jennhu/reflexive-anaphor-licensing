@@ -25,13 +25,12 @@ If you use any of our code, data, or analyses, please cite the paper using the b
 ## Stimuli
 
 For each experiment, a `.csv` file containing the stimuli can be found at 
-`stimuli/<EXPERIMENT>.csv`, where `<EXPERIMENT>` corresponds to **TODO**. 
-The file is structured as follows:
+`stimuli/<EXPERIMENT>/<PRONOUN>.csv`. The file is structured as follows:
 
 **SHERRY TODO: explain how stimuli file is structured**
 
 To extract the sentences from this file, use the script
-`extract_sentences.py`. You can toggle flags like `--uncased` and `--eos`
+`stimuli/extract_sentences.py`. You can toggle flags like `--uncased` and `--eos`
 depending on the requirements of your model. **Please note that the final period
 at the end of each sentence is separated by whitespace.** Otherwise, no 
 tokenization assumptions are made.
@@ -50,10 +49,12 @@ Penn Treebank. This is not the case for the materials used in Experiment 1, the
 
 ## Data
 The per-token surprisal values for each model can be found in the [data](data)
-folder, following the following naming convention:
+folder, following this naming convention:
 ```
-data/<MODEL>/<EXPERIMENT>_surprisal_<MODEL>.txt
+data/<MODEL>/<EXPERIMENT>/<PRONOUN>_<MODEL>.txt
 ```
+The BERT data is in a slightly different `.csv` format, but otherwise
+follows the same naming convention.
 
 ## Dependencies
 Our analysis code requires a basic scientific installation of Python
