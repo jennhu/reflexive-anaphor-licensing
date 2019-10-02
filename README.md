@@ -36,6 +36,12 @@ depending on the requirements of your model. **Please note that the final period
 at the end of each sentence is separated by whitespace.** Otherwise, no 
 tokenization assumptions are made.
 
+### Selecting lexical items
+The [stimuli/lexicon](stimuli/lexicon) folder contains code and
+counts of nouns, pronouns, and verbs in the GRNN Wikipedia
+training corpus. See the paper for more details on how we
+constructed our materials.
+
 ### Vocabulary issues
 In all of our novel materials (**TODO: list the experiment names**), the
 lexical items are designed to be in-vocabulary for models trained on the

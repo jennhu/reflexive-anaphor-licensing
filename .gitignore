@@ -2,12 +2,15 @@
 slurm
 data/rnng/old/
 data/grnn/old/
-stimuli/old/
 analysis/plots/old/
 get_data_df.py
 template/
 *.DS_Store
 run_experiment.sh
+
+stimuli/unused
+stimuli/old/
+stimuli/marvin-linzen-2016
 
 # Temporary files
 ._*
