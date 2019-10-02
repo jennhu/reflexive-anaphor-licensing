@@ -6,14 +6,15 @@ from numpy import mean
 import pandas as pd
 
 #################################################################################
-# Global variables
+# Global variables and constants.
 #################################################################################
 
-MODELS = ['bert', 'trans', 'jrnn', 'grnn', 'tiny', 'rnng', '5gram']
+# Small-data models are trained on PTB.
+SMALL_MODELS = ['tiny', 'rnng']
 BIG_MODELS = ['bert', 'trans', 'jrnn', 'grnn', '5gram']
+MODELS = BIG_MODELS + SMALL_MODELS
 
 PRONOUN_ORDER = ['themselves', 'himself', 'herself']
-# PRONOUN_ORDER = ['them', 'him', 'her']
 
 TITLES = {
     'bert': 'BERT',
@@ -25,9 +26,10 @@ TITLES = {
     '5gram': '5-gram'
 }
 
+# Ungrammatical --> RED
+# Distractor    --> BLUE
+# Baseline      --> GREEN
 PALETTE = {
-    # ungrammatical --> red
-    # grammatical --> green/blue
     'matrix_subj': 'indianred',
     'local_subj': 'indianred', # 'skyblue', 
     'head': 'indianred',
@@ -48,61 +50,42 @@ def _orders(exp, baseline=True):
         position_order = ['distractor', 'head']
     elif 'rc' in exp:
         position_order = ['rc_subj', 'matrix_subj']
-    elif 'nonrefl' in exp:
-        position_order = ['local_subj', 'nonlocal_subj']
     else:
         position_order = ['nonlocal_subj', 'local_subj']
-
-    if 'agree' in exp:
-        target_order = ['was', 'were']
-    else:
-        if 'futrell' in exp:
-            target_order = ['himself', 'herself']
-        else:
-            target_order = PRONOUN_ORDER
 
     if not baseline:
         position_order.insert(0, 'none')
 
-    return position_order, target_order
+    return position_order, PRONOUN_ORDER
 
 
 def _get_title(model):
     return TITLES[model]
 
 
-def _prob_ratio(df1, df2):
-    prob_ratios = []
-    for row in df1.itertuples():
-        surprisal1 = row.surprisal
-        surprisal2 = df2.loc[row.Index].surprisal
-        prob_ratio = 2**(surprisal2 - surprisal1)
-        prob_ratios.append(prob_ratio)
-    return mean(prob_ratios)
+# def _prob_ratio(df1, df2):
+#     prob_ratios = []
+#     for row in df1.itertuples():
+#         surprisal1 = row.surprisal
+#         surprisal2 = df2.loc[row.Index].surprisal
+#         prob_ratio = 2**(surprisal2 - surprisal1)
+#         prob_ratios.append(prob_ratio)
+#     return mean(prob_ratios)
 
 
 def _get_data_df(data, surp, exp, nonrefl):
-    # read surprisals and data
+    # Read surprisals and data.
     surp_df = pd.read_csv(surp, delim_whitespace=True,
                           names=['token', 'surprisal'])
     data_df = pd.read_csv(data)
 
-    agree, pl = 'agree' in exp, 'pl' in exp
-    # only keep surprisal at specified pronoun or verb
-    if agree:
-        verb = 'were' if pl else 'was'
-        surp_df = surp_df.loc[surp_df.token == verb]
-    else:
-        if nonrefl:
-            pn = 'them' if pl else exp.split('_')[-1][:3]
-        else:
-            pn = 'themselves' if pl else exp.split('_')[-1]
-        
-        print(pn)
-        surp_df = surp_df.loc[surp_df.token == pn]
-        # data_df = data_df.loc[data_df.pronoun == pn]
+    # Only keep surprisal at target pronoun, inferred from title of experiment.
+    exp_suffix = exp.split('_')[-1] # 'themselves' if pl else 
+    assert exp_suffix in PRONOUN_ORDER
+    surp_df = surp_df.loc[surp_df.token == exp_suffix]
+    # data_df = data_df.loc[data_df.pronoun == pn]
 
-    # insert surprisal into data_df
+    # Insert surprisal into data_df.
     data_df['surprisal'] = surp_df.surprisal.values
 
     return data_df
@@ -111,11 +94,13 @@ def _get_data_df(data, surp, exp, nonrefl):
 def _subtract_baseline(df, exp):
     item_list = df.item.unique()
     for item in item_list:
-        item_rows = df.loc[df.item == item]
-        base_rows = item_rows.loc[item_rows.mismatch_position == 'none']
+        # Get rows corresponding to item.
+        item_rows = df[df.item == item]
+        base_rows = item_rows[item_rows.mismatch_position == 'none']
         baseline = base_rows.surprisal.mean()
-        # subtract baseline from surprisal of all rows
+        
+        # Subtract baseline from surprisal of all rows.
         item_rows.surprisal -= baseline
-        df.loc[df.item == item] = item_rows
+        df[df.item == item] = item_rows
     return df
 

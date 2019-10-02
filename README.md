@@ -6,7 +6,7 @@ Jennifer Hu, Sherry Yong Chen, and Roger Levy (2020).
 A closer look at the performance of neural language models on reflexive anaphor licensing. 
 *Proceedings of the Society for Computation in Linguistics (SCiL 2020)* Volume 3.
 
-If you use any of our code or analyses, please cite the paper using the bibtex below:
+If you use any of our code, data, or analyses, please cite the paper using the bib entry below:
 ```
 @InProceedings{Hu:et-al:2020,
   Author = {Hu, Jennifer and Chen, Sherry Yong and Levy, Roger},
@@ -54,15 +54,15 @@ for more detailed setup instructions.
 
 Everything is organized by experiment name. An experiment is expected to have
 three components:
-1. `materials/<EXPERIMENT>.csv` 
+1. `stimuli/<EXPERIMENT>.csv` 
     (list of conditions and stimuli)
-2. `materials/<EXPERIMENT>_sentences.txt` 
+2. `stimuli/<EXPERIMENT>_sentences.txt` 
     (list of sentences for most models)
-3. `materials/<EXPERIMENT>_sentences_no_eos.txt` 
-    (list of sentences with no `<eos>` token for RNNG)
+3. `stimuli/<EXPERIMENT>_sentences_no_eos.txt` 
+    (list of sentences with no `<eos>` token)
 
 Then, the per-token surprisal values for a given model are saved to 
-`surprisal_data/<MODEL>/<EXPERIMENT>_surprisal_<MODEL>.txt`.
+`data/<MODEL>/<EXPERIMENT>_surprisal_<MODEL>.txt`.
 
 The plots are analogously saved to
 `analysis/plots/<EXPERIMENT>_<MODEL>.png`.
