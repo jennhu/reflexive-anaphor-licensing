@@ -1,10 +1,8 @@
 # Large data files, SLURM scripts, etc.
-data/
-slurm/logs
-slurm/old
-surprisal_data/rnng/old/
-surprisal_data/grnn/old/
-materials/old/
+slurm
+data/rnng/old/
+data/grnn/old/
+stimuli/old/
 analysis/plots/old/
 get_data_df.py
 template/

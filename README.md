@@ -18,6 +18,8 @@ If you use any of our code or analyses, please cite the paper using the bibtex b
 
 ## Overview
 
+The surprisal data lives in the data folder, and the stimuli live in the stimuli folder.
+
 **TODO**: mention that we designed lexical items to stay in-vocabulary for PTB models
 
 1. [GRNN](https://github.com/facebookresearch/colorlessgreenRNNs) (recurrent neural network trained on Wikipedia)
