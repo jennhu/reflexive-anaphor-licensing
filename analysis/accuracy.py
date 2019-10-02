@@ -11,7 +11,7 @@ import pandas as pd
 # Global variables
 #################################################################################
 
-MODELS = ['grnn_multi', 'grnn', 'jrnn', 'trans', 'rnng', 'tiny', '5gram', 'bert']
+MODELS = ['grnn_multi', 'grnn', 'jrnn', 'trans', 'rnng', 'tiny', 'tinywiki', '5gram', 'bert']
 
 #################################################################################
 # Helper functions

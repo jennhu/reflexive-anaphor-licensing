@@ -42,10 +42,10 @@ def save_df(path, ptb_model='tiny'):
 		data['count'].append(ptb_counts[pn])
 
 	# WIKIPEDIA!!!!!!!!!!!
-	df = pd.read_csv('accuracy/all_exp_accuracy_grnn.csv')
-	df = df[df.model == 'grnn']
+	df = pd.read_csv('accuracy/all_exp_accuracy_tinywiki.csv')
+	df = df[df.model == 'tinywiki']
 	for pn in pronouns:
-		data['model'].append('grnn')
+		data['model'].append('tinywiki')
 		data['pronoun'].append(pn)
 		exp_pn = pn if pn != 'themselves' else 'pl'
 		data['acc'].append(df[df.full_exp.str.contains(exp_pn)].total_acc.mean())
@@ -86,8 +86,8 @@ def annotate(axes):
 def plot(df):
 	sns.set_style('ticks')
 	plt.rcParams.update({'font.size': 16})
-	models = ['grnn', 'tiny']
-	model_titles = ['Wiki / GRNN', 'PTB / TinyLSTM']
+	models = ['tinywiki', 'tiny']
+	model_titles = ['Wiki (90M)', 'PTB (950K)']
 	colors = ['green', 'orange']
 
 	_, axes = plt.subplots(nrows=2, ncols=2, sharey='row', figsize=(9,8))
@@ -123,11 +123,11 @@ def plot(df):
 
 	axes = annotate(axes)
 
-	plt.savefig('acc_freq.pdf', bbox_inches='tight')
+	plt.savefig('acc_freq_vanillaLSTM.pdf', bbox_inches='tight')
 
 if __name__ == '__main__':
-	save_df('acc_freq_data.csv')
-	df = pd.read_csv('acc_freq_data.csv')
+	save_df('acc_freq_data_vanillaLSTM.csv')
+	df = pd.read_csv('acc_freq_data_vanillaLSTM.csv')
 	plot(df)
 
 

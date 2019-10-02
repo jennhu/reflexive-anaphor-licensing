@@ -1,0 +1,10 @@
+model,full_exp,total_acc,vs_baseline_acc,vs_distractor_acc
+tinywiki,loc_himself,1.0,1.0,1.0
+tinywiki,loc_herself,1.0,1.0,1.0
+tinywiki,loc_pl,1.0,1.0,1.0
+tinywiki,cc_himself,0.37333333333333335,1.0,0.37333333333333335
+tinywiki,cc_herself,0.84,1.0,0.84
+tinywiki,cc_pl,1.0,1.0,1.0
+tinywiki,rc_himself,0.0,1.0,0.0
+tinywiki,rc_herself,0.21333333333333335,1.0,0.21333333333333335
+tinywiki,rc_pl,0.14666666666666667,0.5466666666666666,0.14666666666666667

@@ -8,6 +8,7 @@ materials/old/
 analysis/plots/old/
 get_data_df.py
 template/
+*.DS_Store
 
 # Temporary files
 ._*

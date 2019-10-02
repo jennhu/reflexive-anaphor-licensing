@@ -1,13 +1,31 @@
-# Controlled syntactic evaluation of neural language models
+# A closer look at the performance of neural language models on reflexive anaphor licensing
 
-This repository contains the code for testing grammaticality judgments of 
-English syntactic phenomena in five different language models:
+This repository contains the code for the following paper:
+
+Jennifer Hu, Sherry Yong Chen, and Roger Levy (2020). 
+A closer look at the performance of neural language models on reflexive anaphor licensing. 
+*Proceedings of the Society for Computation in Linguistics (SCiL 2020)* Volume 3.
+
+If you use any of our code or analyses, please cite the paper using the bibtex below:
+```
+@InProceedings{Hu:et-al:2020,
+  Author = {Hu, Jennifer and Chen, Sherry Yong and Levy, Roger},
+  Title = {A closer look at the performance of neural language models on reflexive anaphor licensing},
+  Booktitle = {Proceedings of the Society for Computation in Linguistics Volume 3},
+  Year = {2020}
+}
+```
+
+## Overview
+
+**TODO**: mention that we designed lexical items to stay in-vocabulary for PTB models
 
 1. [GRNN](https://github.com/facebookresearch/colorlessgreenRNNs) (recurrent neural network trained on Wikipedia)
 2. [JRNN](https://github.com/tensorflow/models/tree/master/research/lm_1b) (recurrent neural network trained on [One Billion Word Benchmark](http://arxiv.org/abs/1312.3005))
 3. [RNNG](https://github.com/clab/rnng) (recurrent neural network grammar)
 4. [Transformer-XL](https://github.com/kimiyoung/transformer-xl)
 5. [Tiny LSTM](https://github.com/pytorch/examples/tree/master/word_language_model)
+6. n-gram
 
 ## Dependencies
 
@@ -61,17 +79,3 @@ This will save a plot to `analysis/plots/<EXPERIMENT>_<MODEL>.png` showing
 the mean surprisal at the target word across each condition.
 The relevant target word (e.g. *himself*, *themselves*, *was*) will be
 inferred from the name of the experiment.
-
-
-## TODO
-
-- [x] Verbs: count in the corpus (Wiki?)
-- [x] Nouns: check frequency
-- [x] "Baseline baseline": no distracting NPs
-- [x] Counter-balancing of all N occurrences: double-check
-- [x] Accuracy vs. Surprisal
-- [x] Unigram/Bigram probability of Refl/Copula in a corpus
-- [x] "Close" replication of Futrell et al.
-
-
-

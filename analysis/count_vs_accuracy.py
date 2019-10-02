@@ -1,115 +1,135 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib.ticker import FormatStrFormatter
 import seaborn as sns
 
-if __name__ == '__main__':
-	# data = {'model': [], 'himself_acc': [], 'herself_acc': [], 'themselves_acc': [],
-	#         'himself_freq': [], 'herself_freq': [], 'themselves_freq': [],
-	#         'himself_count': [], 'herself_count': [], 'themselves_count': []}
+ptb_freqs = {
+	'himself' : float(60 / 95),
+	'herself' : float(9 / 12),
+	'themselves' : float(89 / 114)
+}
+ptb_counts = {
+	'himself' : 95,
+	'herself' : 12,
+	'themselves' : 114,
+}
+wiki_freqs = {
+	'himself': float(61 / 101),
+	'herself': 0.8,
+	'themselves': 0.73,
+}
+wiki_counts = {
+	'himself' : 17226,
+	'herself' : 3688,
+	'themselves' : 9670,
+}
 
 
-	# df = pd.read_csv('accuracy/all_exp_accuracy_tiny_rnng.csv')
-	# df = df[df.model == 'rnng']
-	# rnng_himself_acc = df[df.full_exp.str.contains('himself')].total_acc.mean()
-	# rnng_herself_acc = df[df.full_exp.str.contains('herself')].total_acc.mean()
-	# rnng_themselves_acc = df[df.full_exp.str.contains('pl')].total_acc.mean()
-
-	# df = df[df.model == 'tiny']
-	# tiny_himself_acc = df[df.full_exp.str.contains('himself')].total_acc.mean()
-	# tiny_herself_acc = df[df.full_exp.str.contains('herself')].total_acc.mean()
-	# tiny_themselves_acc = df[df.full_exp.str.contains('pl')].total_acc.mean()
-
-	df = pd.read_csv('accuracy/all_exp_accuracy_grnn.csv')
-	grnn_accuracies = []
-	
-	grnn_accuracies.append(df[df.full_exp.str.contains('herself')].total_acc.mean())
-	grnn_accuracies.append(df[df.full_exp.str.contains('pl')].total_acc.mean())
-	grnn_accuracies.append(df[df.full_exp.str.contains('himself')].total_acc.mean())
-	# data['model'].append('grnn')
-	# data['himself_acc'].append(df[df.full_exp.str.contains('himself')].total_acc.mean())
-	# data['herself_acc'].append(df[df.full_exp.str.contains('herself')].total_acc.mean())
-	# data['themselves_acc'].append(df[df.full_exp.str.contains('pl')].total_acc.mean())
-
-	# WIKIPEDIA
-	wiki_himself_freq = 0.6 #float(61 / 101)
-	wiki_herself_freq = 0.8
-	wiki_themselves_freq = 0.73
-
-	wiki_himself_count = 17226
-	wiki_herself_count = 3688
-	wiki_themselves_count = 9670
-
-	wiki_freqs = [wiki_himself_freq, wiki_themselves_freq, wiki_herself_freq]
-	wiki_counts = [wiki_herself_count, wiki_themselves_count, wiki_himself_count]
-
+def save_df(path, ptb_model='tiny'):
 	pronouns = ['herself', 'themselves', 'himself']
 
-	# data['himself_freq'].append(wiki_himself_freq)
-	# data['herself_freq'].append(wiki_herself_freq)
-	# data['themselves_freq'].append(wiki_themselves_freq)
-	# data['himself_count'].append(wiki_himself_count)
-	# data['herself_count'].append(wiki_herself_count)
-	# data['themselves_count'].append(wiki_themselves_count)
+	data = {'model': [], 'pronoun': [], 'acc': [], 'freq': [], 'count': []}
 
+	# PTB!!!!!!!!!!!!!!!!!
+	df = pd.read_csv('accuracy/all_exp_accuracy_tiny_rnng.csv')
+	df = df[df.model == ptb_model]
+	# df = df[~df.full_exp.str.contains('ml')]
+	for pn in pronouns:
+		data['model'].append(ptb_model)
+		data['pronoun'].append(pn)
+		exp_pn = pn if pn != 'themselves' else 'pl'
+		data['acc'].append(df[df.full_exp.str.contains(exp_pn)].total_acc.mean())
+		data['freq'].append(ptb_freqs[pn])
+		data['count'].append(ptb_counts[pn])
+
+	# WIKIPEDIA!!!!!!!!!!!
+	df = pd.read_csv('accuracy/all_exp_accuracy_grnn.csv')
+	df = df[df.model == 'grnn']
+	# df = df[~df.full_exp.str.contains('ml')]
+	for pn in pronouns:
+		data['model'].append('grnn')
+		data['pronoun'].append(pn)
+		exp_pn = pn if pn != 'themselves' else 'pl'
+		data['acc'].append(df[df.full_exp.str.contains(exp_pn)].total_acc.mean())
+		data['freq'].append(wiki_freqs[pn])
+		data['count'].append(wiki_counts[pn])
+
+	data_df = pd.DataFrame(data)
+	data_df.to_csv(path, index=False)
+
+def annotate(axes):
+	params = dict(
+		textcoords="offset points"
+	)
+
+	grnn_count = axes[0,0]
+	grnn_freq = axes[0,1]
+	tiny_count = axes[1,0]
+	tiny_freq = axes[1,1]
+
+	grnn_count.annotate('herself', (0, 0.9180952380952381), xytext=(20,-10), **params)
+	grnn_count.annotate('themselves', (1, 0.8573809523809524), xytext=(10,0), **params)
+	grnn_count.annotate('himself', (2, 0.8061904761904761), xytext=(-80,0), **params)
+
+	grnn_freq.annotate('herself', (2, 0.9180952380952381), xytext=(-60,-10), **params)
+	grnn_freq.annotate('themselves', (1, 0.8573809523809524), xytext=(20,0), **params)
+	grnn_freq.annotate('himself', (0, 0.8061904761904761), xytext=(20,0), **params)
+
+	tiny_count.annotate('herself', (0, 0.27555555555555555), xytext=(20,0), **params)
+	tiny_count.annotate('himself', (1, 0.43111111111111106), xytext=(20,0), **params)
+	tiny_count.annotate('themselves', (2, 0.6533333333333333), xytext=(-100,-10), **params)
+
+	tiny_freq.annotate('himself', (0, 0.43111111111111106), xytext=(-10,10), **params)
+	tiny_freq.annotate('herself', (1, 0.27555555555555555), xytext=(20,0), **params)
+	tiny_freq.annotate('themselves', (2, 0.6533333333333333), xytext=(-100,-10), **params)
+
+	return axes
+
+def plot(df):
 	sns.set_style('ticks')
-	plt.rcParams.update({'font.size': 22})
+	plt.rcParams.update({'font.size': 16})
+	models = ['grnn', 'tiny']
+	model_titles = ['Wiki / GRNN', 'PTB / TinyLSTM']
+	colors = ['green', 'orange']
 
-	_, axes = plt.subplots(nrows=1, ncols=2, figsize=(13, 7), sharey=True)
-	plt.subplots_adjust(wspace=0.1)
-	l_ax, r_ax = axes
+	_, axes = plt.subplots(nrows=2, ncols=2, sharey='row', figsize=(9,8))
+	plt.subplots_adjust(hspace=0.2, wspace=0.1)
+	for i in range(2):
+		for j in range(2):
+			ax = axes[i,j]
+			model = models[i]
+			model_title = model_titles[i]
+			model_df = df[df.model == model]
+			x = 'count' if j == 0 else 'freq'
+			sns.pointplot(data=model_df, x=x, y='acc', ax=ax, color=colors[i], scale=1.5)
+			if i == 0:
+				ax.set_xlabel('')
+			else:
+				if j == 0:
+					ax.set_xlabel('# occurrences in corpus')
+				else:
+					ax.set_xlabel('relative freq. of anaphor usage')
+			if j == 0:
+				if i == 0:
+					ax.set_title('accuracy vs. raw count')
+				ax.set_ylabel('accuracy')
+				ax.yaxis.set_major_formatter(FormatStrFormatter('%.2f'))
+			else:
+				if i == 0:
+					ax.set_title('accuracy vs. anaphor freq.')
+				ax.yaxis.set_label_position("right")
+				ax.set_ylabel(model_title, labelpad=25, fontweight='bold', size='large', rotation=270)
+				xticklabels = ax.get_xticklabels()
+				rounded_labels = [str(round(float(l.get_text()), 2)) for l in xticklabels]
+				ax.set_xticklabels(rounded_labels)
 
-	l_ax = sns.pointplot(x=wiki_counts, y=grnn_accuracies, ax=l_ax)
+	axes = annotate(axes)
 
-	for i, pn in enumerate(pronouns):
-		l_ax.annotate(pn, (i, grnn_accuracies[i]), size='small', xytext=(10, 0), textcoords="offset points")
+	plt.savefig('acc_freq.pdf', bbox_inches='tight')
 
-	grnn_accuracies.reverse()
-	pronouns.reverse()
-	r_ax = sns.pointplot(x=wiki_freqs, y=grnn_accuracies, ax=r_ax)
-	for i, pn in enumerate(pronouns):
-		r_ax.annotate(pn, (i, grnn_accuracies[i]), size='small', xytext=(10, 0), textcoords="offset points")
-
-	l_ax.set_ylabel('accuracy (avg over experiments)')
-	l_ax.set_xlabel('raw count')
-	l_ax.set_title('accuracy vs. raw count')
-	r_ax.set_xlabel('relative frequency')
-	r_ax.set_title('accuracy vs. relative freq.')
-	
-	plt.savefig('acc_grnn.pdf', bbox_inches='tight')
-
-	# PTB
-	# ptb_himself_freq = float(60 / 95)
-	# ptb_herself_freq = float(9 / 12)
-	# ptb_themselves_freq = float(89 / 114)
-	# ptb_himself_count = 95
-	# ptb_herself_count = 12
-	# ptb_themselves_count = 114
-
-	# _, axes = plt.subplots(nrows=2, ncols=2)
-	# ax = axes[0,0]
-	# ax.scatter([wiki_himself_count, wiki_herself_count, wiki_themselves_count], [grnn_himself_acc, grnn_herself_acc, grnn_themselves_acc])
-	# ax.set_xlabel('count')
-	# ax.set_ylabel('mean accuracy')
-	# ax.set_title('wiki/grnn count')
-
-	# ax = axes[0,1]
-	# ax.scatter([ptb_himself_count, ptb_herself_count, ptb_themselves_count], [rnng_himself_acc, rnng_herself_acc, rnng_themselves_acc])
-	# ax.set_xlabel('count')
-	# ax.set_ylabel('mean accuracy')
-	# ax.set_title('ptb/rnng count')
-
-	# ax = axes[1,0]
-	# ax.scatter([wiki_himself_freq, wiki_herself_freq, wiki_themselves_freq], [grnn_himself_acc, grnn_herself_acc, grnn_themselves_acc])
-	# ax.set_xlabel('freq')
-	# ax.set_ylabel('mean accuracy')
-	# ax.set_title('wiki/grnn freq')
-
-	# ax = axes[1,1]
-	# ax.scatter([ptb_himself_freq, ptb_herself_freq, ptb_themselves_freq], [rnng_himself_acc, rnng_herself_acc, rnng_themselves_acc])
-	# ax.set_xlabel('freq')
-	# ax.set_ylabel('mean accuracy')
-	# ax.set_title('ptb/rnng freq')
-
-	# plt.show()
+if __name__ == '__main__':
+	save_df('acc_freq_data.csv')
+	df = pd.read_csv('acc_freq_data.csv')
+	plot(df)
 
 
