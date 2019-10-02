@@ -7,6 +7,7 @@ analysis/plots/old/
 get_data_df.py
 template/
 *.DS_Store
+run_experiment.sh
 
 # Temporary files
 ._*

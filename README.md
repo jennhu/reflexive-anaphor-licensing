@@ -16,26 +16,59 @@ If you use any of our code, data, or analyses, please cite the paper using the b
 }
 ```
 
+---
+
 ## Overview
 
-The surprisal data lives in the data folder, and the stimuli live in the stimuli folder.
+**TODO: write short overview/summary here to orient people**
 
-**TODO**: mention that we designed lexical items to stay in-vocabulary for PTB models
+## Stimuli
 
-1. [GRNN](https://github.com/facebookresearch/colorlessgreenRNNs) (recurrent neural network trained on Wikipedia)
-2. [JRNN](https://github.com/tensorflow/models/tree/master/research/lm_1b) (recurrent neural network trained on [One Billion Word Benchmark](http://arxiv.org/abs/1312.3005))
-3. [RNNG](https://github.com/clab/rnng) (recurrent neural network grammar)
-4. [Transformer-XL](https://github.com/kimiyoung/transformer-xl)
+For each experiment, a `.csv` file containing the stimuli can be found at 
+`stimuli/<EXPERIMENT>.csv`, where `<EXPERIMENT>` corresponds to **TODO**. 
+The file is structured as follows:
+
+**SHERRY TODO: explain how stimuli file is structured**
+
+To extract the sentences from this file, use the script
+`extract_sentences.py`. You can toggle flags like `--uncased` and `--eos`
+depending on the requirements of your model. **Please note that the final period
+at the end of each sentence is separated by whitespace.** Otherwise, no 
+tokenization assumptions are made.
+
+### Vocabulary issues
+In all of our novel materials (**TODO: list the experiment names**), the
+lexical items are designed to be in-vocabulary for models trained on the
+Penn Treebank. This is not the case for the materials used in Experiment 1, the 
+[Marvin & Linzen (2018)](https://arxiv.org/abs/1808.09031) replication.
+
+## Data
+The per-token surprisal values for each model can be found in the [data](data)
+folder, following the following naming convention:
+```
+data/<MODEL>/<EXPERIMENT>_surprisal_<MODEL>.txt
+```
+
+## Dependencies
+Our analysis code requires a basic scientific installation of Python
+(`numpy`, `pandas`, `matplotlib`, `seaborn`, etc.). 
+
+If you would like to run a model on our materials -- 
+whether to replicate our results or assess a new model -- 
+you will have to set up the computing environment yourself. 
+Please see the repositories linked below for the source code
+of the models we evaluated (with the exception of n-gram, which uses SRILM).
+We can make the training script for our n-gram model available upon request.
+
+### Models evaluated in our analysis
+1. [GRNN](https://github.com/facebookresearch/colorlessgreenRNNs) (Gulordava et al. 2018)
+2. [JRNN](https://github.com/tensorflow/models/tree/master/research/lm_1b) (Jozefowicz et al. 2016)
+3. [RNNG](https://github.com/clab/rnng) (Dyer et al. 2016; we use an unpublished version to get incremental RNNG parses, courtesy of Peng Qian)
+4. [Transformer-XL](https://github.com/kimiyoung/transformer-xl) (Dai et al. 2019; we use the [huggingface](https://github.com/huggingface/transformers) implementation)
 5. [Tiny LSTM](https://github.com/pytorch/examples/tree/master/word_language_model)
 6. n-gram
 
-## Dependencies
-
-See the parent repositories linked above for model-specific dependencies.
-Our analysis code simply requires a basic scientific installation of Python
-(`numpy`, `pandas`, `matplotlib`, etc.)
-
-### Transformer-XL
+<!-- ### Transformer-XL
 Note that we use the [pytorch-pretrained-BERT](https://github.com/huggingface/pytorch-pretrained-BERT) implementation of Transformer-XL. To download the 
 state-of-the-art model parameters, run the script `get_model.sh`.
 After doing so, you'll need to load the model and tokenizer like this:
@@ -48,31 +81,14 @@ model = TransfoXLModel.from_pretrained('./model/')
 (Source: [Issue #451](https://github.com/huggingface/pytorch-pretrained-BERT/issues/451#issuecomment-481155274))
 
 See [pytorch-pretrained-BERT](https://github.com/huggingface/pytorch-pretrained-BERT) 
-for more detailed setup instructions.
+for more detailed setup instructions. -->
 
-## Data organization
 
-Everything is organized by experiment name. An experiment is expected to have
-three components:
-1. `stimuli/<EXPERIMENT>.csv` 
-    (list of conditions and stimuli)
-2. `stimuli/<EXPERIMENT>_sentences.txt` 
-    (list of sentences for most models)
-3. `stimuli/<EXPERIMENT>_sentences_no_eos.txt` 
-    (list of sentences with no `<eos>` token)
-
-Then, the per-token surprisal values for a given model are saved to 
-`data/<MODEL>/<EXPERIMENT>_surprisal_<MODEL>.txt`.
-
-The plots are analogously saved to
-`analysis/plots/<EXPERIMENT>_<MODEL>.png`.
-
-## Running experiments
-
-Given a full set of materials, run the script `./run_experiment.sh <EXPERIMENT>`
-to generate the sentence files and obtain surprisals from all five models.
+## Reproducing our figures
 
 To generate the plots for a given experiment and model, run the following:
+**TODO: FIX/CLEAN THIS**
+
 ```bash
 cd analysis
 python plot_surprisals.py -exp <EXPERIMENT> -model <MODEL>
