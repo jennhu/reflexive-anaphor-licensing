@@ -28,18 +28,31 @@ For each experiment, a `.csv` file containing the stimuli can be found at
 `stimuli/<EXPERIMENT>/<PRONOUN>.csv`. The file is structured as follows:
 
 -- "item" indicates the item number in that experiemnt
+
 -- "clause_type" indicates whether there's an embedded clause or just one single clause (embed vs simple)
+
 -- "locality" indicates whether the intended antecedent NP is in the same clause (local) or the matrix clause (non-local)
+
 -- "c-command" indicates whether the intended antecedent NP is in a c-commanding relation with the reflexive or not
+
 -- "grammatical" indicates whether the item is grammatical vs ungrammatical
+
 -- "counterbalance"	indicates the counterbalancing of the vocabulary used (to control for frequency)
+
 -- "mismatch_position" indicates which NP involves mismatching features
+
 -- "mismatch_feature": either number feature, gender feature, or none (in the case of grammatical sentences)
+
 -- "head_noun"/"local_sub"/"matrix_subj_noun": the antecedent NP in a licensing position
+
 -- "distractor_noun"/"nonlocal_subj"/"rc_subj_noun": the NP in a non-licensing position
+
 -- "verb" indicates the verb used for that item
+
 -- "pronoun": herself/himself/themselves
+
 -- "sentence"/"sentence_no_eos" compiles the whole sentence for that item
+
 
 To extract the sentences from this file, use the script
 `stimuli/extract_sentences.py`. You can toggle flags like `--uncased` and `--eos`
