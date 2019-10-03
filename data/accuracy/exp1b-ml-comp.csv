@@ -1,0 +1,16 @@
+exp,model,pronoun,total_acc,vs_baseline_acc,vs_distractor_acc
+exp1b-ml-comp,bert,themselves,0.8571428571428571,1.0,0.8571428571428571
+exp1b-ml-comp,bert,himself,1.0,1.0,1.0
+exp1b-ml-comp,bert,herself,1.0,1.0,1.0
+exp1b-ml-comp,trans,themselves,1.0,1.0,1.0
+exp1b-ml-comp,trans,himself,0.8857142857142857,1.0,0.8857142857142857
+exp1b-ml-comp,trans,herself,0.8571428571428571,0.9857142857142858,0.8571428571428571
+exp1b-ml-comp,jrnn,themselves,0.8857142857142857,1.0,0.8857142857142857
+exp1b-ml-comp,jrnn,himself,1.0,1.0,1.0
+exp1b-ml-comp,jrnn,herself,1.0,1.0,1.0
+exp1b-ml-comp,grnn,themselves,1.0,1.0,1.0
+exp1b-ml-comp,grnn,himself,1.0,1.0,1.0
+exp1b-ml-comp,grnn,herself,1.0,1.0,1.0
+exp1b-ml-comp,5gram,themselves,0.4,0.0,0.0
+exp1b-ml-comp,5gram,himself,0.37142857142857144,0.0,0.0
+exp1b-ml-comp,5gram,herself,0.2571428571428571,0.0,0.0

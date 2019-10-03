@@ -1,13 +1,21 @@
-# Large data files, SLURM scripts, etc.
-data/
-slurm/logs
-slurm/old
-surprisal_data/rnng/old/
-surprisal_data/grnn/old/
-materials/old/
+# Large data files, SLURM scripts, old data, etc.
+slurm
+data/rnng/old/
+data/grnn/old/
 analysis/plots/old/
 get_data_df.py
 template/
+*.DS_Store
+run_experiment.sh
+move
+data/unused
+
+stimuli/unused
+stimuli/old/
+stimuli/marvin-linzen-2016
+
+analysis/freq
+analysis/figures
 
 # Temporary files
 ._*

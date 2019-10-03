@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if [ "$#" -ne 1 ]; then
+    echo "Expected usage: ./get_accuracy <output_folder>"
+fi
+
+mkdir -p $1
+
+ML_EXPS=("exp1a-ml-rc" "exp1b-ml-comp")
+OTHER_EXPS=("exp2-rc" "exp3-comp" "exp4-pp")
+EXPS=("${ML_EXPS[@]}" "${OTHER_EXPS[@]}")
+
+for exp in ${EXPS[@]}; do
+    echo "== Computing accuracy for $exp =="
+    if [[ " ${ML_EXPS[*]} " == *" $exp "* ]]; then
+        model="big"
+    else
+        model="all"
+    fi
+    python compute_accuracy.py -o $1 -model $model -exp $exp
+done
