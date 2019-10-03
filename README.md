@@ -28,7 +28,7 @@ For each experiment, a `.csv` file containing the stimuli can be found at
 `stimuli/<EXPERIMENT>/<PRONOUN>.csv`. The file is structured as follows:
 
 | column name | values | related experiment | purpose |
-| ------------- | ------------- | ------------- |
+| ------------- | ------------- | ------------- | ------------- |
 | item | 1/2/3/... | 1-4 | indicates the item number in that experiemnt |
 | clause_type  | embed/simple | 1-4 | indicates whether there's an embedded clause (for sentential complement & relative clause constructions) or just one single clause (for prepositional phrases)  |
 
