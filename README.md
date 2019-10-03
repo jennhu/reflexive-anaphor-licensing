@@ -105,7 +105,7 @@ To generate the plots for a given experiment and model, run the following:
 ```bash
 cd analysis
 mkdir figures
-python plot_for_paper.py -o figures -model <MODELS> -exp <EXPERIMENT> -vs
+python generate_lot.py -o figures -model <MODELS> -exp <EXPERIMENT> -vs
 ```
 This will save a plot to `analysis/figures/<EXPERIMENT>_<MODEL>.png`.
 The `-vs` flag specifies to plot the negative log probability **differential**.
