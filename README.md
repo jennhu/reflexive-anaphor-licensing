@@ -32,22 +32,22 @@ Please note that we do not provide code for running each model. For more details
 For each experiment, a `.csv` file containing the stimuli can be found at 
 `stimuli/<EXPERIMENT>/<PRONOUN>.csv`. The file is structured as follows:
 
-| column name | values | related experiment | purpose |
-| ------------- | ------------- | ------------- | ------------- |
-| item | 1/2/3/... | 1-4 | indicates the item number in that experiemnt |
-| clause_type  | embed/simple | 1-4 | indicates whether there's an embedded clause (for sentential complement & relative clause constructions) or just one single clause (for prepositional phrases)  |
-| locality | local/nonlocal | 1-3 | indicates whether the intended antecedent NP is in the same clause (local) or the matrix clause (non-local) |
-| c-command | c-command/no-c-command | 1a,2,4 | indicates whether the intended antecedent NP is in a c-commanding relation with the reflexive or not |
-| grammatical | 1/0 | 1-4 | indicates whether the item is grammatical (1) vs ungrammatical (0) |
-| counterbalance | a/b(/c/d) | 1-4 | indicates the counterbalancing of the vocabulary used, to ensure that every vocab item appears the same amount of time |
-| mismatch_position | none/X | 1-4 | where X is {"head_noun","distractor_noun","local_sub","nonlocal_subj","matrix_subj_noun","rc_subj_noun"}, indicates which NP involves mismatching features (if applicable) |
-| mismatch_feature | none/number | 1-4 | indicates what feature is mismatched, or there's no mismatch (in the case of grammatical sentences) |
-| head_noun/distractor_noun | vocab | 4 | indicates whether the antecedent NP is the head noun (licensing position) or a distracting noun inside the prepositional phrase (non-licensing position)  |
-| local_sub/nonlocal_subj | vocab | 1b,3 | indicates whether the antecedent NP is the subject of the local clause (licensing position) or the subject of the superoridnate/matrix clause (non-licensing position) |
-| matrix_subj_noun/rc_subj_noun | vocab | 1a,2 | indicates whether the antecedent NP is the subject of the matrix clause (licensing position) or a noun inside the relative clause (non-licensing position)   |
-| verb | vocab | 1-4 | indicates the verb used for that item   |
-| pronoun | herself/himself/themselves | 1-4 | indicates which reflexive pronoun is being investigated |
-| sentence/sentence_no_eos | sentence | 1-4 | compiles the whole sentence for that item |
+| column | values | related experiments | description |
+| ------ | ------ | ------------------ | ----------- |
+| `item` | 1, 2, 3, ... | 1-4 | index of item |
+| `clause_type`  | embed, simple | 1-4 | whether there's an embedded clause (sentential complement & relative clause constructions) or single clause (prepositional phrases)  |
+| `locality` | local, nonlocal | 1-3 | whether intended antecedent is in same clause as reflexive (local) or matrix clause (non-local) |
+| `c-command` | c-command, no-c-command | 1a, 2, 4 | whether intended antecedent c-commands the reflexive |
+| `grammatical` | 0, 1 | 1-4 | whether item is grammatical |
+| `counterbalance` | a, b, c, d | 1-4 | counterbalancing index to ensure that every lexical item appears equally often |
+| `mismatch_position` | none, X | 1-4 | which NP is mismatched (X in `["head_noun", "distractor_noun", "local_sub","nonlocal_subj", "matrix_subj_noun", "rc_subj_noun"]`; `none` if grammatical) |
+| `mismatch_feature` | none, number | 1-4 | which feature is mismatched (`none` if grammatical) |
+| `head_noun`, `distractor_noun` | *lexical item* | 4 | head NP (licensing), distractor NP inside prepositional phrase (non-licensing)  |
+| `local_sub`, `nonlocal_subj` | *lexical item* | 1b, 3 | local clause subject NP (licensing), matrix clause subject NP (non-licensing) |
+| `matrix_subj_noun`, `rc_subj_noun` | *lexical item* | 1a, 2 | matrix clause subject NP (licensing), relative clause subject NP (non-licensing)   |
+| `verb` | *lexical item* | 1-4 | verb for item   |
+| `pronoun` | herself, himself, themselves | 1-4 | target reflexive pronoun |
+| `sentence`, `sentence_no_eos` | sentence | 1-4 | final sentence (with or without `<eos>` token) |
 
 
 ### Extracting sentences
