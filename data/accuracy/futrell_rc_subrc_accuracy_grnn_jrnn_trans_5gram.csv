@@ -1,9 +1,0 @@
-full_exp,model,total_acc,vs_baseline_acc,vs_distractor_acc
-futrell_rc_subrc_himself,grnn,0.6222222222222222,0.7111111111111111,0.8333333333333334
-futrell_rc_subrc_herself,grnn,0.9333333333333333,1.0,0.9333333333333333
-futrell_rc_subrc_himself,jrnn,0.5666666666666667,0.9888888888888889,0.5777777777777777
-futrell_rc_subrc_herself,jrnn,1.0,1.0,1.0
-futrell_rc_subrc_himself,trans,0.9444444444444444,1.0,0.9444444444444444
-futrell_rc_subrc_herself,trans,0.9222222222222223,0.9222222222222223,0.9555555555555556
-futrell_rc_subrc_himself,5gram,0.022222222222222223,0.022222222222222223,0.08888888888888889
-futrell_rc_subrc_herself,5gram,0.0,0.0,0.0

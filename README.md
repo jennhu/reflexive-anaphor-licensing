@@ -64,7 +64,7 @@ training corpus. See the paper for more details on how we
 constructed our materials.
 
 ### Vocabulary issues
-In all of our novel materials (**TODO: list the experiment names**), the
+In our novel materials (used in `['exp2-rc-all', 'exp3-comp', 'exp4-pp']`), the
 lexical items are designed to be in-vocabulary for models trained on the
 Penn Treebank. This is not the case for the materials used in Experiment 1, the 
 [Marvin & Linzen (2018)](https://arxiv.org/abs/1808.09031) replication.
@@ -73,10 +73,15 @@ Penn Treebank. This is not the case for the materials used in Experiment 1, the
 The per-token surprisal values for each model can be found in the [data](data)
 folder, following this naming convention:
 ```
-data/<MODEL>/<EXPERIMENT>/<PRONOUN>_<MODEL>.txt
+data/surprisal/<MODEL>/<EXPERIMENT>/<PRONOUN>_<MODEL>.txt
 ```
 The BERT data is in a slightly different `.csv` format, but otherwise
 follows the same naming convention.
+
+The accuracy results can be found at
+```
+data/accuracy/<EXPERIMENT>.csv
+```
 
 ## Dependencies
 Our analysis code requires a basic scientific installation of Python
@@ -100,14 +105,18 @@ We can make the training script for our n-gram model available upon request.
 ## Reproducing our results
 
 ### Figures
-To generate the plots for a given experiment and model, run the following:
+To generate the plots for a given experiment and list of models, run the following:
 
 ```bash
 cd analysis
-mkdir figures
-python generate_lot.py -o figures -model <MODELS> -exp <EXPERIMENT> -vs
+mkdir -p figures
+python generate_plot.py -o figures -model <MODELS> -exp <EXPERIMENT> -vs
 ```
-This will save a plot to `analysis/figures/<EXPERIMENT>_<MODEL>.png`.
+This will save a plot to `analysis/figures/<EXPERIMENT>-<MODELS>.png`.
+Note that `<MODELS>` can be a list of model names (e.g. `-model rnng bert jrnn`),
+`'big'` for large-vocabulary models, or `'all'` for all models. The
+large-vocabulary models are **BERT, Transformer-XL, JRNN, GRNN, 5-gram**.
+
 The `-vs` flag specifies to plot the negative log probability **differential**.
 You can omit the flag to plot the raw negative log probabilities.
 
@@ -117,9 +126,22 @@ if it does not exist):
 
 ```bash
 cd analysis
-./plot_all figures
+./get_figures figures
 ```
 
 ### Accuracy
 
-**TODO**
+Similarly, to compute the accuracy for a given experiment and list of models,
+run:
+```bash
+cd analysis
+mkdir -p accuracy
+python compute_accuracy.py -o accuracy -model <MODELS> -exp <EXPERIMENT>
+```
+This will save a file to `analysis/accuracy/<EXPERIMENT>-<MODELS>.csv`.
+
+To compute the accuracy for all our experiments, run the following:
+```bash
+cd analysis
+./get_accuracy accuracy
+```

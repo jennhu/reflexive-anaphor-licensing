@@ -1,7 +1,0 @@
-model,full_exp,vs_baseline_acc,vs_distractor_acc
-grnn,futrell_rc_subrc_himself,0.7111111111111111,0.8333333333333334
-grnn,futrell_rc_subrc_herself,1.0,0.9333333333333333
-jrnn,futrell_rc_subrc_himself,0.9888888888888889,0.5777777777777777
-jrnn,futrell_rc_subrc_herself,1.0,1.0
-trans,futrell_rc_subrc_himself,1.0,0.9444444444444444
-trans,futrell_rc_subrc_herself,0.9222222222222223,0.9555555555555556

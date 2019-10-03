@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ "$#" -ne 1 ]; then
-    echo "Expected usage: ./plot_all <output_folder>"
+    echo "Expected usage: ./get_figures <output_folder>"
 fi
 
 mkdir -p $1
