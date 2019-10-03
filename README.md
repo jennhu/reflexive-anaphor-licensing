@@ -32,7 +32,23 @@ Please note that we do not provide code for running each model. For more details
 For each experiment, a `.csv` file containing the stimuli can be found at 
 `stimuli/<EXPERIMENT>/<PRONOUN>.csv`. The file is structured as follows:
 
-**SHERRY TODO: explain how stimuli file is structured**
+| column name | values | related experiment | purpose |
+| ------------- | ------------- | ------------- | ------------- |
+| item | 1/2/3/... | 1-4 | indicates the item number in that experiemnt |
+| clause_type  | embed/simple | 1-4 | indicates whether there's an embedded clause (for sentential complement & relative clause constructions) or just one single clause (for prepositional phrases)  |
+| locality | local/nonlocal | 1-3 | indicates whether the intended antecedent NP is in the same clause (local) or the matrix clause (non-local) |
+| c-command | c-command/no-c-command | 1a,2,4 | indicates whether the intended antecedent NP is in a c-commanding relation with the reflexive or not |
+| grammatical | 1/0 | 1-4 | indicates whether the item is grammatical (1) vs ungrammatical (0) |
+| counterbalance | a/b(/c/d) | 1-4 | indicates the counterbalancing of the vocabulary used, to ensure that every vocab item appears the same amount of time |
+| mismatch_position | none/X | 1-4 | where X is {"head_noun","distractor_noun","local_sub","nonlocal_subj","matrix_subj_noun","rc_subj_noun"}, indicates which NP involves mismatching features (if applicable) |
+| mismatch_feature | none/number | 1-4 | indicates what feature is mismatched, or there's no mismatch (in the case of grammatical sentences) |
+| head_noun/distractor_noun | vocab | 4 | indicates whether the antecedent NP is the head noun (licensing position) or a distracting noun inside the prepositional phrase (non-licensing position)  |
+| local_sub/nonlocal_subj | vocab | 1b,3 | indicates whether the antecedent NP is the subject of the local clause (licensing position) or the subject of the superoridnate/matrix clause (non-licensing position) |
+| matrix_subj_noun/rc_subj_noun | vocab | 1a,2 | indicates whether the antecedent NP is the subject of the matrix clause (licensing position) or a noun inside the relative clause (non-licensing position)   |
+| verb | vocab | 1-4 | indicates the verb used for that item   |
+| pronoun | herself/himself/themselves | 1-4 | indicates which reflexive pronoun is being investigated |
+| sentence/sentence_no_eos | sentence | 1-4 | compiles the whole sentence for that item |
+
 
 ### Extracting sentences
 To extract the sentences from this file, use the script
