@@ -27,10 +27,10 @@ If you use any of our code, data, or analyses, please cite the paper using the b
 For each experiment, a `.csv` file containing the stimuli can be found at 
 `stimuli/<EXPERIMENT>/<PRONOUN>.csv`. The file is structured as follows:
 
-| column name | values | purpose |
+| column name | values | related experiment | purpose |
 | ------------- | ------------- | ------------- |
-| item | 1/2/3/...  | indicates the item number in that experiemnt |
-| clause_type  | embed/simple  | indicates whether there's an embedded clause (for sentential complement & relative clause constructions) or just one single clause (for prepositional phrases)  |
+| item | 1/2/3/... | 1-4 | indicates the item number in that experiemnt |
+| clause_type  | embed/simple | 1-4 | indicates whether there's an embedded clause (for sentential complement & relative clause constructions) or just one single clause (for prepositional phrases)  |
 
 
 -- "locality" indicates whether the intended antecedent NP is in the same clause (local) or the matrix clause (non-local)
