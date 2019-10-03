@@ -1,76 +1,78 @@
-'''
+"""
     accuracy.py
-    Get accuracy.
-'''
+    Get accuracy results.
+"""
 import argparse
 from numpy import mean
 import random
 import pandas as pd
 
+import utils
+
 #################################################################################
 # Global variables
 #################################################################################
 
-MODELS = ['grnn_multi', 'grnn', 'jrnn', 'trans', 'rnng', 'tiny', 'tinywiki', '5gram', 'bert']
+# MODELS = ['grnn_multi', 'grnn', 'jrnn', 'trans', 'rnng', 'tiny', 'tinywiki', '5gram', 'bert']
 
 #################################################################################
 # Helper functions
 #################################################################################
 
-def _prob_ratio(df1, df2):
-    prob_ratios = []
-    for row in df1.itertuples():
-        surprisal1 = row.surprisal
-        surprisal2 = df2.loc[row.Index].surprisal
-        prob_ratio = 2**(surprisal2 - surprisal1)
-        prob_ratios.append(prob_ratio)
-    return mean(prob_ratios)
+# def _prob_ratio(df1, df2):
+#     prob_ratios = []
+#     for row in df1.itertuples():
+#         surprisal1 = row.surprisal
+#         surprisal2 = df2.loc[row.Index].surprisal
+#         prob_ratio = 2**(surprisal2 - surprisal1)
+#         prob_ratios.append(prob_ratio)
+#     return mean(prob_ratios)
 
 
-def _get_data_df(data, surp, exp, nonrefl, multi=False):
-    # read surprisals and data
-    if not multi:
-        surp_df = pd.read_csv(surp, delim_whitespace=True,
-                              names=['token', 'surprisal'])
-    else:
-        surp_df = pd.read_csv(surp, sep=' ',
-                              names=['token', 'sentid', 'sentpos', 'wlen', 'surprisal', 'entropy'],
-                              skiprows=2, skipfooter=3)
-        print(surp_df.head())
-    data_df = pd.read_csv(data)
+# def _get_data_df(data, surp, exp, nonrefl, multi=False):
+#     # read surprisals and data
+#     if not multi:
+#         surp_df = pd.read_csv(surp, delim_whitespace=True,
+#                               names=['token', 'surprisal'])
+#     else:
+#         surp_df = pd.read_csv(surp, sep=' ',
+#                               names=['token', 'sentid', 'sentpos', 'wlen', 'surprisal', 'entropy'],
+#                               skiprows=2, skipfooter=3)
+#         print(surp_df.head())
+#     data_df = pd.read_csv(data)
 
-    agree, pl = 'agree' in exp, 'pl' in exp
-    # only keep surprisal at specified pronoun or verb
-    if agree:
-        verb = 'were' if pl else 'was'
-        surp_df = surp_df.loc[surp_df.token == verb]
-    else:
-        if nonrefl:
-            pn = 'them' if pl else exp.split('_')[-1][:3]
-        else:
-            pn = 'themselves' if pl else exp.split('_')[-1]
-        surp_df = surp_df.loc[surp_df.token == pn]
+#     agree, pl = 'agree' in exp, 'pl' in exp
+#     # only keep surprisal at specified pronoun or verb
+#     if agree:
+#         verb = 'were' if pl else 'was'
+#         surp_df = surp_df.loc[surp_df.token == verb]
+#     else:
+#         if nonrefl:
+#             pn = 'them' if pl else exp.split('_')[-1][:3]
+#         else:
+#             pn = 'themselves' if pl else exp.split('_')[-1]
+#         surp_df = surp_df.loc[surp_df.token == pn]
 
-        # data_df = data_df.loc[data_df.pronoun == pn]
+#         # data_df = data_df.loc[data_df.pronoun == pn]
 
-    # insert surprisal into data_df
-    data_df['surprisal'] = surp_df.surprisal.values
+#     # insert surprisal into data_df
+#     data_df['surprisal'] = surp_df.surprisal.values
 
-    return data_df
+#     return data_df
 
 
-def _subtract_baseline(df, exp):
-    item_list = df.item.unique()
-    for item in item_list:
-        item_rows = df.loc[df.item == item]
-        base_rows = item_rows.loc[item_rows.mismatch_position == 'none']
-        baseline = base_rows.surprisal.mean()
-        # subtract baseline from surprisal of all rows
-        item_rows.surprisal -= baseline
-        df.loc[df.item == item] = item_rows
-    return df
+# def _subtract_baseline(df, exp):
+#     item_list = df.item.unique()
+#     for item in item_list:
+#         item_rows = df.loc[df.item == item]
+#         base_rows = item_rows.loc[item_rows.mismatch_position == 'none']
+#         baseline = base_rows.surprisal.mean()
+#         # subtract baseline from surprisal of all rows
+#         item_rows.surprisal -= baseline
+#         df.loc[df.item == item] = item_rows
+#     return df
 
-def _get_accuracy(df, mismatch_position):
+def get_accuracy(df, mismatch_position):
     item_list = df.item.unique()
     n_items = len(item_list)
     num_correct_vs_baseline = 0
@@ -111,14 +113,9 @@ def _get_accuracy(df, mismatch_position):
 # Main function
 #################################################################################
 
-def main(out_prefix, model, exp, nonrefl, vs_baseline):
+def main(out_prefix, model, exp):
     out_path = '%s/%s_accuracy_%s.csv' % (out_prefix, exp, '_'.join(model))
-    if 'futrell' in exp:
-        suffixes = ['_himself', '_herself']
-    elif 'agree' in exp:
-        suffixes = ['', '_pl']
-    else:
-        suffixes = ['_himself', '_herself', '_pl']
+    suffixes = ['_himself', '_herself', '_pl']
     model_list = MODELS if model == ['all'] else model
     
     acc_dict = {'model':[], 'full_exp':[], 'total_acc':[], 'vs_baseline_acc':[], 'vs_distractor_acc':[]}
@@ -154,20 +151,14 @@ def main(out_prefix, model, exp, nonrefl, vs_baseline):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Plot surprisals.')
+    parser = argparse.ArgumentParser(description='Compute accuracy for models.')
     parser.add_argument('--out_prefix', '-out_prefix', '--O', '-O',
                         default='accuracy',
-                        help='prefix to path to save final plots (file will '
+                        help='prefix to save final file (file will '
                              'be named according to experiment name)')
     parser.add_argument('--model', '-model', '--M', '-M', nargs='+',
                         help='names of models, or all to plot all at once')
     parser.add_argument('--exp', '-exp',
                         help='name of experiment')
-    parser.add_argument('--nonrefl', '-nonrefl', action='store_true',
-                        help='toggle whether using nonreflexive pronoun')
-    parser.add_argument('--vs_baseline', '-vs_baseline', '--vs', '-vs',
-                        default=False, action='store_true',
-                        help='toggle plotting raw surprisal or surprisal '
-                             'difference vs. baseline')
     args = parser.parse_args()
-    main(**vars(args))
+    main(args)

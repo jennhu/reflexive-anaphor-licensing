@@ -1,8 +1,8 @@
 # A closer look at the performance of neural language models on reflexive anaphor licensing
 
-This repository contains the code for the following paper:
+This repository contains the materials for the following paper:
 
-Jennifer Hu, Sherry Yong Chen, and Roger Levy (2020). 
+> Jennifer Hu, Sherry Yong Chen, and Roger Levy (2020). 
 A closer look at the performance of neural language models on reflexive anaphor licensing. 
 *Proceedings of the Society for Computation in Linguistics (SCiL 2020)* Volume 3.
 
@@ -20,7 +20,12 @@ If you use any of our code, data, or analyses, please cite the paper using the b
 
 ## Overview
 
-**TODO: write short overview/summary here to orient people**
+Our materials are organized into three primary folders:
+* [analysis](analysis) (code for reproducing the results and figures in the paper)
+* [data](data) (accuracy and surprisal results from each model)
+* [stimuli](stimuli) (test suites and script for extracting sentences)
+
+Please note that we do not provide code for running each model. For more details, see the [Dependencies](#dependencies) section.
 
 ## Stimuli
 
@@ -29,6 +34,7 @@ For each experiment, a `.csv` file containing the stimuli can be found at
 
 **SHERRY TODO: explain how stimuli file is structured**
 
+### Extracting sentences
 To extract the sentences from this file, use the script
 `stimuli/extract_sentences.py`. You can toggle flags like `--uncased` and `--eos`
 depending on the requirements of your model. **Please note that the final period
@@ -75,32 +81,29 @@ We can make the training script for our n-gram model available upon request.
 5. [Tiny LSTM](https://github.com/pytorch/examples/tree/master/word_language_model)
 6. n-gram
 
-<!-- ### Transformer-XL
-Note that we use the [pytorch-pretrained-BERT](https://github.com/huggingface/pytorch-pretrained-BERT) implementation of Transformer-XL. To download the 
-state-of-the-art model parameters, run the script `get_model.sh`.
-After doing so, you'll need to load the model and tokenizer like this:
+## Reproducing our results
 
-```python
-tokenizer = TransfoXLTokenizer.from_pretrained('./model/')
-model = TransfoXLModel.from_pretrained('./model/')
-```
-
-(Source: [Issue #451](https://github.com/huggingface/pytorch-pretrained-BERT/issues/451#issuecomment-481155274))
-
-See [pytorch-pretrained-BERT](https://github.com/huggingface/pytorch-pretrained-BERT) 
-for more detailed setup instructions. -->
-
-
-## Reproducing our figures
-
+### Figures
 To generate the plots for a given experiment and model, run the following:
-**TODO: FIX/CLEAN THIS**
 
 ```bash
 cd analysis
-python plot_surprisals.py -exp <EXPERIMENT> -model <MODEL>
+mkdir figures
+python plot_for_paper.py -o figures -model <MODELS> -exp <EXPERIMENT> -vs
 ```
-This will save a plot to `analysis/plots/<EXPERIMENT>_<MODEL>.png` showing
-the mean surprisal at the target word across each condition.
-The relevant target word (e.g. *himself*, *themselves*, *was*) will be
-inferred from the name of the experiment.
+This will save a plot to `analysis/figures/<EXPERIMENT>_<MODEL>.png`.
+The `-vs` flag specifies to plot the negative log probability **differential**.
+You can omit the flag to plot the raw negative log probabilities.
+
+To plot the results for all our experiments, run the following
+(replacing `figures` with your desired output folder, which will be created
+if it does not exist):
+
+```bash
+cd analysis
+./plot_all figures
+```
+
+### Accuracy
+
+**TODO**

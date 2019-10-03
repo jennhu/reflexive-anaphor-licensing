@@ -1,4 +1,4 @@
-# Large data files, SLURM scripts, etc.
+# Large data files, SLURM scripts, old data, etc.
 slurm
 data/rnng/old/
 data/grnn/old/
@@ -13,6 +13,9 @@ data/unused
 stimuli/unused
 stimuli/old/
 stimuli/marvin-linzen-2016
+
+analysis/freq
+analysis/figures
 
 # Temporary files
 ._*
