@@ -1,6 +1,6 @@
 # A closer look at the performance of neural language models on reflexive anaphor licensing
 
-This repository contains the materials for the following paper:
+This repository contains the materials for the following [paper](https://scholarworks.umass.edu/scil/vol3/iss1/37/):
 
 > Jennifer Hu, Sherry Yong Chen, and Roger Levy (2020). 
 A closer look at the performance of neural language models on reflexive anaphor licensing. 
@@ -11,8 +11,11 @@ If you use any of our code, data, or analyses, please cite the paper using the b
 @InProceedings{Hu:et-al:2020,
   Author = {Hu, Jennifer and Chen, Sherry Yong and Levy, Roger},
   Title = {A closer look at the performance of neural language models on reflexive anaphor licensing},
-  Booktitle = {Proceedings of the Society for Computation in Linguistics Volume 3},
-  Year = {2020}
+  Booktitle = {Proceedings of the Society for Computation in Linguistics (SCiL 2020)},
+  Volume = {3},
+  Pages = {382-392},
+  Year = {2020},
+  URL = {https://scholarworks.umass.edu/scil/vol3/iss1/37/}
 }
 ```
 
